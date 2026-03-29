@@ -35,6 +35,15 @@ function App() {
           image="https://picsum.photos/600/800?random=2"
           reverse
         />
+        <CourseSection
+          title="Skin Diving Course"
+          description1="スキンダイビングを楽しみたい方向けのコース。無理なく安全に潜るための基本的なスキルと呼吸法を身につけます。"
+          description2="海の中を自由に楽しみながら、美しい水中世界との一体感を体験できます。初心者の方でも安心して参加できます。"
+          duration="1日（プールまたは海洋）"
+          condition="健康で泳げる方"
+          price="¥15,000"
+          image="https://picsum.photos/600/800?random=3"
+        />
 
       </div>
 
