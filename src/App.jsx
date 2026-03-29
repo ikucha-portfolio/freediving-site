@@ -1,41 +1,82 @@
-import Section from "./components/layout/Section";
-import TwoColumn from "./components/layout/TwoColumn";
-import TitleBlock from "./components/ui/TitleBlock";
-import BodyText from "./components/ui/BodyText";
-import Button from "./components/ui/Button";
-import Card from "./components/ui/Card";
-import InfoCard from "./components/ui/InfoCard";
-
 function App() {
   return (
-    <Section>
-      <TitleBlock>フリーダイビングコース</TitleBlock>
+    <section className="w-full bg-[#f8f7f5] py-28">
 
-      <BodyText>
-        静けさの中で、自分と向き合う時間
-      </BodyText>
+      <div className="max-w-4xl mx-auto px-8">
 
-      <TwoColumn>
-        <Card>
-  <h3 className="text-lg font-medium text-[#5a6b74] mb-2">
-    AIDA1コース
-  </h3>
-  <p className="text-sm text-[#7a8a94]">
-    初めての方向けの基礎コース
-  </p>
-</Card>
-        <InfoCard>
-  <div>
-    <p className="text-sm text-[#7a8a94]">料金</p>
-    <p className="text-xl font-semibold text-[#5a6b74]">
-      ¥30,000
-    </p>
-  </div>
+        {/* タイトル */}
+        <div className="text-center mb-28">
+      <h1 className="text-3xl md:text-4xl font-light text-[#5a6b74]">
+        Courses
+      </h1>
+    </div>
 
-  <Button>申し込む</Button>
-</InfoCard>
-      </TwoColumn>
-    </Section>
+
+        {/* ===== AIDA1 ===== */}
+        <div className="flex flex-col md:flex-row items-center gap-16">
+
+          {/* 左：テキスト */}
+          <div className="w-full md:w-1/2 max-w-[420px] mx-auto md:mx-0 space-y-8">
+
+            <h3 className="text-xl font-light text-[#5a6b74]">
+              AIDA Level 1
+            </h3>
+
+            <p className="text-sm text-[#7a8a94] leading-[2]">
+              フリーダイビングの基礎を学ぶ初心者向けコース。
+              安全な潜水のための知識、呼吸法、リラクゼーション、
+              イコライゼーション（耳抜き）の基本を習得します。
+            </p>
+
+            <p className="text-sm text-[#7a8a94] leading-[2]">
+              プールと海洋実習を通じて、水深10〜15mまでの潜水スキルを身につけます。
+              海との一体感を感じながら、自分のペースで学べる環境を提供します。
+            </p>
+
+            {/* 情報カード */}
+            <div className="bg-white border border-gray-100 p-6 space-y-4 w-full max-w-[380px]">
+
+              <div>
+                <p className="text-xs text-gray-400 mb-1">期間</p>
+                <p className="text-sm text-[#5a6b74]">
+                  2日間（学科＋プール実習＋海洋実習）
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-400 mb-1">受講条件</p>
+                <p className="text-sm text-[#5a6b74]">
+                  18歳以上、健康で泳げる方
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-400 mb-1">料金</p>
+                <p className="text-lg font-light text-[#5a6b74]">
+                  ¥45,000
+                </p>
+              </div>
+
+            </div>
+
+            {/* ボタン */}
+            <button className="text-xs border border-gray-400 px-5 py-2.5 text-[#5a6b74] hover:bg-black hover:text-white transition">
+              お問い合わせ
+            </button>
+
+          </div>
+
+          {/* 右：画像 */}
+          <img
+            src="https://picsum.photos/600/800"
+            alt="AIDA1"
+            className="w-full max-w-[400px] aspect-[3/4] object-cover rounded-sm"
+          />
+        </div>
+
+      </div>
+
+    </section>
   );
 }
 
