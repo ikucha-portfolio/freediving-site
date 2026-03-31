@@ -20,7 +20,7 @@ function Header() {
             Freediving
           </Link>
           <Link to="/course" className="text-xs text-[#7a8a94] hover:opacity-70">
-            Course
+            Courses
           </Link>
           <Link to="/price" className="text-xs text-[#7a8a94] hover:opacity-70">
             Price
