@@ -1,9 +1,9 @@
-const Section = ({ children }) => {
+export default function Section({ children }) {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-24 md:py-32">
-      {children}
+    <section className="w-full py-24 md:py-32">
+      <div className="max-w-5xl mx-auto px-8">
+        {children}
+      </div>
     </section>
   );
-};
-
-export default Section;
+}

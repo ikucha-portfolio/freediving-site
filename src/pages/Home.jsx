@@ -43,78 +43,97 @@ export default function Home() {
       </section>
 
       {/* Freediving セクション */}
-      <Section>
-        <TwoColumn className="gap-24">
+      {/* Freediving セクション */}
+<Section>
 
-          {/* 左 */}
-          <div className="space-y-8 max-w-[480px]">
+  {/* 👇 これを追加（超重要） */}
+  <div className="max-w-4xl mx-auto">
 
-            <TitleBlock>
-              Free divingとは
-            </TitleBlock>
+    <TwoColumn className="gap-8 md:gap-12">
 
-            <BodyText>
-              フリーダイビングは、酸素タンクを使わずに一呼吸で潜水するマリンスポーツです。
-            </BodyText>
+      {/* 左 */}
+      <div className="space-y-7">
 
-            <BodyText>
-              静寂に包まれた海中で、自分自身と向き合い、心身のリラックスと集中力を高めることができます。
-            </BodyText>
+        <TitleBlock>
+          Free divingとは
+        </TitleBlock>
 
-            <BodyText>
-              AIDA（国際フリーダイビング協会）の認定資格を取得し、安全に楽しむための知識と技術を学びましょう。
-            </BodyText>
+        <BodyText>
+          奄美大島は、豊かな自然が残る世界遺産の島です。
+        </BodyText>
 
+        <BodyText>
+          穏やかな海と安定した環境は、
+          フリーダイビングを始めるのに適しています。
+        </BodyText>
+
+        <BodyText>
+          この海で、フリーダイビングを体験してみませんか。
+        </BodyText>
+
+        <Link to="/freediving">
+          <div className="pt-4 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
+            More →
           </div>
+        </Link>
 
-          {/* 右 */}
-          <div className="flex justify-end">
-            <img
-              src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
-              alt="Freediver"
-              className="w-[420px] aspect-[3/4] object-cover rounded-sm"
-            />
-          </div>
+      </div>
 
-        </TwoColumn>
+      {/* 右 */}
+      <div className="flex justify-end">
+        <img
+          src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
+          alt="Freediver"
+          className="w-[360px] md:w-[420px] aspect-[3/4] object-cover rounded-sm"
+        />
+      </div>
+
+    </TwoColumn>
+
+  </div>
       </Section>
 
       {/* Courses セクション */}
       <Section>
 
-        <div className="text-center mb-20">
-          <TitleBlock>Courses</TitleBlock>
-        </div>
+  {/* 👇これ追加 */}
+  <div className="max-w-4xl mx-auto">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div className="text-center mb-20">
+      <TitleBlock>Courses</TitleBlock>
+    </div>
 
-  <Card
-    variant="home"
-    title="Skin Diving Course"
-    description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
-  />
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
 
-  <Card
-    variant="home"
-    title="AIDA Level 1"
-    description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
-  />
+      <Card
+        variant="home"
+        title="Skin Diving Course"
+        description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
+      />
 
-  <Card
-    variant="home"
-    title="AIDA Level 2"
-    description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
-  />
+      <Card
+        variant="home"
+        title="AIDA Level 1"
+        description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
+      />
 
-  <Card
-    variant="home"
-    title="AIDA Level 3"
-    description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
-  />
+      <Card
+        variant="home"
+        title="AIDA Level 2"
+        description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
+      />
 
-</div>
+      <Card
+        variant="home"
+        title="AIDA Level 3"
+        description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
+      />
 
-      </Section>
+    </div>
+
+  </div>
+
+</Section>
 
     </main>
   );
