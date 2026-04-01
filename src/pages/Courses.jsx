@@ -1,9 +1,12 @@
 import CourseSection from "../components/CourseSection";
+import Container from "../components/layout/Container";
 
 const Courses = () => {
   return (
     <>
       <section className="w-full bg-[#f8f7f5] py-28">
+        
+        <Container> {/* ←これに置き換え */}
 
         <div className="max-w-4xl mx-auto px-8">
 
@@ -60,6 +63,8 @@ const Courses = () => {
   reverse
 />
         </div>
+        
+</Container>
 
       </section>
     </>

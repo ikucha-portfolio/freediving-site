@@ -4,6 +4,7 @@ import TwoColumn from "../components/layout/TwoColumn";
 import TitleBlock from "../components/ui/TitleBlock";
 import BodyText from "../components/ui/BodyText";
 import Card from "../components/ui/Card";
+import Container from "../components/layout/Container";
 
 export default function Home() {
   return (
@@ -43,97 +44,91 @@ export default function Home() {
       </section>
 
       {/* Freediving セクション */}
-      {/* Freediving セクション */}
-<Section>
+      <Section>
+        <Container>
 
-  {/* 👇 これを追加（超重要） */}
-  <div className="max-w-4xl mx-auto">
+          <TwoColumn className="gap-8 md:gap-12">
 
-    <TwoColumn className="gap-8 md:gap-12">
+            {/* 左 */}
+            <div className="space-y-7">
 
-      {/* 左 */}
-      <div className="space-y-7">
+              <TitleBlock>
+                Free divingとは
+              </TitleBlock>
 
-        <TitleBlock>
-          Free divingとは
-        </TitleBlock>
+              <BodyText>
+                奄美大島は、豊かな自然が残る世界遺産の島です。
+              </BodyText>
 
-        <BodyText>
-          奄美大島は、豊かな自然が残る世界遺産の島です。
-        </BodyText>
+              <BodyText>
+                穏やかな海と安定した環境は、
+                フリーダイビングを始めるのに適しています。
+              </BodyText>
 
-        <BodyText>
-          穏やかな海と安定した環境は、
-          フリーダイビングを始めるのに適しています。
-        </BodyText>
+              <BodyText>
+                この海で、フリーダイビングを体験してみませんか。
+              </BodyText>
 
-        <BodyText>
-          この海で、フリーダイビングを体験してみませんか。
-        </BodyText>
+              <Link to="/freediving">
+                <div className="pt-4 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
+                  More →
+                </div>
+              </Link>
 
-        <Link to="/freediving">
-          <div className="pt-4 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
-            More →
-          </div>
-        </Link>
+            </div>
 
-      </div>
+            {/* 右 */}
+            <div className="flex justify-end">
+              <img
+                src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
+                alt="Freediver"
+                className="w-[360px] md:w-[420px] aspect-[3/4] object-cover rounded-sm"
+              />
+            </div>
 
-      {/* 右 */}
-      <div className="flex justify-end">
-        <img
-          src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
-          alt="Freediver"
-          className="w-[360px] md:w-[420px] aspect-[3/4] object-cover rounded-sm"
-        />
-      </div>
+          </TwoColumn>
 
-    </TwoColumn>
-
-  </div>
+        </Container>
       </Section>
 
       {/* Courses セクション */}
       <Section>
+        <Container>
 
-  {/* 👇これ追加 */}
-  <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <TitleBlock>Courses</TitleBlock>
+          </div>
 
-    <div className="text-center mb-20">
-      <TitleBlock>Courses</TitleBlock>
-    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+            <Card
+              variant="home"
+              title="Skin Diving Course"
+              description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
+            />
 
-      <Card
-        variant="home"
-        title="Skin Diving Course"
-        description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
-      />
+            <Card
+              variant="home"
+              title="AIDA Level 1"
+              description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
+            />
 
-      <Card
-        variant="home"
-        title="AIDA Level 1"
-        description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
-      />
+            <Card
+              variant="home"
+              title="AIDA Level 2"
+              description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
+            />
 
-      <Card
-        variant="home"
-        title="AIDA Level 2"
-        description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
-      />
+            <Card
+              variant="home"
+              title="AIDA Level 3"
+              description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
+            />
 
-      <Card
-        variant="home"
-        title="AIDA Level 3"
-        description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
-      />
+          </div>
 
-    </div>
-
-  </div>
-
-</Section>
+        </Container>
+      </Section>
 
     </main>
   );
