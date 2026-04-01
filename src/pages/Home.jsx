@@ -86,27 +86,33 @@ export default function Home() {
           <TitleBlock>Courses</TitleBlock>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          <Card
-            variant="home"
-            title="AIDA Level 1"
-            description="初心者向けコースの簡単な説明。安全にフリーダイビングを始めるための基礎を学びます。"
-          />
+  <Card
+    variant="home"
+    title="Skin Diving Course"
+    description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
+  />
 
-          <Card
-            variant="home"
-            title="AIDA Level 2"
-            description="中級者向けコースの簡単な説明。より深く、より長く潜るためのテクニックを習得します。"
-          />
+  <Card
+    variant="home"
+    title="AIDA Level 1"
+    description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
+  />
 
-          <Card
-            variant="home"
-            title="Skin Diving Course"
-            description="スキンダイビングコースの簡単な説明。シュノーケリングからステップアップしたい方に。"
-          />
+  <Card
+    variant="home"
+    title="AIDA Level 2"
+    description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
+  />
 
-        </div>
+  <Card
+    variant="home"
+    title="AIDA Level 3"
+    description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
+  />
+
+</div>
 
       </Section>
 
