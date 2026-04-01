@@ -3,6 +3,7 @@ import Section from "../components/layout/Section";
 import TwoColumn from "../components/layout/TwoColumn";
 import TitleBlock from "../components/ui/TitleBlock";
 import BodyText from "../components/ui/BodyText";
+import Card from "../components/ui/Card";
 
 export default function Home() {
   return (
@@ -43,7 +44,6 @@ export default function Home() {
 
       {/* Freediving セクション */}
       <Section>
-
         <TwoColumn className="gap-24">
 
           {/* 左 */}
@@ -77,6 +77,36 @@ export default function Home() {
           </div>
 
         </TwoColumn>
+      </Section>
+
+      {/* Courses セクション */}
+      <Section>
+
+        <div className="text-center mb-20">
+          <TitleBlock>Courses</TitleBlock>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-12">
+
+          <Card
+            variant="home"
+            title="AIDA Level 1"
+            description="初心者向けコースの簡単な説明。安全にフリーダイビングを始めるための基礎を学びます。"
+          />
+
+          <Card
+            variant="home"
+            title="AIDA Level 2"
+            description="中級者向けコースの簡単な説明。より深く、より長く潜るためのテクニックを習得します。"
+          />
+
+          <Card
+            variant="home"
+            title="Skin Diving Course"
+            description="スキンダイビングコースの簡単な説明。シュノーケリングからステップアップしたい方に。"
+          />
+
+        </div>
 
       </Section>
 
