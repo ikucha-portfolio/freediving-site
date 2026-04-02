@@ -11,7 +11,8 @@ export default function Home() {
     <main>
 
       {/* HERO */}
-      <section className="relative h-screen w-full overflow-hidden">
+    
+      <section className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden">
 
         <div className="absolute inset-0">
           <img
