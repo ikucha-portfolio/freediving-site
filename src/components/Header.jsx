@@ -11,7 +11,7 @@ function Header() {
           to="/"
           className="text-sm tracking-[0.25em] font-extralight text-[#5a6b74]"
         >
-          HICO FREEDIVING
+          hico freediving
         </Link>
 
         {/* ナビ */}
