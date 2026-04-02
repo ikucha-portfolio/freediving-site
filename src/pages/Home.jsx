@@ -92,44 +92,65 @@ export default function Home() {
       </Section>
 
       {/* Courses セクション */}
-      <Section>
-        <Container>
+      {/* Courses セクション */}
+<Section>
+  <Container>
 
-          <div className="text-center mb-20">
-            <TitleBlock>Courses</TitleBlock>
-          </div>
+    {/* タイトル */}
+    <div className="text-center mb-12">
+      <TitleBlock>Courses</TitleBlock>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+    {/* --- Skin Diving --- */}
+    <div className="mb-16">
 
-            <Card
-              variant="home"
-              title="Skin Diving Course"
-              description="スキンダイビングの基礎を学ぶコース。無理なく安全に潜るためのスキルを習得します。"
-            />
+      <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6">
+        SKIN DIVING COURSE
+      </h3>
 
-            <Card
-              variant="home"
-              title="AIDA Level 1"
-              description="初心者向けコース。安全にフリーダイビングを始めるための基礎を学びます。"
-            />
+      <div className="max-w-md">
+        <Card
+          variant="home"
+          title="Skin Diving Course"
+          description="シュノーケリングからステップアップしたい方へ"
+        />
+      </div>
 
-            <Card
-              variant="home"
-              title="AIDA Level 2"
-              description="中級者向けコース。より深く、より長く潜るためのテクニックを習得します。"
-            />
+    </div>
 
-            <Card
-              variant="home"
-              title="AIDA Level 3"
-              description="上級者向けコース。より高度な技術と安全管理を学び、限界に挑戦します。"
-            />
+    {/* --- License --- */}
+    <div>
 
-          </div>
+      <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6">
+        LICENSE COURSE
+      </h3>
 
-        </Container>
-      </Section>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
+        <Card
+          variant="home"
+          title="AIDA Level 1"
+          description="初心者向けコース"
+        />
+
+        <Card
+          variant="home"
+          title="AIDA Level 2"
+          description="中級者向けコース"
+        />
+
+        <Card
+          variant="home"
+          title="AIDA Level 3"
+          description="中〜上級者向けコース"
+        />
+
+      </div>
+
+    </div>
+
+  </Container>
+</Section>
     </main>
   );
 }
