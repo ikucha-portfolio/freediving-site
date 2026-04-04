@@ -55,10 +55,10 @@ export default function Home() {
         <TitleBlock>
           フリーダイビングとは
         </TitleBlock>
-
+        <BodyText>
         <p>奄美大島は、穏やかな海と豊かな自然に恵まれた場所です。</p>
         <p>フリーダイビングを始めるのに適した環境が整っています。</p>
-
+        </BodyText>
         <Link to="/freediving">
           <div className="pt-2 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
             詳しく見る →
