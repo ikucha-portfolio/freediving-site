@@ -1,4 +1,4 @@
-export default function Section({ children, variant = "default" }) {
+export default function Section({ children, variant = "default", className = "" }) {
   let padding = "";
 
   if (variant === "compact") {
@@ -10,7 +10,7 @@ export default function Section({ children, variant = "default" }) {
   }
 
   return (
-    <section className={`w-full ${padding}`}>
+    <section className={`w-full ${padding} ${className}`}>
       {children}
     </section>
   );
