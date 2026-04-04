@@ -92,7 +92,7 @@ export default function Home() {
 
   <Link
     to="/freediving"
-    className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+    className="group text-xs tracking-[0.2em] text-[#5a6b74] hover:text-[#2f3e46]"
   >
     <span className="inline-flex items-center gap-3">
       FREEDIVING
@@ -104,7 +104,7 @@ export default function Home() {
 
   <Link
     to="/about"
-    className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+    className="group text-xs tracking-[0.2em] text-[#5a6b74] hover:text-[#2f3e46]"
   >
     <span className="inline-flex items-center gap-3">
       ABOUT ME
