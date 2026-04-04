@@ -9,9 +9,8 @@ import Container from "../components/layout/Container";
 export default function Home() {
   return (
     <main>
-
-      {/* HERO */}
-    <section className="relative w-full h-screen pt-20 overflow-hidden">
+{/* HERO */}
+<section className="relative w-full h-screen pt-20 overflow-hidden">
 
   {/* 画像 */}
   <div className="absolute inset-0">
@@ -24,35 +23,37 @@ export default function Home() {
   </div>
 
   {/* コンテンツ */}
-  <div className="relative z-10 flex items-center justify-end h-full px-8 md:px-20">
+  <div className="relative z-10 h-full flex items-center">
 
-    <div className="max-w-xl text-white space-y-8 text-center">
+    {/* ← ここ追加（超重要） */}
+    <div className="max-w-5xl mx-auto w-full px-8 flex justify-end">
 
-      {/* タイトル */}
-      <h1
-        translate="no"
-        className="notranslate text-4xl md:text-6xl font-extralight tracking-[0.08em] leading-[1.5]"
-        style={{ fontFamily: "'Cormorant Garamond', serif" }}
-      >
-        hico freediving
-      </h1>
+      <div className="max-w-xl text-white space-y-8 text-center">
 
-      {/* コピー */}
-      <p className="text-sm md:text-base text-white/85 leading-loose tracking-wide">
-        一呼吸で海の世界に飛び込める楽しさを。<br />
-        心も体もゆるむひとときを。
-      </p>
+        <h1
+          translate="no"
+          className="notranslate text-4xl md:text-6xl font-extralight tracking-[0.08em] leading-[1.5]"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          hico freediving
+        </h1>
 
-      {/* CTA（ガラス） */}
-      <Link
-        to="/course"
-        className="inline-block px-8 py-3 text-sm tracking-widest
-        bg-white/10 border border-white/30 text-white
-        backdrop-blur-md
-        hover:bg-white/20 transition-all duration-300"
-      >
-        コースを見る
-      </Link>
+        <p className="text-sm md:text-base text-white/85 leading-loose tracking-wide">
+          一呼吸で海の世界に飛び込める楽しさを。<br />
+          心も体もゆるむひとときを。
+        </p>
+
+        <Link
+          to="/course"
+          className="inline-block px-8 py-3 text-sm tracking-widest
+          bg-white/10 border border-white/30 text-white
+          backdrop-blur-md
+          hover:bg-white/20 transition-all duration-300"
+        >
+          コースを見る
+        </Link>
+
+      </div>
 
     </div>
   </div>
