@@ -22,6 +22,9 @@ function Header() {
           <Link to="/course" className="text-xs text-[#7a8a94] hover:opacity-70">
             Courses
           </Link>
+          <Link to="/price" className="text-xs text-[#7a8a94] hover:opacity-70">
+            Price
+          </Link>
           <Link to="/about" className="text-xs text-[#7a8a94] hover:opacity-70">
             About
           </Link>
