@@ -1,8 +1,8 @@
 const BodyText = ({ children }) => {
   return (
-    <p className="text-sm leading-[1.9] text-[#7a8a94]">
+    <div className="space-y-6 text-[#7a8a94] leading-[2] font-extralight text-[15px] md:text-base">
       {children}
-    </p>
+    </div>
   );
 };
 
