@@ -247,6 +247,114 @@ export default function Home() {
 
   </Container>
 </Section>
+
+{/* Amami Sea */}
+<Section>
+  <Container>
+
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+
+      {/* テキスト */}
+      <div className="space-y-6">
+
+        <h2 className="text-2xl md:text-3xl font-light text-[#5a6b74]">
+          Amami Sea
+        </h2>
+
+        <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+          透き通るような青い海。<br />
+          静かに潜る時間の中で、<br />
+          自分と向き合う特別な体験ができます。
+        </p>
+
+        <div className="text-[12px] text-[#aab6bd] tracking-[0.15em]">
+          VIEW MORE →
+        </div>
+
+      </div>
+
+      {/* 画像 */}
+      <div className="w-full h-[300px] bg-gray-200">
+        {/* 後で画像入れる */}
+      </div>
+
+    </div>
+
+  </Container>
+</Section>
+
+{/* FAQ */}
+<Section variant="compact">
+  <Container size="narrow">
+
+    <div className="text-center mb-10">
+      <TitleBlock center>FAQ</TitleBlock>
+    </div>
+
+    <div className="space-y-6">
+
+      <div>
+        <p className="font-light text-[#5a6b74]">
+          Q.初めてでもできますか？
+        </p>
+        <p className="text-[#7a8a94] text-sm mt-2">
+          はい、スキンダイビングコースからご参加いただけます。
+        </p>
+      </div>
+
+      <div>
+        <p className="font-light text-[#5a6b74]">
+          Q. 年齢や体力に制限はありますか？
+        </p>
+        <p className="text-[#7a8a94] text-sm mt-2">
+          18歳以上で健康に問題のない方なら体力に自信がなくても大丈夫です。
+        </p>
+      </div>
+
+      <div>
+        <p className="font-light text-[#5a6b74]">
+          Q.機材のレンタルはできますか？
+        </p>
+        <p className="text-[#7a8a94] text-sm mt-2">
+          はい、どのコースでも必要な機材は全てレンタル可能です。
+        </p>
+      </div>
+
+    </div>
+
+  </Container>
+</Section>
+
+{/* Contact */}
+<Section>
+  <Container size="narrow">
+
+    <div className="text-center space-y-6">
+
+      <TitleBlock center>Contact</TitleBlock>
+
+      <p className="text-[#7a8a94] text-sm">
+        ご予約・お問い合わせはこちらから
+      </p>
+
+      <button className="px-6 py-3 border border-[#5a6b74] text-[#5a6b74] text-sm tracking-widest hover:bg-[#5a6b74] hover:text-white transition">
+        CONTACT
+      </button>
+
+    </div>
+
+  </Container>
+</Section>
+
+<footer className="border-t border-[#eee] py-10 mt-20">
+  <Container>
+
+    <div className="text-center text-sm text-[#aab6bd]">
+      © 2026 Hico Freediving
+    </div>
+
+  </Container>
+</footer>
     </main>
   );
 }
