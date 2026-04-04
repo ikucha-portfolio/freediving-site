@@ -142,52 +142,108 @@ export default function Home() {
     </div>
 
     {/* --- Skin Diving --- */}
-    <div className="mb-16">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
 
-      <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6">
-        SKIN DIVING COURSE
-      </h3>
+  {/* Skin */}
+  <div className="bg-white border border-[#e5e0d8] p-8 space-y-4 hover:shadow-sm transition">
 
-      <div>
-        <Card
-          variant="home"
-          title="Skin Diving Course"
-          description="シュノーケルを使っての海遊びが初心者の方、もっと上達したい方におすすめのコース"
-        />
-      </div>
-
+    <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+      SKIN DIVING
     </div>
 
-    {/* --- License --- */}
-    <div>
+    <h3 className="text-[18px] font-light text-[#6b7c85]">
+      Skin Diving
+    </h3>
 
-      <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6">
-        LICENSE COURSE
-      </h3>
+    <p className="text-[14px] text-[#8fa0a8] leading-[1.8]">
+      シュノーケルを使っての海遊びが初心者の方、
+      <br />
+      もっと上達したい方におすすめ
+    </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-
-        <Card
-          variant="home"
-          title="AIDA Level 1"
-          description="フリーダイビング体験コース"
-        />
-
-        <Card
-          variant="home"
-          title="AIDA Level 2"
-          description="フリーダイビング初級コース"
-        />
-
-        <Card
-          variant="home"
-          title="AIDA Level 3"
-          description="フリーダイビング中級コース"
-        />
-
-      </div>
-
+    <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] pt-2">
+      LEARN MORE →
     </div>
+
+  </div>
+
+  {/* AIDA1 */}
+  <div className="bg-white border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition">
+
+  <div className="space-y-4">
+
+    <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+      LICENSE
+    </div>
+
+    <h3 className="text-[18px] font-light text-[#6b7c85]">
+      AIDA 1
+    </h3>
+
+    {/* 👇ここが超重要 */}
+    <p className="text-[14px] text-[#8fa0a8] leading-[1.8] min-h-[125px]">
+      フリーダイビング体験コース
+    </p>
+
+  </div>
+
+  {/* 👇普通に余白で調整 */}
+  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] mt-6">
+    LEARN MORE →
+  </div>
+
+</div>
+
+  {/* AIDA2 */}
+<div className="bg-white border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition">
+
+  <div className="space-y-4">
+
+    <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+      LICENSE
+    </div>
+
+    <h3 className="text-[18px] font-light text-[#6b7c85]">
+      AIDA 2
+    </h3>
+
+    <p className="text-[14px] text-[#8fa0a8] leading-[1.8] min-h-[125px]">
+      フリーダイビング初級コース
+    </p>
+
+  </div>
+
+  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] mt-6">
+    LEARN MORE →
+  </div>
+
+</div>
+
+  {/* AIDA3 */}
+<div className="bg-white border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition">
+
+  <div className="space-y-4">
+
+    <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+      LICENSE
+    </div>
+
+    <h3 className="text-[18px] font-light text-[#6b7c85]">
+      AIDA 3
+    </h3>
+
+    <p className="text-[14px] text-[#8fa0a8] leading-[1.8] min-h-[125px]">
+      フリーダイビング中級コース
+    </p>
+
+  </div>
+
+  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] mt-6">
+    LEARN MORE →
+  </div>
+
+</div>
+</div>
 
   </Container>
 </Section>
