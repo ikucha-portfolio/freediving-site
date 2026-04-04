@@ -12,8 +12,7 @@ export default function Home() {
 
       {/* HERO */}
     
-      <section className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden">
-
+      <section className="relative w-full h-[80vh] md:h-[90vh] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1663876065260-1f06695da535?w=1600&q=80"
@@ -21,7 +20,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             style={{ filter: "saturate(0.85) brightness(1.05)" }}
           />
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#faf8f5]"></div>
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-4xl mx-auto space-y-6">
@@ -45,56 +44,50 @@ export default function Home() {
       </section>
 
       {/* Freediving セクション */}
-      <Section>
-        <Container>
+      <Section variant="compact">
+  <Container>
 
-          <TwoColumn className="gap-8 md:gap-12">
+    <TwoColumn>
 
-            {/* 左 */}
-            <div className="space-y-7">
+      {/* 左 */}
+      <div className="space-y-5">
 
-              <TitleBlock>
-                Free divingとは
-              </TitleBlock>
+        <TitleBlock>
+          フリーダイビングとは
+        </TitleBlock>
 
-              <BodyText>
-                奄美大島は、豊かな自然が残る世界遺産の島です。
-              </BodyText>
+        <BodyText>
+          奄美大島は、穏やかな海と豊かな自然に恵まれた場所です。
+        </BodyText>
 
-              <BodyText>
-                穏やかな海と安定した環境は、
-                フリーダイビングを始めるのに適しています。
-              </BodyText>
+        <BodyText>
+          フリーダイビングを始めるのに適した環境が整っています。
+        </BodyText>
 
-              <BodyText>
-                この海で、フリーダイビングを体験してみませんか。
-              </BodyText>
+        <Link to="/freediving">
+          <div className="pt-2 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
+            詳しく見る →
+          </div>
+        </Link>
 
-              <Link to="/freediving">
-                <div className="pt-4 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
-                  More →
-                </div>
-              </Link>
+      </div>
 
-            </div>
+      {/* 右 */}
+      <div className="flex justify-end">
+        <img
+          src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
+          alt="Freediver"
+          className="w-[260px] md:w-[300px] aspect-square object-cover rounded-sm"
+        />
+      </div>
 
-            {/* 右 */}
-            <div className="flex justify-end">
-              <img
-                src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
-                alt="Freediver"
-                className="w-[360px] md:w-[420px] aspect-[3/4] object-cover rounded-sm"
-              />
-            </div>
+    </TwoColumn>
 
-          </TwoColumn>
-
-        </Container>
-      </Section>
+  </Container>
+</Section>
 
       {/* Courses セクション */}
-      {/* Courses セクション */}
-<Section>
+<Section variant="compact">
   <Container>
 
     {/* タイトル */}
