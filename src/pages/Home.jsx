@@ -87,7 +87,7 @@ export default function Home() {
 
     {/* タイトル */}
     <div className="text-center mb-12">
-      <TitleBlock>Courses</TitleBlock>
+      <TitleBlock center>Courses</TitleBlock>
     </div>
 
     {/* --- Skin Diving --- */}

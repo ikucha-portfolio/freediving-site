@@ -6,17 +6,19 @@ const Card = ({ title, description, variant = "default" }) => {
     "transition duration-300 cursor-pointer";
 
   const variantStyle =
-    variant === "home"
-      ? `
-        p-8
-        border border-[#eee]
-        rounded-sm
-        hover:bg-[#fafafa]
-      `
-      : `
-        p-6
-        border-b border-[#eee]
-      `;
+  variant === "home"
+    ? `
+      p-8
+      bg-white/70
+      border border-[#e5e0d8]
+      rounded-none
+      hover:bg-white
+      transition
+    `
+    : `
+      p-6
+      border-b border-[#e5e0d8]
+    `;
 
   return (
     <Link to="/course" className="block">
