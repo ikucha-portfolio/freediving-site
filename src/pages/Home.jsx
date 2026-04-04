@@ -11,8 +11,7 @@ export default function Home() {
     <main>
 
       {/* HERO */}
-    
-      <section className="relative w-full h-[80vh] md:h-[90vh] pt-20 overflow-hidden">
+    <section className="relative w-full h-screen pt-20 overflow-hidden">
 
   {/* 画像 */}
   <div className="absolute inset-0">
@@ -22,29 +21,35 @@ export default function Home() {
       className="w-full h-full object-cover"
       style={{ filter: "saturate(0.9) brightness(1.05)" }}
     />
-
   </div>
 
-  {/* コンテンツ（右寄せ） */}
+  {/* コンテンツ */}
   <div className="relative z-10 flex items-center justify-end h-full px-8 md:px-20">
 
-    <div className="max-w-xl text-white text-right space-y-8">
+    <div className="max-w-xl text-white space-y-8 text-center">
 
+      {/* タイトル */}
       <h1
         translate="no"
         className="notranslate text-4xl md:text-6xl font-extralight tracking-[0.08em] leading-[1.5]"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
         hico freediving
       </h1>
 
-      <p className="text-sm md:text-base text-white/80 leading-loose tracking-wide">
-        海の中でしか味わえない静けさ、<br />
+      {/* コピー */}
+      <p className="text-sm md:text-base text-white/85 leading-loose tracking-wide">
+        一呼吸で海の世界に飛び込める楽しさを。<br />
         心も体もゆるむひとときを。
       </p>
 
+      {/* CTA（ガラス） */}
       <Link
         to="/course"
-        className="inline-block px-8 py-3 bg-white/90 text-[#5a6b74] hover:bg-white transition text-sm tracking-widest"
+        className="inline-block px-8 py-3 text-sm tracking-widest
+        bg-white/10 border border-white/30 text-white
+        backdrop-blur-md
+        hover:bg-white/20 transition-all duration-300"
       >
         コースを見る
       </Link>
@@ -53,6 +58,7 @@ export default function Home() {
   </div>
 
 </section>
+      
 
       {/* Freediving セクション */}
       <Section variant="compact">
