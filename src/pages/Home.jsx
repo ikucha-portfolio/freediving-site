@@ -47,7 +47,7 @@ export default function Home() {
       <Section variant="compact">
   <Container>
 
-    <TwoColumn>
+    <TwoColumn variant="compact">
 
       {/* 左 */}
       <div className="space-y-5">
@@ -77,7 +77,7 @@ export default function Home() {
         <img
           src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
           alt="Freediver"
-          className="w-[260px] md:w-[300px] aspect-square object-cover rounded-sm"
+          className="w-[260px] md:w-[300px] aspect-square object-cover rounded-none"
         />
       </div>
 

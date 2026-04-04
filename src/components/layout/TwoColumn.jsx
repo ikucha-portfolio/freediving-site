@@ -1,11 +1,11 @@
 const TwoColumn = ({ children, variant = "default" }) => {
-  const gapStyle =
-    variant === "wide"
-      ? "gap-20"
-      : "gap-8 md:gap-12";
+  const style =
+    variant === "compact"
+      ? "gap-12 items-start"
+      : "gap-24 items-start";
 
   return (
-    <div className={`grid md:grid-cols-2 items-center ${gapStyle}`}>
+    <div className={`grid md:grid-cols-2 ${style}`}>
       {children}
     </div>
   );
