@@ -13,39 +13,46 @@ export default function Home() {
       {/* HERO */}
     
       <section className="relative w-full h-[80vh] md:h-[90vh] pt-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1663876065260-1f06695da535?w=1600&q=80"
-            alt="Freediving"
-            className="w-full h-full object-cover"
-            style={{ filter: "saturate(0.85) brightness(1.05)" }}
-          />
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#faf8f5]"></div>
-        </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-4xl mx-auto space-y-6">
+  {/* 画像 */}
+  <div className="absolute inset-0">
+    <img
+      src="/images/hero2.jpeg"
+      alt="Freediving"
+      className="w-full h-full object-cover"
+      style={{ filter: "saturate(0.9) brightness(1.05)" }}
+    />
 
-         <h1
-  translate="no"
-  className="text-4xl md:text-6xl font-light tracking-[0.05em] leading-[1.4] drop-shadow-[0_3px_8px_rgba(0,0,0,0.35)]"
->
-  hico freediving
-</h1>
+  </div>
 
-<p className="text-base md:text-lg text-white/90 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
-  海の中でしか味わえない静けさ、<br className="hidden md:block" />
-  心も体もゆるむひとときを。
-</p>
+  {/* コンテンツ（右寄せ） */}
+  <div className="relative z-10 flex items-center justify-end h-full px-8 md:px-20">
 
-<Link
-  to="/course"
-  className="inline-block px-8 py-3 bg-white/90 text-[#5a6b74] border border-white/60 hover:bg-white transition-all text-sm tracking-widest backdrop-blur-sm"
->
-  View Courses
-</Link>
+    <div className="max-w-xl text-white text-right space-y-8">
 
-        </div>
-      </section>
+      <h1
+        translate="no"
+        className="notranslate text-4xl md:text-6xl font-extralight tracking-[0.08em] leading-[1.5]"
+      >
+        hico freediving
+      </h1>
+
+      <p className="text-sm md:text-base text-white/80 leading-loose tracking-wide">
+        海の中でしか味わえない静けさ、<br />
+        心も体もゆるむひとときを。
+      </p>
+
+      <Link
+        to="/course"
+        className="inline-block px-8 py-3 bg-white/90 text-[#5a6b74] hover:bg-white transition text-sm tracking-widest"
+      >
+        コースを見る
+      </Link>
+
+    </div>
+  </div>
+
+</section>
 
       {/* Freediving セクション */}
       <Section variant="compact">
