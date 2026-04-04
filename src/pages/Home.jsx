@@ -88,24 +88,42 @@ export default function Home() {
     ぜひ体験してみてください。
   </p>
 </BodyText>
-        <div className="flex gap-6 pt-2 text-sm text-[#5a6b74] tracking-wide">
-          <Link to="/freediving" className="hover:opacity-70 transition">
-            フリーダイビングについて →
-          </Link>
+  <div className="pt-10 space-y-6 flex flex-col items-end">
 
-          <Link to="/about" className="hover:opacity-70 transition">
-            インストラクターについて →
-          </Link>
-        </div>
+  <Link
+    to="/freediving"
+    className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+  >
+    <span className="inline-flex items-center gap-3">
+      FREEDIVING
+      <span className="transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </span>
+    </span>
+  </Link>
 
-      </div>
+  <Link
+    to="/about"
+    className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+  >
+    <span className="inline-flex items-center gap-3">
+      ABOUT ME
+      <span className="transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </span>
+    </span>
+  </Link>
+
+</div>
+</div>
+      
 
       {/* 右 */}
       <div className="flex justify-end">
         <img
-          src="https://images.unsplash.com/photo-1759676233508-55c55aa1ff3f?q=80&w=800"
+          src="/images/freediving.jpeg"
           alt="Freediver"
-          className="w-[260px] md:w-[300px] aspect-square object-cover rounded-none"
+          className="w-[260px] md:w-[320px] aspect-[3/4] object-cover"
         />
       </div>
 
