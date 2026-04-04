@@ -81,7 +81,7 @@ export default function Home() {
   </Container>
 </Section>
 
-      {/* Courses セクション */}
+{/* Courses セクション */}
 <Section variant="compact">
   <Container>
 
@@ -97,7 +97,7 @@ export default function Home() {
         SKIN DIVING COURSE
       </h3>
 
-      <div className="max-w-md">
+      <div>
         <Card
           variant="home"
           title="Skin Diving Course"
@@ -114,7 +114,7 @@ export default function Home() {
         LICENSE COURSE
       </h3>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
 
         <Card
           variant="home"

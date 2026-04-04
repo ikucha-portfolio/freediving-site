@@ -4,10 +4,10 @@ const Container = ({ children, size = "default" }) => {
       ? "max-w-3xl"
       : size === "wide"
       ? "max-w-6xl"
-      : "max-w-4xl"; // ←ここ変更（元5xl → 4xl）
+      : "max-w-4xl";
 
   return (
-    <div className={`${sizeStyle} mx-auto px-8`}>
+    <div className={`${sizeStyle} mx-auto px-6 md:px-8`}>
       {children}
     </div>
   );
