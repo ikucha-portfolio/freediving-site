@@ -25,20 +25,24 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-4xl mx-auto space-y-6">
 
-          <h1 className="text-4xl md:text-6xl font-light tracking-[0.05em] leading-[1.4] drop-shadow-[0_3px_8px_rgba(0,0,0,0.35)]">
-            Freediving in Amami
-          </h1>
+         <h1
+  translate="no"
+  className="text-4xl md:text-6xl font-light tracking-[0.05em] leading-[1.4] drop-shadow-[0_3px_8px_rgba(0,0,0,0.35)]"
+>
+  hico freediving
+</h1>
 
-          <p className="text-base md:text-lg text-white/90 font-light tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
-            Explore the ocean on a single breath
-          </p>
+<p className="text-base md:text-lg text-white/90 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
+  海の中でしか味わえない静けさ、<br className="hidden md:block" />
+  心も体もゆるむひとときを。
+</p>
 
-          <Link
-            to="/course"
-            className="inline-block px-8 py-3 bg-white/90 text-[#5a6b74] border border-white/60 hover:bg-white transition-all text-sm tracking-widest backdrop-blur-sm"
-          >
-            View Courses
-          </Link>
+<Link
+  to="/course"
+  className="inline-block px-8 py-3 bg-white/90 text-[#5a6b74] border border-white/60 hover:bg-white transition-all text-sm tracking-widest backdrop-blur-sm"
+>
+  View Courses
+</Link>
 
         </div>
       </section>
@@ -53,17 +57,32 @@ export default function Home() {
       <div className="space-y-5">
 
         <TitleBlock>
-          フリーダイビングとは
+          <span translate="no" className="notranslate">
+            WATS FREEDIVING
+          </span>
         </TitleBlock>
+
         <BodyText>
-        <p>奄美大島は、穏やかな海と豊かな自然に恵まれた場所です。</p>
-        <p>フリーダイビングを始めるのに適した環境が整っています。</p>
-        </BodyText>
-        <Link to="/freediving">
-          <div className="pt-2 text-sm text-[#5a6b74] tracking-wide hover:opacity-70 transition cursor-pointer">
-            詳しく見る →
-          </div>
-        </Link>
+  <p>
+    フリーダイビングは、酸素ボンベを使わずに
+    自分の息だけで海や水中に潜るスポーツです。
+  </p>
+
+  <p>
+    一呼吸で海の世界に飛び込む。
+    その静けさと、心も体もゆるむ感覚を、
+    ぜひ体験してみてください。
+  </p>
+</BodyText>
+        <div className="flex gap-6 pt-2 text-sm text-[#5a6b74] tracking-wide">
+          <Link to="/freediving" className="hover:opacity-70 transition">
+            フリーダイビングについて →
+          </Link>
+
+          <Link to="/about" className="hover:opacity-70 transition">
+            インストラクターについて →
+          </Link>
+        </div>
 
       </div>
 
@@ -101,7 +120,7 @@ export default function Home() {
         <Card
           variant="home"
           title="Skin Diving Course"
-          description="シュノーケリングからステップアップしたい方へ"
+          description="シュノーケルを使っての海遊びが初心者の方、もっと上達したい方におすすめのコース"
         />
       </div>
 
@@ -119,19 +138,19 @@ export default function Home() {
         <Card
           variant="home"
           title="AIDA Level 1"
-          description="初心者向けコース"
+          description="フリーダイビング体験コース"
         />
 
         <Card
           variant="home"
           title="AIDA Level 2"
-          description="中級者向けコース"
+          description="フリーダイビング初級コース"
         />
 
         <Card
           variant="home"
           title="AIDA Level 3"
-          description="中〜上級者向けコース"
+          description="フリーダイビング中級コース"
         />
 
       </div>
