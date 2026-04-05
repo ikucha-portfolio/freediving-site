@@ -168,35 +168,50 @@ export default function Home() {
 
         </Container>
       </Section>
+{/* Amami */}
+<Section>
+  <Container>
 
-      {/* Amami */}
-      <Section>
-        <Container>
+    {/* タイトル */}
+    <div className="mb-10">
+      <TitleBlock>Amami Sea</TitleBlock>
+    </div>
 
-          <div className="mb-12">
-            <TitleBlock>Amami Sea</TitleBlock>
-          </div>
+    {/* コンテンツ */}
+    <div className="grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12">
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+  {/* 左：画像 */}
+  <div>
+    <img
+      src="/images/Amami sea.jpeg"
+      alt="Amami Sea"
+      className="w-full h-[360px] object-cover"
+    />
+  </div>
 
-            <div className="space-y-6">
-              <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
-                透き通るような青い海。<br />
-                静かに潜る時間の中で、<br />
-                自分と向き合う特別な体験ができます。
-              </p>
+  {/* 右：テキスト */}
+  <div className="max-w-[420px]">
 
-              <div className="text-[12px] text-[#aab6bd] tracking-[0.15em]">
-                VIEW MORE →
-              </div>
-            </div>
+    <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+  透き通るような青い海。<br />
+  静かに潜る時間の中で、<br />
+  自分と向き合う特別な体験ができます。<br />
+  <br />
+  自然豊かな世界遺産の島、奄美大島。<br />
+  手つかずの自然に囲まれたこの場所で、<br />
+  ゆっくりとした時間の流れを感じてみてください。
+</p>
 
-            <div className="w-full h-[300px] bg-gray-200" />
+    <div className="mt-6 text-[12px] text-[#aab6bd] tracking-[0.15em]">
+      VIEW MORE →
+    </div>
 
-          </div>
+      </div>
 
-        </Container>
-      </Section>
+    </div>
+
+  </Container>
+</Section>
 
       {/* FAQ */}
       <Section variant="compact">

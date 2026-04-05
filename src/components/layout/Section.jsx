@@ -6,7 +6,7 @@ export default function Section({ children, variant = "default", className = "" 
   } else if (variant === "large") {
     padding = "py-48";
   } else {
-    padding = "py-40";
+    padding = "py-16 md:py-20"; // ←ここ変更
   }
 
   return (
