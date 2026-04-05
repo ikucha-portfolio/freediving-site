@@ -5,6 +5,7 @@ import TitleBlock from "../components/ui/TitleBlock";
 import BodyText from "../components/ui/BodyText";
 import Container from "../components/layout/Container";
 
+
 export default function Home() {
   return (
     <main>
@@ -255,36 +256,123 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Contact */}
-      <Section>
-        <Container size="narrow">
+     {/* Contact */}
+<Section className="relative py-24 overflow-hidden bg-[#f7fafb]">
 
-          <div className="space-y-6">
+  {/* 🌊 ベース（超薄いグラデーション） */}
+  <div className="absolute inset-0 bg-[linear-gradient(180deg,#f7fafb_0%,#f2f7f9_40%,#f7fafb_100%)]" />
 
-            <TitleBlock>Contact</TitleBlock>
+  {/* 🌊 水のゆらぎ①（横に広げる） */}
+  <div className="
+    absolute top-1/3 left-1/2 -translate-x-1/2
+    w-[800px] h-[300px]
+    bg-[#dbeff5]
+    opacity-30
+    blur-[120px]
+  " />
 
-            <p className="text-[#7a8a94] text-sm">
-              ご予約・お問い合わせはこちらから
-            </p>
+  {/* 🌊 水のゆらぎ②（少しズラす） */}
+  <div className="
+    absolute bottom-0 left-1/3
+    w-[600px] h-[250px]
+    bg-[#e8f6fa]
+    opacity-20
+    blur-[100px]
+  " />
 
-            <button className="px-6 py-3 border border-[#5a6b74] text-[#5a6b74] text-sm tracking-widest hover:bg-[#5a6b74] hover:text-white transition">
-              CONTACT
-            </button>
+  <Container size="narrow">
 
-          </div>
+    <div className="relative text-center space-y-8">
 
-        </Container>
-      </Section>
+      <TitleBlock align="center">Contact</TitleBlock>
 
-      {/* Footer */}
-      <footer className="border-t border-[#eee] py-10 mt-20">
-        <Container>
-          <div className="text-center text-sm text-[#aab6bd]">
-            © 2026 Hico Freediving
-          </div>
-        </Container>
-      </footer>
+      <p className="text-[#6f848e] text-[15px] leading-[1.9]">
+        海にふれるきっかけを、<br />
+        ここからはじめてみませんか
+      </p>
 
+      <p className="text-[#9fb0b8] text-[13px] leading-[1.8]">
+        ご相談からでも大丈夫です。<br />
+        はじめての方もお気軽にご連絡ください。
+      </p>
+
+      <button className="
+        px-10 py-3
+        text-[12px] tracking-[0.25em]
+        text-[#5a6b74]
+        border border-[#cfe0e6]
+        bg-white/40
+        backdrop-blur-sm
+        hover:bg-white/60
+        transition
+      ">
+        CONTACT
+      </button>
+
+      {/* 🌊 SNS（主役にする） */}
+      <div className="flex justify-center gap-10 pt-8 text-[#6f848e]">
+
+        {/* Instagram */}
+        <a href="#" className="hover:scale-110 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="w-7 h-7"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="6" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" />
+          </svg>
+        </a>
+
+        {/* YouTube */}
+        <a href="#" className="hover:scale-110 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-7 h-7"
+          >
+            <path d="M23.5 6.2a2.8 2.8 0 0 0-2-2C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.5.7a2.8 2.8 0 0 0-2 2C0 8 0 12 0 12s0 4 .5 5.8a2.8 2.8 0 0 0 2 2c1.9.7 9.5.7 9.5.7s7.6 0 9.5-.7a2.8 2.8 0 0 0 2-2C24 16 24 12 24 12s0-4-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+
+  </Container>
+</Section>
+
+{/* Footer */}
+<footer className="border-t border-[#e5edf0]">
+  <Container size="narrow">
+
+    <div className="py-10 text-center space-y-4">
+
+      {/* ナビ（最小） */}
+      <div className="flex justify-center flex-wrap gap-5 text-[12px] text-[#9fb0b8] tracking-[0.08em]">
+        <a href="#">Freediving</a>
+        <a href="#">Course</a>
+        <a href="#">Price</a>
+        <a href="#">About</a>
+        <a href="#">Amami Sea</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+
+      {/* コピーライト */}
+      <div className="text-[11px] text-[#c0ccd2]">
+        © 2026 Hico Freediving
+      </div>
+
+    </div>
+
+  </Container>
+</footer>
     </main>
   );
 }
