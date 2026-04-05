@@ -9,7 +9,7 @@ function CourseSection({
   reverse = false,
 }) {
   return (
-    <div className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-16 mt-32`}>
+    <div className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-start gap-16 mt-32`}>
 
       <div className="w-full md:w-1/2 max-w-[420px] mx-auto md:mx-0 space-y-8">
 
@@ -54,7 +54,7 @@ function CourseSection({
         <img
           src={image}
           alt={title}
-          className="w-full max-w-[400px] aspect-[3/4] object-cover rounded-sm"
+          className="w-full max-w-[400px] aspect-[3/4] object-cover rounded-none"
         />
       </div>
 
