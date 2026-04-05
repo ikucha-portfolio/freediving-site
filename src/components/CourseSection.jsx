@@ -25,29 +25,20 @@ function CourseSection({
           {description2}
         </p>
 
-        <div className="bg-white border border-gray-100 p-6 space-y-4 w-full max-w-[380px]">
 
-          <div>
-            <p className="text-xs text-gray-400 mb-1">期間</p>
-            <p className="text-sm text-[#5a6b74]">{duration}</p>
-          </div>
-
-          <div>
-            <p className="text-xs text-gray-400 mb-1">受講条件</p>
-            <p className="text-sm text-[#5a6b74]">{condition}</p>
-          </div>
-
-          <div>
-            <p className="text-xs text-gray-400 mb-1">料金</p>
-            <p className="text-lg font-light text-[#5a6b74]">{price}</p>
-          </div>
-
-        </div>
-
-        <button className="text-xs border border-gray-400 px-5 py-2.5 text-[#5a6b74] hover:bg-black hover:text-white transition">
-          お問い合わせ
-        </button>
-
+        <button
+  className="
+    px-6 py-2.5
+    text-[11px] tracking-[0.25em]
+    text-[#5a6b74]
+    border border-[#cfe0e6]
+    bg-white/40 backdrop-blur-sm
+    hover:bg-white/60
+    transition
+  "
+>
+  CONTACT
+</button>
       </div>
 
       <div className="w-full md:w-1/2 flex justify-center">
