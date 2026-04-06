@@ -195,14 +195,11 @@ export default function Home() {
             </div>
 
             <div className="max-w-[420px]">
-              <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
-                透き通るような青い海。<br />
-                静かに潜る時間の中で、<br />
-                自分と向き合う特別な体験ができます。<br /><br />
-                自然豊かな世界遺産の島、奄美大島。<br />
-                手つかずの自然に囲まれたこの場所で、<br />
-                ゆっくりとした時間の流れを感じてみてください。
-              </p>
+  <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+    奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。<br /><br />
+    湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。<br /><br />
+    さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。
+  </p>
 
               <div className="mt-6 text-[12px] text-[#aab6bd] tracking-[0.15em]">
                 VIEW MORE →
