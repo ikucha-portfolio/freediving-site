@@ -222,34 +222,47 @@ export default function Home() {
       <TitleBlock>FAQ</TitleBlock>
     </div>
 
-    <div className="space-y-6">
+    <div className="space-y-3">
 
-      {faqs.map((item, i) => (
-        <div key={i} className="border-b border-[#dfe9ed] pb-4">
+  {faqs.map((item, i) => (
+    <div
+      key={i}
+      className="
+        bg-white/40
+        backdrop-blur-sm
+        border border-[#e8eff2]
+        rounded-none
+        px-5 py-4
+        transition
+        hover:bg-white/60
+      "
+    >
 
-          <button
-            onClick={() =>
-              setOpenIndex(openIndex === i ? null : i)
-            }
-            className="w-full flex justify-between items-center text-left"
-          >
-            <p className="font-light text-[#6f848e]">
-              Q. {item.q}
-            </p>
+      {/* 質問 */}
+      <button
+        onClick={() =>
+          setOpenIndex(openIndex === i ? null : i)
+        }
+        className="w-full flex justify-between items-center text-left"
+      >
+        <p className="text-[14px] text-[#5a6b74]">
+          Q. {item.q}
+        </p>
 
-            <span className="text-[#9fb2bb]">
-              {openIndex === i ? "−" : "+"}
-            </span>
-          </button>
+        <span className="text-[#9fb2bb] text-lg">
+          {openIndex === i ? "−" : "+"}
+        </span>
+      </button>
 
-          {openIndex === i && (
-            <p className="text-[#7a8a94] text-sm mt-3 leading-loose">
-              {item.a}
-            </p>
-          )}
+      {/* 回答 */}
+      {openIndex === i && (
+        <p className="text-[#7a8a94] text-sm mt-4 leading-loose">
+          {item.a}
+        </p>
+      )}
 
-        </div>
-      ))}
+    </div>
+  ))}
 
     </div>
 
@@ -269,11 +282,6 @@ export default function Home() {
           <div className="relative text-center space-y-8">
 
             <TitleBlock align="center">Contact</TitleBlock>
-
-            <p className="text-[#6f848e] text-[15px] leading-[1.9]">
-              海にふれるきっかけを、<br />
-              ここからはじめてみませんか
-            </p>
 
             <p className="text-[#9fb0b8] text-[13px] leading-[1.8]">
               ご相談からでも大丈夫です。<br />
@@ -295,7 +303,7 @@ export default function Home() {
 
           <div className="py-8 text-center space-y-3">
 
-            <div className="flex justify-center flex-wrap gap-4 text-[12px] text-[#b8c7cd] tracking-[0.12em]">
+            <div className="flex justify-center flex-wrap gap-4 text-[12px] text-[#7a8a94] tracking-[0.12em]">
               <a href="#">Freediving</a>
               <a href="#">Course</a>
               <a href="#">Price</a>

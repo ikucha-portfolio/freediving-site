@@ -38,39 +38,47 @@ export default function FAQ() {
         </div>
 
         {/* FAQ */}
-        <div>
+        <div className="space-y-3">
 
-          {faqs.map((item, i) => (
-            <div
-              key={i}
-              className="border-b border-[#e3eef2]"
-            >
+  {faqs.map((item, i) => (
+    <div
+      key={i}
+      className="
+        bg-white/40
+        backdrop-blur-sm
+        border border-[#e8eff2]
+        rounded-none
+        px-5 py-4
+        transition
+        hover:bg-white/60
+      "
+    >
 
-              {/* 質問 */}
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === i ? null : i)
-                }
-                className="w-full flex justify-between items-center py-6 text-left hover:opacity-70 transition"
-              >
-                <span className="text-sm text-[#5a6b74]">
-                  Q. {item.q}
-                </span>
+      {/* 質問 */}
+      <button
+        onClick={() =>
+          setOpenIndex(openIndex === i ? null : i)
+        }
+        className="w-full flex justify-between items-center text-left"
+      >
+        <p className="text-[14px] text-[#5a6b74]">
+          Q. {item.q}
+        </p>
 
-                <span className="text-[#9fb2bb] text-lg">
-                  {openIndex === i ? "−" : "+"}
-                </span>
-              </button>
+        <span className="text-[#9fb2bb] text-lg">
+          {openIndex === i ? "−" : "+"}
+        </span>
+      </button>
 
-              {/* 回答 */}
-              {openIndex === i && (
-                <div className="pb-6 pr-6 text-sm text-[#6b7c85] leading-loose">
-                  {item.a}
-                </div>
-              )}
+      {/* 回答 */}
+      {openIndex === i && (
+        <p className="text-[#7a8a94] text-sm mt-4 leading-loose">
+          {item.a}
+        </p>
+      )}
 
-            </div>
-          ))}
+    </div>
+  ))}
 
         </div>
 
