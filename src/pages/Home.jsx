@@ -4,8 +4,25 @@ import TwoColumn from "../components/layout/TwoColumn";
 import TitleBlock from "../components/ui/TitleBlock";
 import BodyText from "../components/ui/BodyText";
 import Container from "../components/layout/Container";
+import { useState } from "react";
 
 export default function Home() {
+  const faqs = [
+  {
+    q: "初めてでもできますか？",
+    a: "はい、スキンダイビングコースからご参加いただけます。"
+  },
+  {
+    q: "年齢や体力に制限はありますか？",
+    a: "18歳以上で健康に問題のない方なら大丈夫です。"
+  },
+  {
+    q: "機材のレンタルはできますか？",
+    a: "はい、全てレンタル可能です。"
+  }
+];
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
     <main className="bg-[#f4f4f2]">
 
@@ -196,48 +213,48 @@ export default function Home() {
 
         </Container>
       </Section>
+     
+{/* FAQ */}
+<Section className="bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]">
+  <Container size="narrow">
 
-      {/* FAQ */}
-      <Section className="bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]">
-        <Container size="narrow">
+    <div className="mb-12">
+      <TitleBlock>FAQ</TitleBlock>
+    </div>
 
-          <div className="mb-12">
-            <TitleBlock>FAQ</TitleBlock>
-          </div>
+    <div className="space-y-6">
 
-          <div className="space-y-6">
+      {faqs.map((item, i) => (
+        <div key={i} className="border-b border-[#dfe9ed] pb-4">
 
-            <div>
-              <p className="font-light text-[#6f848e]">
-                Q. 初めてでもできますか？
-              </p>
-              <p className="text-[#7a8a94] text-sm mt-2">
-                はい、スキンダイビングコースからご参加いただけます。
-              </p>
-            </div>
+          <button
+            onClick={() =>
+              setOpenIndex(openIndex === i ? null : i)
+            }
+            className="w-full flex justify-between items-center text-left"
+          >
+            <p className="font-light text-[#6f848e]">
+              Q. {item.q}
+            </p>
 
-            <div>
-              <p className="font-light text-[#6f848e]">
-                Q. 年齢や体力に制限はありますか？
-              </p>
-              <p className="text-[#7a8a94] text-sm mt-2">
-                18歳以上で健康に問題のない方なら大丈夫です。
-              </p>
-            </div>
+            <span className="text-[#9fb2bb]">
+              {openIndex === i ? "−" : "+"}
+            </span>
+          </button>
 
-            <div>
-              <p className="font-light text-[#6f848e]">
-                Q. 機材のレンタルはできますか？
-              </p>
-              <p className="text-[#7a8a94] text-sm mt-2">
-                はい、全てレンタル可能です。
-              </p>
-            </div>
+          {openIndex === i && (
+            <p className="text-[#7a8a94] text-sm mt-3 leading-loose">
+              {item.a}
+            </p>
+          )}
 
-          </div>
+        </div>
+      ))}
 
-        </Container>
-      </Section>
+    </div>
+
+  </Container>
+</Section>
 
       {/* Contact */}
       <Section className="relative py-24 overflow-hidden bg-[#f4f4f2]">

@@ -3,6 +3,7 @@ import Courses from "./pages/Courses";
 import Home from "./pages/Home"; // ← 追加
 import About from "./pages/About";
 import Price from "./pages/Price";
+import FAQ from "./pages/FAQ";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/course" element={<Courses />} />
         <Route path="/about" element={<About />} />
         <Route path="/price" element={<Price />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
     </div>
   );
