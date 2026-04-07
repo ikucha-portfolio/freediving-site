@@ -26,7 +26,7 @@ export default function Price() {
               duration: "2時間"
             },
             {
-              title: "AIDA Level 1",
+              title: "AIDA1",
               label: "LICENSE",
               price: "¥25,000",
               desc: "座学＋海洋講習",
@@ -34,7 +34,7 @@ export default function Price() {
               note: "※別途AIDA申請料あり"
             },
             {
-              title: "AIDA Level 2",
+              title: "AIDA2",
               label: "LICENSE",
               price: "¥55,000",
               desc: "座学＋海洋・プール講習",
@@ -42,7 +42,7 @@ export default function Price() {
               note: "※別途認定料・プール使用料あり"
             },
             {
-              title: "AIDA Level 3",
+              title: "AIDA3",
               label: "LICENSE",
               price: "¥65,000",
               desc: "座学＋海洋・プール講習",

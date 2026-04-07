@@ -20,9 +20,9 @@ const Courses = () => {
           title="Skin Diving Course"
           description1={
             <>
-              シュノーケルを使って海を楽しみたい方、<br />
-              スキンダイビングを始めてみたい方、<br />
-              もっと上達したい方まで対応しています。
+              はじめて海に潜ってみたい方から、<br />
+              もっと自由に泳げるようになりたい方に<br />
+              おすすめのコースです。
             </>
           }
           description2={
@@ -32,7 +32,7 @@ const Courses = () => {
               
               人数：最大4名<br />
               時間：2時間<br />
-              場所：瀬戸内町または名瀬周辺のビーチ（リクエスト可）<br />
+              場所：瀬戸内町または名瀬周辺のビーチ<br />
               料金：¥12,000<br />
               集合時間：天候を見て前日までにご連絡
             </>
@@ -42,7 +42,7 @@ const Courses = () => {
 
         {/* AIDA Level 1 */}
         <CourseSection
-          title="AIDA Level 1"
+          title="AIDA1"
           description1={
             <>
               体験フリーダイビングコース。<br />
@@ -66,7 +66,7 @@ const Courses = () => {
 
         {/* AIDA Level 2 */}
         <CourseSection
-          title="AIDA Level 2"
+          title="AIDA2"
           description1={
             <>
               フリーダイビング初級コース。<br />
@@ -79,7 +79,7 @@ const Courses = () => {
               条件を満たす方はAIDA1をスキップして受講可能です。<br /><br />
 
               参加条件：18歳以上で健康な方／200m以上（ノーフィン）または300m以上（フィン使用）泳げる方<br />
-              日程：2.5〜3日（分割受講可能）<br />
+              日程：2.5〜3日（日程を分けての受講可能）<br />
               料金：¥55,000（別途認定料・プール使用料あり）<br /><br />
 
               認定条件：STA2分 / DYN40m / CWT12m（最大20m）<br />
@@ -91,7 +91,7 @@ const Courses = () => {
 
         {/* AIDA Level 3 */}
         <CourseSection
-          title="AIDA Level 3"
+          title="AIDA3"
           description1={
             <>
               フリーダイビング中級コース。<br />
@@ -103,7 +103,7 @@ const Courses = () => {
               フレンツェル法、圧外傷、トレーニング設計、フリーフォール、バディトレーニングなど実践的な内容を学びます。<br /><br />
 
               参加条件：AIDA2または同等資格／18歳以上で健康な方<br />
-              日程：3〜3.5日（分割受講可能）<br />
+              日程：3〜3.5日（日程を分けての受講可能）<br />
               料金：¥65,000（別途認定料・プール使用料あり）<br /><br />
 
               認定条件：STA2分45秒 / DYN55m / CWT24m / 筆記テスト<br />

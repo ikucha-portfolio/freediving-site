@@ -143,7 +143,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
 
             {[
-              { title: "Skin Diving", label: "SKIN DIVING", text: "シュノーケルを使っての海遊びが初心者の方、もっと上達したい方におすすめ" },
+              { title: "Skin Diving", label: "SKIN DIVING", text: "シュノーケルから一歩先へ、海の中を楽しみたい方におすすめのコース" },
               { title: "AIDA 1", label: "LICENSE", text: "フリーダイビング体験コース" },
               { title: "AIDA 2", label: "LICENSE", text: "フリーダイビング初級コース" },
               { title: "AIDA 3", label: "LICENSE", text: "フリーダイビング中級コース" }

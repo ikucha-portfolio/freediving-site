@@ -44,47 +44,43 @@ export default function About() {
 
               {/* NAME */}
               <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">NAME</h3>
+                <h3 className="text-xs text-[#9fb2bb]">インストラクター</h3>
                 <p className="text-base text-[#6b7c85]">
-                  hico|ひこ<br />
-                </p>
-                 <p className="text-sm text-[#6b7c85]">
-                  地元愛知の総合病院で4年勤務後、沖縄へ移住。
-                  <br />
+                  hico/ひこ<br />
                 </p>
                 
               </div>
 
               {/* FREEDIVING */}
               <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">FREEDIVING</h3>
+                <h3 className="text-xs text-[#9fb2bb]">経歴</h3>
                 <p className="text-sm text-[#6b7c85] ">
-                  沖縄に移住するまでは海で泳いだことはなく、
-                  初めは足がつかないところが怖くて浮き輪をつけていました。<br />
+                  愛知県出身。地元の総合病院で４年勤務後沖縄へ移住しました。
+                  海で泳いだことがなく、初めは足がつかないところが怖くて浮き輪をつけていました。<br />
                   スキンダイビングをしているうちに少しずつ潜れるようになり、
-                  「もっと自由に動きたい」と思うようになりました。
+                  水中で「もっと自由に動きたい」と思うようになりました。
                 </p>
 
                 <p className="text-sm text-[#6b7c85] ">
-                  2018年にフリーダイビングを始め、一息の世界に魅了される。<br />
-                  より良い環境を求め奄美大島へ移住。現在は看護師として働きながら
-                  大会出場を目標に練習しています。
+                  2018年にフリーダイビングを始め、一息の世界に魅了されました。<br />
+                  より良い環境を求め奄美大島へ移住し、現在は看護師として働きながら
+                  フリーダイビングの大会出場を目標に練習しています。
                 </p>
               </div>
 
               {/* LICENSE */}
               <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">LICENSE</h3>
+                <h3 className="text-xs text-[#9fb2bb]">資格</h3>
                 <p className="text-sm text-[#6b7c85]">
-                  ・AIDA Freediving instructor<br />
-                  ・YOGA instructor RYT200<br />
+                  ・AIDA フリーダイビングインストラクター<br />
+                  ・YOGA インストラクター RYT200<br />
                   ・看護師免許
                 </p>
               </div>
 
               {/* CAREER */}
               <div className="space-y-4">
-                <h3 className="text-xs text-[#9fb2bb]">CAREER</h3>
+                <h3 className="text-xs text-[#9fb2bb]">大会出場歴</h3>
 
                 <div className="space-y-4 text-sm text-[#6b7c85]">
 
