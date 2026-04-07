@@ -9,16 +9,16 @@ import { useState } from "react";
 export default function Home() {
   const faqs = [
   {
-    q: "初めてでもできますか？",
-    a: "はい、スキンダイビングコースからご参加いただけます。"
+    q: "初めてでも参加できますか？",
+    a: "はい、ほとんどの方が未経験からのスタートです。インストラクターが丁寧にサポートします。"
   },
   {
-    q: "年齢や体力に制限はありますか？",
-    a: "18歳以上で健康に問題のない方なら大丈夫です。"
+    q: "泳ぎが得意でなくても大丈夫ですか？",
+    a: "はい、大丈夫です。浮き方や呼吸の方法からゆっくり練習していきます。"
   },
   {
-    q: "機材のレンタルはできますか？",
-    a: "はい、全てレンタル可能です。"
+    q: "フリーダイビングは危険ではないですか？",
+    a: "正しい知識とルールを守れば安全に楽しめます。講習でしっかり学べますのでご安心ください。"
   }
 ];
   const [openIndex, setOpenIndex] = useState(null);
@@ -220,48 +220,54 @@ export default function Home() {
     </div>
 
     <div className="space-y-3">
+      {faqs.map((item, i) => (
+        <div
+          key={i}
+          className="
+            bg-white/40
+            backdrop-blur-sm
+            border border-[#e8eff2]
+            rounded-none
+            px-5 py-4
+            transition
+            hover:bg-white/60
+          "
+        >
+          {/* 質問 */}
+          <button
+            onClick={() =>
+              setOpenIndex(openIndex === i ? null : i)
+            }
+            className="w-full flex justify-between items-center text-left"
+          >
+            <p className="text-[14px] text-[#5a6b74]">
+              Q. {item.q}
+            </p>
 
-  {faqs.map((item, i) => (
-    <div
-      key={i}
-      className="
-        bg-white/40
-        backdrop-blur-sm
-        border border-[#e8eff2]
-        rounded-none
-        px-5 py-4
-        transition
-        hover:bg-white/60
-      "
-    >
+            <span className="text-[#9fb2bb] text-lg">
+              {openIndex === i ? "−" : "+"}
+            </span>
+          </button>
 
-      {/* 質問 */}
-      <button
-        onClick={() =>
-          setOpenIndex(openIndex === i ? null : i)
-        }
-        className="w-full flex justify-between items-center text-left"
-      >
-        <p className="text-[14px] text-[#5a6b74]">
-          Q. {item.q}
-        </p>
-
-        <span className="text-[#9fb2bb] text-lg">
-          {openIndex === i ? "−" : "+"}
-        </span>
-      </button>
-
-      {/* 回答 */}
-      {openIndex === i && (
-        <p className="text-[#7a8a94] text-sm mt-4 leading-loose">
-          {item.a}
-        </p>
-      )}
-
+          {/* 回答 */}
+          {openIndex === i && (
+            <p className="text-[#7a8a94] text-sm mt-4 leading-loose">
+              {item.a}
+            </p>
+          )}
+        </div>
+      ))}
     </div>
-  ))}
 
+    <div className="mt-10 text-center">
+  <Link to="/faq" className="inline-block mt-6">
+    <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
+      VIEW MORE →
     </div>
+  </Link>
+</div>
+
+  
 
   </Container>
 </Section>
