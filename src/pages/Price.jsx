@@ -50,7 +50,6 @@ export default function Price() {
 
               {/* 左 */}
               <div>
-
                 <div className="text-[10px] tracking-[0.2em] text-[#aab6bd] mb-2">
                   {course.label}
                 </div>
@@ -63,11 +62,21 @@ export default function Price() {
                   {course.desc}
                 </p>
 
+                {course.title === "AIDA Level 1" && (
+                  <p className="text-[12px] text-[#aab6bd] mt-2 leading-relaxed">
+                    ※別途AIDA申請料あり
+                  </p>
+                )}
+
+                {(course.title === "AIDA Level 2" || course.title === "AIDA Level 3") && (
+                  <p className="text-[12px] text-[#aab6bd] mt-2 leading-relaxed">
+                    ※別途認定料・プール使用料あり
+                  </p>
+                )}
               </div>
 
               {/* 右 */}
               <div className="flex items-center gap-6">
-
                 <span className="text-lg md:text-xl font-light text-[#5a6b74]">
                   {course.price}
                 </span>
@@ -77,7 +86,6 @@ export default function Price() {
                     CONTACT
                   </button>
                 </Link>
-
               </div>
 
             </div>
@@ -99,26 +107,25 @@ export default function Price() {
           </h2>
 
           <div className="space-y-3 text-sm text-[#6b7c85]">
-{[
-  { name: "フィン（ショート）", price: "¥500" },
-  { name: "マスク", price: "¥500" },
-  { name: "シュノーケル", price: "¥500" },
-  { name: "ウェットスーツ", price: "¥1000" },
-  { name: "ウェイトベルト", price: "¥500" },
-  { name: "ウェイト", price: "無料" },
-  { name: "ラニヤード", price: "無料" }
-].map((item, i) => (
-  <div
-    key={i}
-    className="flex justify-between border-b border-[#e5e0d8] pb-2"
-  >
-    <span>{item.name}</span>
-    <span className={item.price === "無料" ? "text-[#5a6b74]" : ""}>
-      {item.price}
-    </span>
-  </div>
-))}
-
+            {[
+              { name: "フィン（ショート）", price: "¥500" },
+              { name: "マスク", price: "¥500" },
+              { name: "シュノーケル", price: "¥500" },
+              { name: "ウェットスーツ", price: "¥1,000" },
+              { name: "ウェイトベルト", price: "¥500" },
+              { name: "ウェイト", price: "無料" },
+              { name: "ラニヤード", price: "無料" }
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex justify-between border-b border-[#e5e0d8] pb-2"
+              >
+                <span>{item.name}</span>
+                <span className={item.price === "無料" ? "text-[#5a6b74]" : ""}>
+                  {item.price}
+                </span>
+              </div>
+            ))}
           </div>
 
         </div>
