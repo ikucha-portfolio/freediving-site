@@ -191,10 +191,6 @@ export default function Home() {
     湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。<br /><br />
     さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。
   </p>
-
-              <div className="mt-6 text-[12px] text-[#aab6bd] tracking-[0.15em]">
-                VIEW MORE →
-              </div>
             </div>
 
           </div>

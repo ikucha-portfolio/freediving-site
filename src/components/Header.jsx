@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
       <div className="max-w-5xl mx-auto px-8 flex items-center justify-between">
 
         {/* ロゴ */}
-        <Link
+        <NavLink
           to="/"
           translate="no"
           className={`notranslate text-sm tracking-[0.25em] font-extralight transition-colors duration-500 ${
@@ -32,7 +32,7 @@ function Header() {
           }`}
         >
           hico freediving
-        </Link>
+        </NavLink>
 
         {/* ナビ */}
         <nav
@@ -41,11 +41,21 @@ function Header() {
             isScrolled ? "text-[#7a8a94]" : "text-white/80"
           }`}
         >
-          <Link to="/course" className="hover:opacity-70">Courses</Link>
-          <Link to="/price" className="hover:opacity-70">Price</Link>
-          <Link to="/about" className="hover:opacity-70">About</Link>
-          <Link to="/faq" className="hover:opacity-70">FAQ</Link>
-          <Link to="/contact" className="hover:opacity-70">Contact</Link>
+          <NavLink to="/courses" className="hover:opacity-70">
+            Courses
+          </NavLink>
+          <NavLink to="/price" className="hover:opacity-70">
+            Price
+          </NavLink>
+          <NavLink to="/about" className="hover:opacity-70">
+            About
+          </NavLink>
+          <NavLink to="/faq" className="hover:opacity-70">
+            FAQ
+          </NavLink>
+          <NavLink to="/contact" className="hover:opacity-70">
+            Contact
+          </NavLink>
         </nav>
 
       </div>
