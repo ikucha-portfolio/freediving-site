@@ -99,13 +99,12 @@ export default function Price() {
           </h2>
 
           <div className="space-y-3 text-sm text-[#6b7c85]">
-
-            {[
-  { name: "フィン", price: "¥---" },
-  { name: "マスク", price: "¥---" },
-  { name: "シュノーケル", price: "¥---" },
-  { name: "ウェットスーツ", price: "¥---" },
-  { name: "ウェイトベルト", price: "¥---" },
+{[
+  { name: "フィン（ショート）", price: "¥500" },
+  { name: "マスク", price: "¥500" },
+  { name: "シュノーケル", price: "¥500" },
+  { name: "ウェットスーツ", price: "¥1000" },
+  { name: "ウェイトベルト", price: "¥500" },
   { name: "ウェイト", price: "無料" },
   { name: "ラニヤード", price: "無料" }
 ].map((item, i) => (
