@@ -22,32 +22,38 @@ export default function Price() {
               title: "Skin Diving",
               label: "SKIN DIVING",
               price: "¥12,000",
-              desc: "海洋講習"
+              desc: "海洋講習",
+              duration: "2時間"
             },
             {
               title: "AIDA Level 1",
               label: "LICENSE",
               price: "¥25,000",
-              desc: "座学＋海洋講習"
+              desc: "座学＋海洋講習",
+              duration: "1日（5〜6時間）",
+              note: "※別途AIDA申請料あり"
             },
             {
               title: "AIDA Level 2",
               label: "LICENSE",
               price: "¥55,000",
-              desc: "座学＋海洋・プール講習"
+              desc: "座学＋海洋・プール講習",
+              duration: "2.5〜3日（日程を分けての受講可能）",
+              note: "※別途認定料・プール使用料あり"
             },
             {
               title: "AIDA Level 3",
               label: "LICENSE",
               price: "¥65,000",
-              desc: "座学＋海洋・プール講習"
+              desc: "座学＋海洋・プール講習",
+              duration: "3〜3.5日（日程を分けての受講可能）",
+              note: "※別途認定料・プール使用料あり"
             }
           ].map((course, i) => (
             <div
               key={i}
               className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-sm transition"
             >
-
               {/* 左 */}
               <div>
                 <div className="text-[10px] tracking-[0.2em] text-[#aab6bd] mb-2">
@@ -62,15 +68,13 @@ export default function Price() {
                   {course.desc}
                 </p>
 
-                {course.title === "AIDA Level 1" && (
-                  <p className="text-[12px] text-[#aab6bd] mt-2 leading-relaxed">
-                    ※別途AIDA申請料あり
-                  </p>
-                )}
+                <p className="text-[13px] text-[#7a8a94] mt-2">
+                  所要日程：{course.duration}
+                </p>
 
-                {(course.title === "AIDA Level 2" || course.title === "AIDA Level 3") && (
+                {course.note && (
                   <p className="text-[12px] text-[#aab6bd] mt-2 leading-relaxed">
-                    ※別途認定料・プール使用料あり
+                    {course.note}
                   </p>
                 )}
               </div>
@@ -81,13 +85,12 @@ export default function Price() {
                   {course.price}
                 </span>
 
-                <Link to="/contact">
-                  <button className="px-8 py-2.5 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 backdrop-blur-sm hover:bg-white/70 transition">
-                    CONTACT
-                  </button>
-                </Link>
+                <Link to="/courses" className="inline-block">
+  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
+    コース内容へ →
+  </div>
+</Link>
               </div>
-
             </div>
           ))}
 
@@ -96,7 +99,6 @@ export default function Price() {
         {/* --- 注意書き --- */}
         <div className="text-xs text-[#5a6b74] mb-16 space-y-2">
           <p>※レンタル料金は含まれておりません</p>
-          <p>※各コース別途、認定料・施設使用料がかかる場合があります</p>
         </div>
 
         {/* --- RENTAL --- */}
