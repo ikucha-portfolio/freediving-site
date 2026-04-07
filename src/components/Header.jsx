@@ -41,11 +41,9 @@ function Header() {
             isScrolled ? "text-[#7a8a94]" : "text-white/80"
           }`}
         >
-          <Link to="/freediving" className="hover:opacity-70">Freediving</Link>
           <Link to="/course" className="hover:opacity-70">Courses</Link>
           <Link to="/price" className="hover:opacity-70">Price</Link>
           <Link to="/about" className="hover:opacity-70">About</Link>
-          <Link to="/amami-sea" className="hover:opacity-70">Amami Sea</Link>
           <Link to="/faq" className="hover:opacity-70">FAQ</Link>
           <Link to="/contact" className="hover:opacity-70">Contact</Link>
         </nav>

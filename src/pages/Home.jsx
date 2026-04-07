@@ -98,15 +98,6 @@ export default function Home() {
 
               <div className="pt-10 space-y-6 flex flex-col items-end">
 
-                <Link to="/freediving" className="group text-xs tracking-[0.2em] text-[#5a6b74]">
-                  <span className="inline-flex items-center gap-3">
-                    FREEDIVING
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </span>
-                </Link>
-
                 <Link to="/about" className="group text-xs tracking-[0.2em] text-[#5a6b74]">
                   <span className="inline-flex items-center gap-3">
                     ABOUT ME
