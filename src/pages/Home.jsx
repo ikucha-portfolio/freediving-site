@@ -124,48 +124,75 @@ export default function Home() {
       </Section>
 
       {/* Courses */}
-      <Section variant="compact" className="bg-[#f4f4f2]">
-        <Container>
+<Section variant="compact" className="bg-[#f4f4f2]">
+  <Container>
 
-          <div className="mb-12">
-            <TitleBlock>Courses</TitleBlock>
+    <div className="mb-12">
+      <TitleBlock>Courses</TitleBlock>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+      {[
+        {
+          title: "Skin Diving",
+          label: "SKIN DIVING",
+          text: "シュノーケルから一歩先へ、海の中を楽しみたい方におすすめのコース",
+          id: "skin-diving"
+        },
+        {
+          title: "AIDA 1",
+          label: "LICENSE",
+          text: "フリーダイビング体験コース",
+          id: "aida1"
+        },
+        {
+          title: "AIDA 2",
+          label: "LICENSE",
+          text: "フリーダイビング初級コース",
+          id: "aida2"
+        },
+        {
+          title: "AIDA 3",
+          label: "LICENSE",
+          text: "フリーダイビング中級コース",
+          id: "aida3"
+        }
+      ].map((course, i) => (
+        <div
+          key={i}
+          className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition"
+        >
+
+          <div className="space-y-4">
+            <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+              {course.label}
+            </div>
+
+            <h3 className="text-[18px] font-light text-[#5a6b74]">
+              {course.title}
+            </h3>
+
+            <p className="text-[14px] text-[#7a8a94] leading-[1.8] min-h-[125px]">
+              {course.text}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {/* 👇ここが重要 */}
+          <Link
+  to={`/courses#${course.id}`}
+  className="text-[12px] ..."
+>
+  LEARN MORE →
+</Link>
 
-            {[
-              { title: "Skin Diving", label: "SKIN DIVING", text: "シュノーケルから一歩先へ、海の中を楽しみたい方におすすめのコース" },
-              { title: "AIDA 1", label: "LICENSE", text: "フリーダイビング体験コース" },
-              { title: "AIDA 2", label: "LICENSE", text: "フリーダイビング初級コース" },
-              { title: "AIDA 3", label: "LICENSE", text: "フリーダイビング中級コース" }
-            ].map((course, i) => (
-              <div key={i} className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition">
+        </div>
+      ))}
 
-                <div className="space-y-4">
-                  <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
-                    {course.label}
-                  </div>
+    </div>
 
-                  <h3 className="text-[18px] font-light text-[#5a6b74]">
-                    {course.title}
-                  </h3>
-
-                  <p className="text-[14px] text-[#7a8a94] leading-[1.8] min-h-[125px]">
-                    {course.text}
-                  </p>
-                </div>
-
-                <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] mt-6">
-                  LEARN MORE →
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-        </Container>
-      </Section>
+  </Container>
+</Section>
 
       {/* Amami */}
       <Section className="bg-[#f4f4f2]">
