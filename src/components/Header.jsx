@@ -13,6 +13,11 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItemClass = ({ isActive }) =>
+    `hover:opacity-100 transition ${
+      isActive ? "opacity-100" : "opacity-60"
+    }`;
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
@@ -41,19 +46,27 @@ function Header() {
             isScrolled ? "text-[#7a8a94]" : "text-white/80"
           }`}
         >
-          <NavLink to="/courses" className="hover:opacity-70">
+          <NavLink to="/" className={navItemClass}>
+            Home
+          </NavLink>
+
+          <NavLink to="/courses" className={navItemClass}>
             Courses
           </NavLink>
-          <NavLink to="/price" className="hover:opacity-70">
+
+          <NavLink to="/price" className={navItemClass}>
             Price
           </NavLink>
-          <NavLink to="/about" className="hover:opacity-70">
+
+          <NavLink to="/about" className={navItemClass}>
             About
           </NavLink>
-          <NavLink to="/faq" className="hover:opacity-70">
+
+          <NavLink to="/faq" className={navItemClass}>
             FAQ
           </NavLink>
-          <NavLink to="/contact" className="hover:opacity-70">
+
+          <NavLink to="/contact" className={navItemClass}>
             Contact
           </NavLink>
         </nav>
