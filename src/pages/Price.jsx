@@ -23,7 +23,8 @@ export default function Price() {
               label: "SKIN DIVING",
               price: "¥12,000",
               desc: "海洋講習",
-              duration: "2時間"
+              duration: "2時間",
+              id: "skin-diving"
             },
             {
               title: "AIDA1",
@@ -31,7 +32,8 @@ export default function Price() {
               price: "¥25,000",
               desc: "座学＋海洋講習",
               duration: "1日（5〜6時間）",
-              note: "※別途AIDA申請料あり"
+              note: "※別途AIDA申請料あり",
+              id: "aida1"
             },
             {
               title: "AIDA2",
@@ -39,7 +41,8 @@ export default function Price() {
               price: "¥55,000",
               desc: "座学＋海洋・プール講習",
               duration: "2.5〜3日（日程を分けての受講可能）",
-              note: "※別途認定料・プール使用料あり"
+              note: "※別途認定料・プール使用料あり",
+              id: "aida2"
             },
             {
               title: "AIDA3",
@@ -47,7 +50,8 @@ export default function Price() {
               price: "¥65,000",
               desc: "座学＋海洋・プール講習",
               duration: "3〜3.5日（日程を分けての受講可能）",
-              note: "※別途認定料・プール使用料あり"
+              note: "※別途認定料・プール使用料あり",
+              id: "aida3"
             }
           ].map((course, i) => (
             <div
@@ -85,11 +89,15 @@ export default function Price() {
                   {course.price}
                 </span>
 
-                <Link to="/courses" className="inline-block">
-  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
-    コース内容へ →
-  </div>
-</Link>
+                {/* 👇ここが重要 */}
+                <Link
+                  to={`/courses#${course.id}`}
+                  className="inline-block"
+                >
+                  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
+                    コース内容へ →
+                  </div>
+                </Link>
               </div>
             </div>
           ))}
