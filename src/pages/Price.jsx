@@ -17,43 +17,51 @@ export default function Price() {
         {/* --- COURSE --- */}
         <div className="space-y-6 mb-10">
 
-          {[
-            {
-              title: "Skin Diving",
-              label: "SKIN DIVING",
-              price: "¥12,000",
-              desc: "海洋講習",
-              duration: "2時間",
-              id: "skin-diving"
-            },
-            {
-              title: "AIDA1",
-              label: "LICENSE",
-              price: "¥25,000",
-              desc: "座学＋海洋講習",
-              duration: "1日（5〜6時間）",
-              note: "※別途AIDA申請料あり",
-              id: "aida1"
-            },
-            {
-              title: "AIDA2",
-              label: "LICENSE",
-              price: "¥55,000",
-              desc: "座学＋海洋・プール講習",
-              duration: "2.5〜3日（日程を分けての受講可能）",
-              note: "※別途認定料・プール使用料あり",
-              id: "aida2"
-            },
-            {
-              title: "AIDA3",
-              label: "LICENSE",
-              price: "¥65,000",
-              desc: "座学＋海洋・プール講習",
-              duration: "3〜3.5日（日程を分けての受講可能）",
-              note: "※別途認定料・プール使用料あり",
-              id: "aida3"
-            }
-          ].map((course, i) => (
+         {[
+  {
+    title: "AIDA1",
+    label: "LICENSE",
+    price: "¥25,000",
+    desc: "座学＋海洋講習",
+    duration: "1日（5〜6時間）",
+    note: "※別途AIDA申請料あり",
+    id: "aida1"
+  },
+  {
+    title: "AIDA2",
+    label: "LICENSE",
+    price: "¥55,000",
+    desc: "座学＋海洋・プール講習",
+    duration: "2.5〜3日（日程を分けての受講可能）",
+    note: "※別途認定料・プール使用料あり",
+    id: "aida2"
+  },
+  {
+    title: "AIDA3",
+    label: "LICENSE",
+    price: "¥65,000",
+    desc: "座学＋海洋・プール講習",
+    duration: "3〜3.5日（日程を分けての受講可能）",
+    note: "※別途認定料・プール使用料あり",
+    id: "aida3"
+  },
+  {
+    title: "Skin Diving",
+    label: "SKIN DIVING",
+    price: "¥12,000",
+    desc: "海洋講習",
+    duration: "2時間",
+    id: "skin-diving"
+  },
+  {
+    title: "Training",
+    label: "TRAINING",
+    price: "¥12,000",
+    desc: "ビーチトレーニング",
+    duration: "1セッション（2〜2.5時間）",
+    id: "training"
+  }
+].map((course, i) => (
             <div
               key={i}
               className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-sm transition"
