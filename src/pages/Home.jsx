@@ -50,8 +50,8 @@ export default function Home() {
               </h1>
 
               <p className="text-sm md:text-base text-white/85 leading-loose tracking-wide">
-                心も体もゆるむひとときを。<br />
-                一息で奄美ブルーに溶けましょう🫧
+                心も体もゆるむひとときを<br />
+                一息で奄美ブルーに溶けましょう
               </p>
 
               <Link
