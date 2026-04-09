@@ -49,10 +49,21 @@ export default function Home() {
                 hico freediving
               </h1>
 
-              <p className="text-sm md:text-base text-white/85 leading-loose tracking-wide">
-                心も体もゆるむひとときを<br />
-                一息で奄美ブルーに溶けましょう
-              </p>
+              <p
+  className="
+    text-sm md:text-base
+    bg-gradient-to-b from-white to-white/70
+    bg-clip-text text-transparent
+    leading-[2.4]
+    tracking-[0.12em]
+    font-light
+    drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]
+  "
+ style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+ >
+  心も体もゆるむひとときを<br />
+  一息で奄美ブルーに溶けましょう
+</p>
 
               <Link
                 to="/course"
