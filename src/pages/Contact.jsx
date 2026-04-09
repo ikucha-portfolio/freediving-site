@@ -60,49 +60,66 @@ export default function Contact() {
             </div>
 
             {/* 右：フォーム */}
-            <form className="space-y-3">
+            <form
+  action="https://formspree.io/f/xnjoybbo"
+  method="POST"
+  className="space-y-3"
+>
+  <input
+    type="hidden"
+    name="_next"
+    value="http://localhost:5173/thanks"
+  />
 
   <input
+  name="name"
     type="text"
     placeholder="お名前・年齢（例：山田 花子 30歳）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <input
+  name="email"
     type="email"
     placeholder="メールアドレス（例：example@gmail.com）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <input
+  name="phone"
     type="tel"
     placeholder="電話番号（任意）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <input
+  name="date"
     type="text"
     placeholder="希望日程（例：◯月◯日 午前）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <input
+  name="course"
     type="text"
     placeholder="希望コース（例：AIDA2）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <textarea
+    name="experience"
     placeholder="海での経験（例：シュノーケリング経験あり／スキンダイビング初心者です）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <textarea
+    name="goals"
     placeholder="課題・目標（例：リラックスして潜れるようになりたい）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
   />
 
   <input
+    name="rental"
     type="text"
     placeholder="レンタル希望（例：フィン・マスク）"
     className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
