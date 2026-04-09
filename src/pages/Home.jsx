@@ -102,7 +102,7 @@ export default function Home() {
                   <span className="inline-flex items-center gap-3">
                     ABOUT ME
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
+                      ••• →
                     </span>
                   </span>
                 </Link>
@@ -168,42 +168,58 @@ export default function Home() {
         <div
           key={i}
           className="
+            relative
             bg-[#f4f4f2]
             border border-[#e5e0d8]
             p-6
-            flex flex-col justify-between
+            pb-12
+            flex flex-col
             transition
             hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)]
           "
         >
 
           <div className="space-y-3">
-            <div className="text-[10px] tracking-[0.25em] text-[#aab6bd]">
+
+            <div
+              className="
+                inline-block
+                text-[10px]
+                tracking-[0.25em]
+                text-[#7a8a94]
+                bg-[#eef3f5]
+                px-2.5 py-1
+                -ml-2
+              "
+            >
               {course.label}
             </div>
 
-            <h3 className="text-[18px] font-light text-[#5a6b74]">
+            <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.4]">
               {course.title}
             </h3>
 
             <p className="text-[14px] text-[#7a8a94] leading-[1.7]">
               {course.text}
             </p>
+
           </div>
 
           <Link
             to={`/courses#${course.id}`}
             className="
+              absolute
+              bottom-4
+              right-5
               text-[12px]
               text-[#aab6bd]
-              tracking-[0.18em]
+              tracking-[0.2em]
               hover:opacity-60
+              hover:translate-x-[2px]
               transition
-              mt-6
-              inline-block
             "
           >
-            LEARN MORE →
+            ••• →
           </Link>
 
         </div>
@@ -213,7 +229,6 @@ export default function Home() {
 
   </Container>
 </Section>
-
       {/* Amami */}
       <Section className="bg-[#f4f4f2]">
         <Container>
@@ -293,11 +308,16 @@ export default function Home() {
       ))}
     </div>
 
-    <div className="mt-10 text-center">
-  <Link to="/faq" className="inline-block mt-6">
-    <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
-      VIEW MORE →
-    </div>
+    <div className="mt-10 text-right">
+  <Link
+    to="/faq"
+    className="group inline-flex items-center gap-2 text-[12px] text-[#aab6bd] tracking-[0.15em]"
+  >
+    <span>VIEW MORE</span>
+
+    <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:opacity-60">
+      ••• →
+    </span>
   </Link>
 </div>
 
