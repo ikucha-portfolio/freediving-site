@@ -122,24 +122,18 @@ export default function Home() {
 
         </Container>
       </Section>
-
-      {/* Courses */}
+      
+{/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
 
-    <div className="mb-12">
+    <div className="mb-16 text-center">
       <TitleBlock>Courses</TitleBlock>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
       {[
-        {
-          title: "Skin Diving",
-          label: "SKIN DIVING",
-          text: "シュノーケルから一歩先へ、海の中を楽しみたい方におすすめのコース",
-          id: "skin-diving"
-        },
         {
           title: "AIDA 1",
           label: "LICENSE",
@@ -157,15 +151,34 @@ export default function Home() {
           label: "LICENSE",
           text: "フリーダイビング中級コース",
           id: "aida3"
+        },
+        {
+          title: "Skin Diving",
+          label: "SKIN DIVING",
+          text: "シュノーケルから一歩先へ、海の中を楽しみたい方へ",
+          id: "skin-diving"
+        },
+        {
+          title: "Training",
+          label: "TRAINING",
+          text: "スキルアップ・継続のためのトレーニング",
+          id: "training"
         }
       ].map((course, i) => (
         <div
           key={i}
-          className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 h-[320px] flex flex-col hover:shadow-sm transition"
+          className="
+            bg-[#f4f4f2]
+            border border-[#e5e0d8]
+            p-6
+            flex flex-col justify-between
+            transition
+            hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)]
+          "
         >
 
-          <div className="space-y-4">
-            <div className="text-[10px] tracking-[0.2em] text-[#aab6bd]">
+          <div className="space-y-3">
+            <div className="text-[10px] tracking-[0.25em] text-[#aab6bd]">
               {course.label}
             </div>
 
@@ -173,18 +186,25 @@ export default function Home() {
               {course.title}
             </h3>
 
-            <p className="text-[14px] text-[#7a8a94] leading-[1.8] min-h-[125px]">
+            <p className="text-[14px] text-[#7a8a94] leading-[1.7]">
               {course.text}
             </p>
           </div>
 
-          {/* 👇ここが重要 */}
           <Link
-  to={`/courses#${course.id}`}
-  className="text-[12px] ..."
->
-  LEARN MORE →
-</Link>
+            to={`/courses#${course.id}`}
+            className="
+              text-[12px]
+              text-[#aab6bd]
+              tracking-[0.18em]
+              hover:opacity-60
+              transition
+              mt-6
+              inline-block
+            "
+          >
+            LEARN MORE →
+          </Link>
 
         </div>
       ))}
