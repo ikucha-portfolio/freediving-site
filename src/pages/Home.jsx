@@ -366,29 +366,7 @@ export default function Home() {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-[#f4f4f2]">
-        <Container size="narrow">
-
-          <div className="py-8 text-center space-y-3">
-
-            <div className="flex justify-center flex-wrap gap-4 text-[12px] text-[#7a8a94] tracking-[0.12em]">
-              <a href="#">Freediving</a>
-              <a href="#">Course</a>
-              <a href="#">Price</a>
-              <a href="#">About</a>
-              <a href="#">Amami Sea</a>
-              <a href="#">FAQ</a>
-              <a href="#">Contact</a>
-            </div>
-
-            <div className="text-[11px] text-[#c0ccd2]">
-              © 2026 Hico Freediving
-            </div>
-
-          </div>
-
-        </Container>
-      </footer>
+     
 
     </main>
   );

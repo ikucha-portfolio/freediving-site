@@ -7,6 +7,8 @@ import Price from "./pages/Price";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Thanks from "./pages/Thanks"; // ←追加
+import Footer from "./components/layout/Footer";
+
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/thanks" element={<Thanks />} /> {/* ←これ！ */}
       </Routes>
+      <Footer />
     </div>
   );
 }
