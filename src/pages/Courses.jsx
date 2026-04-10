@@ -4,7 +4,7 @@ import Section from "../components/layout/Section";
 
 const Courses = () => {
   return (
-    <Section className="bg-[#f8f7f5]">
+    <Section className="bg-[#f4f4f2]">
 
       <Container>
 

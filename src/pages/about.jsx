@@ -4,118 +4,96 @@ import TwoColumn from "../components/layout/TwoColumn";
 
 export default function About() {
   return (
-    <>
+    <main className="bg-[#f4f4f2]">
 
-      {/* ===== メッセージ ===== */}
-      <Section variant="compact">
-        <Container size="narrow">
+      {/* ===== HERO ===== */}
+      <section className="relative h-[50vh] md:h-[55vh] w-full overflow-hidden">
 
-          <div className="text-center">
+        <img
+          src="/images/about-hero.jpeg"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-  <h1 className="text-2xl md:text-3xl text-[#5a6b74] mb-10">
-    About
-  </h1>
+        {/* 少しBoho感のくすみ */}
+        <div className="absolute inset-0 bg-[#1c2b2e]/40" />
 
-  <div className="space-y-4 text-base text-[#6b7c85] leading-relaxed max-w-[680px] mx-auto">
-              <p>
-                これから海遊びを始めたい方、フリーダイビングに興味がある方、<br />
-                もっと深く潜れるようになりたい方、初心者〜上級者さんまで、男女問わず大歓迎です。<br />
-                一呼吸で海の世界に飛び込む楽しさを、誰でも気軽に体験してほしいです。<br />
-                海の中でしか味わえない静けさや、心も体もゆるむひとときをぜひ味わってください。
-              </p>
-            </div>
+        {/* 👇 下にグラデーション追加 */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-[#f4f4f2]" />
 
-          </div>
+        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
 
-        </Container>
-      </Section>
+          <p className="text-white/70 text-[11px] tracking-[0.3em] mb-4">
+            INSTRUCTOR
+          </p>
 
-      {/* ===== 区切り ===== */}
-      <div className="border-t border-[#e5eef2]" />
+          <h1 className="text-white text-5xl md:text-6xl tracking-[0.3em] font-extralight">
+            hico
+          </h1>
 
-      {/* ===== メイン ===== */}
+        </div>
+      </section>
+
+
+      {/* ===== STORY ===== */}
       <Section>
         <Container>
 
-          <TwoColumn variant="wide">
+          <TwoColumn>
 
-            {/* 左：情報 */}
-            <div className="space-y-10 max-w-[520px]">
+            {/* テキスト */}
+            <div className="flex items-start">
 
-              {/* NAME */}
-              <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">インストラクター</h3>
-                <p className="text-base text-[#6b7c85]">
-                  hico/ひこ<br />
-                </p>
-                
-              </div>
+              <div className="max-w-[420px]">
 
-              {/* FREEDIVING */}
-              <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">経歴</h3>
-                <p className="text-sm text-[#6b7c85] ">
-                  愛知県出身。地元の総合病院で４年勤務後沖縄へ移住しました。
-                  海で泳いだことがなく、初めは足がつかないところが怖くて浮き輪をつけていました。<br />
-                  スキンダイビングをしているうちに少しずつ潜れるようになり、
-                  水中で「もっと自由に動きたい」と思うようになりました。
-                </p>
+                {/* 👇 メッセージ（フォント変えて差別化） */}
+                <div className="mb-12 pl-6 border-l border-[#d8e2e6]">
 
-                <p className="text-sm text-[#6b7c85] ">
-                  2018年にフリーダイビングを始め、一息の世界に魅了されました。<br />
-                  より良い環境を求め奄美大島へ移住し、現在は看護師として働きながら
-                  フリーダイビングの大会出場を目標に練習しています。
-                </p>
-              </div>
-
-              {/* LICENSE */}
-              <div className="space-y-3">
-                <h3 className="text-xs text-[#9fb2bb]">資格</h3>
-                <p className="text-sm text-[#6b7c85]">
-                  ・AIDA フリーダイビングインストラクター<br />
-                  ・YOGA インストラクター RYT200<br />
-                  ・看護師免許
-                </p>
-              </div>
-
-              {/* CAREER */}
-              <div className="space-y-4">
-                <h3 className="text-xs text-[#9fb2bb]">大会出場歴</h3>
-
-                <div className="space-y-4 text-sm text-[#6b7c85]">
-
-                  <div>
-                    <p className="text-xs text-[#9fb2bb] mb-1">海洋</p>
-                    <p>
-                      AIDA Panglao Depth games TAIWAN CUP 2023<br />
-                      15TH AIDA PANGLAO DEPTH GAMES 2023 FINAL<br />
-                      AIDA Volcano Cup 2024<br />
-                      21st AIDA Panglao Depth Games Final 2024<br />
-                      AIDA Panglao Depth Championship 2024 -2
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-[#9fb2bb] mb-1">プール</p>
-                    <p>
-                      AIDA Yuinoshima Freediving Cup 2nd 🥈<br />
-                      AIDA Freediving Pool Games Japan Suzuka 1st 🥇<br />
-                      Kusatsu 2nd 🥈<br />
-                      Wakayama 3rd 🥉<br />
-                      AIDA JAPAN FREEDIVING POOL CHAMPIONSHIPS 2026 女子1st 🥇
-                    </p>
-                  </div>
+                  <p className="text-[15px] leading-[2.2] text-[#6b7c85] font-light tracking-[0.03em]">
+                    これから海遊びを始めたい方、フリーダイビングに興味がある方、<br />
+                    もっと深く潜れるようになりたい方、<br />
+                    初心者から上級者まで、男女問わず大歓迎です。
+                  </p>
 
                 </div>
+
+                {/* STORYタイトル */}
+                <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-8">
+                  経歴
+                </p>
+
+                {/* 本文 */}
+                <div className="space-y-5 text-[#6b7c85] text-[14px] leading-[1.9] font-light">
+
+                  <p>
+                    愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
+                    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていた。
+                  </p>
+
+                  <p>
+                    スキンダイビングを始め、少しずつ水中に慣れていく。
+                  </p>
+
+                  <p>
+                    水中でもっと自由に動きたい、もっと深く潜りたい。
+                    2018年にフリーダイビングと出会い、その魅力に惹かれる。
+                  </p>
+
+                  <p>
+                    より良い環境を求めて奄美大島へ移住。
+                    現在は看護師として働きながら、競技にも挑戦している。
+                  </p>
+
+                </div>
+
               </div>
 
             </div>
 
-            {/* 右：写真 */}
-            <div>
+            {/* 画像 */}
+            <div className="flex justify-center">
               <img
                 src="/images/instructor.jpeg"
-                className="w-full h-[520px] object-cover"
+                className="w-full max-w-[480px] h-[420px] object-cover"
               />
             </div>
 
@@ -124,6 +102,81 @@ export default function About() {
         </Container>
       </Section>
 
-    </>
+
+      {/* ===== LICENSE & RESULTS ===== */}
+      <Section>
+        <Container>
+
+          <div className="grid md:grid-cols-3 gap-16">
+
+            {/* LICENSE */}
+            <div>
+              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
+                資格
+              </p>
+
+              <div className="space-y-5 text-[#5a6b74] text-[13px] leading-[2] font-light">
+                <p>AIDA Freediving instructor</p>
+                <p>YOGA instructor RYT200</p>
+                <p>看護師免許</p>
+              </div>
+            </div>
+
+            {/* OCEAN */}
+            <div>
+              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
+                大会出場歴 — 海洋
+              </p>
+
+              <div className="space-y-5 text-[#6b7c85] text-[13px] leading-[2] font-light">
+                <p>AIDA Panglao Depth games TAIWAN CUP 2023</p>
+                <p>15TH AIDA PANGLAO DEPTH GAMES 2023 FINAL</p>
+                <p>AIDA Volcano Cup 2024</p>
+                <p>21st AIDA Panglao Depth Games Final 2024</p>
+                <p>AIDA Panglao Depth Championship 2024 -2</p>
+              </div>
+            </div>
+
+            {/* POOL */}
+            <div>
+              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
+                大会出場歴 — プール
+              </p>
+
+              <div className="space-y-5 text-[#6b7c85] text-[13px] leading-[2] font-light">
+                <p>AIDA Yuinoshima Freediving Cup 2nd🥈</p>
+                <p>AIDA Freediving Pool Games Japan Suzuka 1st🥇</p>
+                <p>AIDA Freediving Pool Games Japan Kusatsu 2nd🥈</p>
+                <p>AIDA Freediving Pool Games Japan Wakayama 3rd🥉</p>
+                <p>AIDA JAPAN FREEDIVING POOL CHAMPIONSHIPS 2026 女子1st🥇</p>
+              </div>
+            </div>
+
+          </div>
+
+        </Container>
+      </Section>
+
+
+      {/* ===== FOOT VISUAL ===== */}
+      <section className="relative h-[35vh] w-full">
+
+        <img
+          src="/images/about-sea.jpeg"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/30" />
+
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <p className="text-white text-center text-[14px] leading-[2] tracking-[0.05em]">
+            奄美の美しい海で、<br />
+            あなたをお待ちしています。
+          </p>
+        </div>
+
+      </section>
+
+    </main>
   );
 }
