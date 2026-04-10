@@ -7,134 +7,135 @@ export default function Contact() {
   return (
     <main className="bg-[#f4f4f2] min-h-screen flex items-center">
 
-      <Section className="w-full py-6">
+      <Section className="w-full py-10 md:py-16">
         <Container>
 
-          {/* タイトル */}
-          <div className="text-center mb-10">
-            <TitleBlock>Contact</TitleBlock>
-          </div>
+          <TwoColumn>
 
-          {/* TwoColumn */}
-          <TwoColumn variant="default">
+            {/* 左：タイトル＋説明 */}
+            <div className="space-y-8">
 
-            {/* 左：説明 */}
-            <div className="space-y-5">
+              {/* タイトル */}
+              <TitleBlock>Contact</TitleBlock>
 
-              <p className="text-[14px] text-[#5a6b74] leading-[2]">
-                はじめての方もご安心ください。<br />
-                ご予約だけでなく、ご相談からでも大丈夫です。
-              </p>
+              {/* テキスト */}
+              <div className="space-y-6">
 
-              <p className="text-[13px] text-[#7a8a94] leading-[1.8]">
-                まだ具体的に決まっていなくても問題ありません。<br />
-                わかる範囲でご記入いただければ大丈夫です◎
-              </p>
+                <p className="text-[14px] text-[#5a6b74] leading-[2]">
+                  はじめての方もご安心ください。<br />
+                  ご予約だけでなく、ご相談からでも大丈夫です。
+                </p>
 
-              {/* Instagram */}
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#7a8a94] hover:text-[#5a6b74] transition"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#7a8a94"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                <p className="text-[13px] text-[#7a8a94] leading-[1.8]">
+                  まだ具体的に決まっていなくても問題ありません。<br />
+                  わかる範囲でご記入いただければ大丈夫です◎
+                </p>
+
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#7a8a94] hover:text-[#5a6b74] transition"
                 >
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17" cy="7" r="1.2" />
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#7a8a94"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17" cy="7" r="1.2" />
+                  </svg>
 
-                <span className="text-sm">Instagramでお問い合わせ</span>
-              </a>
+                  <span className="text-sm">Instagramでお問い合わせ</span>
+                </a>
 
+              </div>
             </div>
 
             {/* 右：フォーム */}
             <form
-  action="https://formspree.io/f/xnjoybbo"
-  method="POST"
-  className="space-y-3"
->
-  <input
-    type="hidden"
-    name="_next"
-    value="http://localhost:5173/thanks"
-  />
+              action="https://formspree.io/f/xnjoybbo"
+              method="POST"
+              className="space-y-3"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="http://localhost:5173/thanks"
+              />
 
-  <input
-  name="name"
-    type="text"
-    placeholder="お名前・年齢（例：山田 花子 30歳）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="name"
+                type="text"
+                placeholder="お名前・年齢（例：山田 花子 30歳）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <input
-  name="email"
-    type="email"
-    placeholder="メールアドレス（例：example@gmail.com）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="email"
+                type="email"
+                placeholder="メールアドレス（例：example@gmail.com）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <input
-  name="phone"
-    type="tel"
-    placeholder="電話番号（任意）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="phone"
+                type="tel"
+                placeholder="電話番号（任意）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <input
-  name="date"
-    type="text"
-    placeholder="希望日程（例：◯月◯日 午前）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="date"
+                type="text"
+                placeholder="希望日程（例：◯月◯日 午前）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <input
-  name="course"
-    type="text"
-    placeholder="希望コース（例：AIDA2）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="course"
+                type="text"
+                placeholder="希望コース（例：AIDA2）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <textarea
-    name="experience"
-    placeholder="海での経験（例：シュノーケリング経験あり／スキンダイビング初心者です）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <textarea
+                name="experience"
+                placeholder="海での経験（例：シュノーケリング経験あり／スキンダイビング初心者です）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <textarea
-    name="goals"
-    placeholder="課題・目標（例：リラックスして潜れるようになりたい）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <textarea
+                name="goals"
+                placeholder="課題・目標（例：リラックスして潜れるようになりたい）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm h-14 placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <input
-    name="rental"
-    type="text"
-    placeholder="レンタル希望（例：フィン・マスク）"
-    className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
-  />
+              <input
+                name="rental"
+                type="text"
+                placeholder="レンタル希望（例：フィン・マスク）"
+                className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
+              />
 
-  <div className="pt-4 text-center">
-    <button
-      type="submit"
-      className="px-10 py-2.5 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 hover:bg-white/60 transition"
-    >
-      SEND
-    </button>
-  </div>
+              <div className="pt-6 text-center">
+                <button
+                  type="submit"
+                  className="px-10 py-2.5 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 hover:bg-white/60 transition"
+                >
+                  SEND
+                </button>
+              </div>
 
-</form>
+            </form>
 
           </TwoColumn>
 
