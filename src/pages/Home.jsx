@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Freediving */}
-      <Section variant="compact" className="bg-[#f4f4f2]">
+      <Section className= "pt-24 md:pt-32 bg-[#f4f4f2]">
         <Container>
 
           <TwoColumn variant="compact">
