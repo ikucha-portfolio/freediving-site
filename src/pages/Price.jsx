@@ -15,104 +15,134 @@ export default function Price() {
         </div>
 
         {/* --- COURSE --- */}
-        <div className="space-y-6 mb-10">
+        <div className="space-y-5 mb-10">
 
-         {[
-  {
-    title: "AIDA1",
-    label: "LICENSE",
-    price: "¥25,000",
-    desc: "座学＋海洋講習",
-    duration: "1日（5〜6時間）",
-    note: "※別途AIDA申請料あり",
-    id: "aida1"
-  },
-  {
-    title: "AIDA2",
-    label: "LICENSE",
-    price: "¥55,000",
-    desc: "座学＋海洋・プール講習",
-    duration: "2.5〜3日（日程を分けての受講可能）",
-    note: "※別途認定料・プール使用料あり",
-    id: "aida2"
-  },
-  {
-    title: "AIDA3",
-    label: "LICENSE",
-    price: "¥65,000",
-    desc: "座学＋海洋・プール講習",
-    duration: "3〜3.5日（日程を分けての受講可能）",
-    note: "※別途認定料・プール使用料あり",
-    id: "aida3"
-  },
-  {
-    title: "Skin Diving",
-    label: "SKIN DIVING",
-    price: "¥12,000",
-    desc: "海洋講習",
-    duration: "2時間",
-    id: "skin-diving"
-  },
-  {
-    title: "Training",
-    label: "TRAINING",
-    price: "¥12,000",
-    desc: "ビーチトレーニング",
-    duration: "1セッション（2〜2.5時間）",
-    id: "training"
-  }
-].map((course, i) => (
+          {[
+            {
+              title: "AIDA1",
+              label: "LICENSE",
+              price: "¥25,000",
+              desc: "座学＋海洋講習",
+              duration: "1日（5〜6時間）",
+              note: "※別途AIDA申請料あり",
+              id: "aida1"
+            },
+            {
+              title: "AIDA2",
+              label: "LICENSE",
+              price: "¥55,000",
+              desc: "座学＋海洋・プール講習",
+              duration: "2.5〜3日（日程を分けての受講可能）",
+              note: "※別途認定料・プール使用料あり",
+              id: "aida2"
+            },
+            {
+              title: "AIDA3",
+              label: "LICENSE",
+              price: "¥65,000",
+              desc: "座学＋海洋・プール講習",
+              duration: "3〜3.5日（日程を分けての受講可能）",
+              note: "※別途認定料・プール使用料あり",
+              id: "aida3"
+            },
+            {
+              title: "Skin Diving",
+              label: "SKIN DIVING",
+              price: "¥12,000",
+              desc: "海洋講習",
+              duration: "2時間",
+              id: "skin-diving"
+            },
+            {
+              title: "Training",
+              label: "TRAINING",
+              price: "¥12,000",
+              desc: "ビーチトレーニング",
+              duration: "1セッション（2〜2.5時間）",
+              id: "training"
+            }
+          ].map((course, i) => (
             <div
               key={i}
-              className="bg-[#f4f4f2] border border-[#e5e0d8] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 hover:shadow-sm transition"
+              className="
+                bg-[#f4f4f2]
+                border border-[#e5e0d8]
+                px-5 py-4
+                flex items-center justify-between
+                hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)]
+                transition
+              "
             >
+
               {/* 左 */}
               <div>
-                <div className="text-[10px] tracking-[0.2em] text-[#aab6bd] mb-2">
+
+                {/* カテゴリー */}
+                <div
+                  className="
+                    inline-block
+                    text-[10px]
+                    tracking-[0.25em]
+                    text-[#7a8a94]
+                    bg-[#eef3f5]/80
+                    px-2.5 py-1
+                    mb-1
+                    -ml-2.5
+                  "
+                >
                   {course.label}
                 </div>
 
-                <h2 className="text-[18px] font-light text-[#5a6b74] mb-2">
+                {/* タイトル */}
+                <h2 className="text-[18px] font-light text-[#5a6b74]">
                   {course.title}
                 </h2>
 
-                <p className="text-[14px] text-[#7a8a94]">
+                <p className="text-[14px] text-[#7a8a94] mt-1">
                   {course.desc}
                 </p>
 
-                <p className="text-[13px] text-[#7a8a94] mt-2">
+                <p className="text-[13px] text-[#7a8a94] mt-0.5">
                   所要日程：{course.duration}
                 </p>
 
                 {course.note && (
-                  <p className="text-[12px] text-[#aab6bd] mt-2 leading-relaxed">
+                  <p className="text-[12px] text-[#aab6bd] mt-0.5">
                     {course.note}
                   </p>
                 )}
+
               </div>
 
               {/* 右 */}
-              <div className="flex items-center gap-6">
-                <span className="text-lg md:text-xl font-light text-[#5a6b74]">
+              <div className="flex flex-col items-end gap-1 min-w-[110px]">
+
+                <span className="text-xl md:text-2xl font-light text-[#5a6b74]">
                   {course.price}
                 </span>
 
-                {/* 👇ここが重要 */}
                 <Link
                   to={`/courses#${course.id}`}
-                  className="inline-block"
+                  className="
+                    text-[11px]
+                    text-[#aab6bd]
+                    tracking-[0.2em]
+                    hover:opacity-60
+                    hover:translate-x-[2px]
+                    transition
+                  "
                 >
-                  <div className="text-[12px] text-[#aab6bd] tracking-[0.15em] hover:opacity-60 transition">
-                    コース内容へ →
-                  </div>
+                  ••• →
                 </Link>
+
               </div>
+
             </div>
           ))}
 
         </div>
 
-        {/* --- 注意書き --- */}
+        {/* 注意書き */}
         <div className="text-xs text-[#5a6b74] mb-16 space-y-2">
           <p>※レンタル料金は含まれておりません</p>
         </div>
