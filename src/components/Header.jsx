@@ -1,17 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  // 👇 Heroありページを定義
+  const isHeroPage =
+    location.pathname === "/" ||
+    location.pathname === "/about";
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 60);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (isHeroPage) {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isHeroPage]);
+
+  // 👇 状態を統一
+  const isActiveHeader = isHeroPage ? isScrolled : true;
 
   const navItemClass = ({ isActive }) =>
     `hover:opacity-100 transition ${
@@ -21,7 +32,7 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
+        isActiveHeader
           ? "bg-[#faf8f5]/80 backdrop-blur-md border-b border-[#e8e4dd] py-4"
           : "bg-transparent py-6"
       }`}
@@ -33,7 +44,7 @@ function Header() {
           to="/"
           translate="no"
           className={`notranslate text-sm tracking-[0.25em] font-extralight transition-colors duration-500 ${
-            isScrolled ? "text-[#5a6b74]" : "text-white"
+            isActiveHeader ? "text-[#5a6b74]" : "text-white"
           }`}
         >
           hico freediving
@@ -43,7 +54,7 @@ function Header() {
         <nav
           translate="no"
           className={`flex gap-10 text-xs transition-colors duration-500 ${
-            isScrolled ? "text-[#7a8a94]" : "text-white/80"
+            isActiveHeader ? "text-[#7a8a94]" : "text-white/80"
           }`}
         >
           <NavLink to="/" className={navItemClass}>
