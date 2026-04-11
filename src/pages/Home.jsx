@@ -115,11 +115,12 @@ export default function Home() {
 </section>
       
 {/* Freediving */}
-<Section variant="large" className="bg-[#f4f4f2]">
+<Section variant="large" className="pt-32 md:pt-40 bg-[#f4f4f2]">
   <Container>
 
     <TwoColumn variant="compact">
 
+      {/* テキスト */}
       <div className="space-y-5">
 
         <TitleBlock>
@@ -141,9 +142,12 @@ export default function Home() {
           </p>
         </BodyText>
 
-        <div className="pt-10 space-y-6 flex flex-col items-end">
-
-          <Link to="/about" className="group text-xs tracking-[0.2em] text-[#5a6b74]">
+        {/* PCのみCTA */}
+        <div className="hidden md:flex pt-6 justify-end">
+          <Link
+            to="/about"
+            className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+          >
             <span className="inline-flex items-center gap-3">
               ABOUT ME
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -151,16 +155,34 @@ export default function Home() {
               </span>
             </span>
           </Link>
-
         </div>
+
       </div>
 
-      <div className="flex justify-end">
+      {/* 画像＋CTA（スマホ用） */}
+      <div className="flex flex-col items-end space-y-6">
+
         <img
           src="/images/freediving.jpeg"
           alt="Freediver"
-          className="w-[260px] md:w-[320px] aspect-[3/4] object-cover"
+          className="w-full md:w-[320px] aspect-[3/4] object-cover"
         />
+
+        {/* スマホのみCTA */}
+        <div className="flex md:hidden w-full justify-end">
+          <Link
+            to="/about"
+            className="group text-xs tracking-[0.2em] text-[#5a6b74]"
+          >
+            <span className="inline-flex items-center gap-3">
+              ABOUT ME
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                ••• →
+              </span>
+            </span>
+          </Link>
+        </div>
+
       </div>
 
     </TwoColumn>
@@ -168,9 +190,6 @@ export default function Home() {
   </Container>
 </Section>
       
-
-
-{/* Courses */}
 {/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
