@@ -1,6 +1,5 @@
 import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
-import TwoColumn from "../components/layout/TwoColumn";
 
 export default function About() {
   return (
@@ -8,153 +7,139 @@ export default function About() {
 
       {/* ===== HERO ===== */}
       <section className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden">
-
         <img
           src="/images/about-hero.jpeg"
           className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
         />
-
-        {/* くすみ（弱め） */}
         <div className="absolute inset-0 bg-[#1c2b2e]/25" />
 
-        {/* 下グラデ */}
-      
-
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
-
           <p className="text-white/70 text-[11px] tracking-[0.3em] mb-4">
             INSTRUCTOR
           </p>
-
           <h1 className="text-white text-5xl md:text-6xl tracking-[0.3em] font-extralight">
             hico
           </h1>
-
         </div>
       </section>
 
-
       {/* ===== STORY ===== */}
-      <Section className="pt-24 md:pt-32">
+      <Section className="pt-16 md:pt-24">
         <Container>
 
-          <TwoColumn>
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
 
-            {/* テキスト */}
-            <div className="flex items-start">
+            {/* ===== 左：ストーリー ===== */}
+            <div className="max-w-[560px]">
 
-              <div className="max-w-[420px]">
+              {/* タイトル */}
+              <p className="text-[11px] tracking-[0.3em] text-[#9fb2bb] mb-4">
+                経歴
+              </p>
 
-                {/* メッセージ */}
-                <div className="mb-8 pl-6 border-l border-[#d8e2e6]">
-                  <p className="text-[14px] leading-[2] text-[#6b7c85] font-light tracking-[0.03em]">
-                    これから海遊びを始めたい方、<br />
-                    フリーダイビングに興味がある方、<br />
-                    もっと深く潜れるようになりたい方、<br />
-                    初心者から上級者まで、男女問わず大歓迎です。
-                  </p>
-                </div>
+              <div className="space-y-8 text-[#6b7c85] text-[14px] leading-[2.1] font-light">
+{/* STORY本文（コンパクト版） */}
+<div className="space-y-5 text-[#6b7c85] text-[14px] leading-[2] font-light">
 
-                {/* タイトル */}
-                <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
-                  経歴
-                </p>
+  <p>
+    愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
+    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていた。
+    スキンダイビングを始め、少しずつ水中に慣れていく。
+    水中でもっと自由に動きたい、もっと深く潜りたい。
+    2018年にフリーダイビングと出会い、その魅力に惹かれる。
+  </p>
 
-                {/* 本文 */}
-                <div className="space-y-4 text-[#6b7c85] text-[13px] leading-[1.7] font-light">
+  <p>
+    より良い環境を求めて奄美大島へ移住。
+    現在は看護師として働きながら、競技にも挑戦している。
+  </p>
 
-                  <p>
-                    愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
-                    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていた。
-                  </p>
+  {/* メッセージ（軽く区切る） */}
+  <div className="pt-5 border-t border-[#e5e0d8]">
+    <p className="text-[15px] leading-[2.2] tracking-[0.04em] text-[#5a6b74]">
+      これから海遊びを始めたい方、フリーダイビングに興味がある方、
+      もっと深く潜れるようになりたい方、初心者から上級者まで、
+      男女問わず大歓迎です。
+    </p>
+  </div>
 
-                  <p>
-                    スキンダイビングを始め、少しずつ水中に慣れていく。
-                  </p>
-
-                  <p>
-                    水中でもっと自由に動きたい、もっと深く潜りたい。
-                    2018年にフリーダイビングと出会い、その魅力に惹かれる。
-                  </p>
-
-                  <p>
-                    より良い環境を求めて奄美大島へ移住。
-                    現在は看護師として働きながら、競技にも挑戦している。
-                  </p>
-
-                </div>
-
-                {/* Instagram */}
-                <div className="mt-8">
-                  <a
-                    href="https://instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-[#7a8a94] hover:text-[#5a6b74] transition"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="5" />
-                      <circle cx="12" cy="12" r="4" />
-                      <circle cx="17" cy="7" r="1.2" />
-                    </svg>
-
-                    <span className="text-[12px] tracking-[0.1em]">
-                      Instagram
-                    </span>
-                  </a>
-                </div>
+</div>
 
               </div>
 
+              {/* Instagram */}
+             <div className="mt-10">
+  <a
+    href="https://instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#7a8a94] hover:text-[#5a6b74] transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="6" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="1.2" />
+    </svg>
+
+    <span className="text-[12px] tracking-[0.15em]">
+      Instagram
+    </span>
+  </a>
+</div>
+
             </div>
 
-            {/* 画像 */}
-            <div className="flex justify-center">
+            {/* ===== 右：写真 ===== */}
+            <div className="flex justify-center md:justify-end">
               <img
                 src="/images/instructor.jpeg"
-                className="w-full max-w-[460px] h-[400px] object-cover object-[center_35%]"
+                className="
+                  w-full
+                  max-w-[320px] md:max-w-[420px]
+                  h-[320px] md:h-[420px]
+                  object-cover
+                  object-[center_35%]
+                "
               />
             </div>
 
-          </TwoColumn>
+          </div>
 
         </Container>
       </Section>
 
-
-      {/* ===== LICENSE & RESULTS ===== */}
-      <Section>
+      {/* ===== PROFILE ===== */}
+      <Section variant="compact">
         <Container>
 
-          <div className="grid md:grid-cols-3 gap-16">
+          <div className="max-w-[900px] mx-auto grid md:grid-cols-3 gap-12 md:gap-16 text-left mt-4 md:mt-8">
 
-            {/* LICENSE */}
-            <div>
-              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
-                資格
-              </p>
+{/* LICENSE */}
+<div>
+  <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-3">
+    免許・資格
+  </p>
 
-              <div className="space-y-4 text-[#5a6b74] text-[13px] leading-[1.9] font-light">
-                <p>AIDA フリーダイビングインストラクター</p>
-                <p>YOGA インストラクター RYT200</p>
-                <p>看護師免許</p>
-              </div>
-            </div>
-
+  <div className="space-y-2 text-[#5a6b74] text-[13px] leading-[1.7] font-light">
+    <p>AIDA フリーダイビングインストラクター</p>
+    <p>YOGA インストラクター RYT200</p>
+    <p>看護師免許</p>
+  </div>
+</div>
             {/* OCEAN */}
             <div>
-              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
-                大会出場歴 — 海洋
+              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4">
+                大会出場歴 -海洋
               </p>
 
               <div className="space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light">
@@ -168,8 +153,8 @@ export default function About() {
 
             {/* POOL */}
             <div>
-              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-6">
-                大会出場歴 — プール
+              <p className="text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4">
+                大会出場歴 -プール
               </p>
 
               <div className="space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light">
@@ -185,7 +170,6 @@ export default function About() {
 
         </Container>
       </Section>
-
 
     </main>
   );
