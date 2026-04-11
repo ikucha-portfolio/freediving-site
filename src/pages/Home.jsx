@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="bg-[#f4f4f2]">
 {/* HERO */}
-<section className="relative w-full h-screen pt-20 overflow-hidden">
+<section className="relative z-0 w-full h-screen pt-20 overflow-hidden">
 
   {/* 背景 */}
   <div className="absolute inset-0">
@@ -42,7 +42,7 @@ export default function Home() {
   </div>
 
   {/* コンテンツ */}
-  <div className="relative z-10 h-full flex items-center">
+  <div className="relative h-full flex items-center">
     <div
       className="
         max-w-5xl mx-auto w-full
