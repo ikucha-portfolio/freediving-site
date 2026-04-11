@@ -114,11 +114,68 @@ export default function Home() {
   </div>
 </section>
       
+{/* Freediving */}
+<Section variant="large" className="bg-[#f4f4f2]">
+  <Container>
+
+    <TwoColumn variant="compact">
+
+      <div className="space-y-5">
+
+        <TitleBlock>
+          <span translate="no" className="notranslate">
+            WHAT IS FREEDIVING
+          </span>
+        </TitleBlock>
+
+        <BodyText>
+          <p>
+            フリーダイビングは、酸素ボンベを使わずに
+            自分の息だけで海や水中に潜るスポーツです。
+          </p>
+
+          <p>
+            一呼吸で海の世界に飛び込む。
+            その静けさと、心も体もゆるむ感覚を、
+            ぜひ体験してみてください。
+          </p>
+        </BodyText>
+
+        <div className="pt-10 space-y-6 flex flex-col items-end">
+
+          <Link to="/about" className="group text-xs tracking-[0.2em] text-[#5a6b74]">
+            <span className="inline-flex items-center gap-3">
+              ABOUT ME
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                ••• →
+              </span>
+            </span>
+          </Link>
+
+        </div>
+      </div>
+
+      <div className="flex justify-end">
+        <img
+          src="/images/freediving.jpeg"
+          alt="Freediver"
+          className="w-[260px] md:w-[320px] aspect-[3/4] object-cover"
+        />
+      </div>
+
+    </TwoColumn>
+
+  </Container>
+</Section>
+      
+
+
+{/* Courses */}
 {/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
 
-    <div className="mb-16 text-center">
+    <div className="mb-14 text-center">
       <TitleBlock>Courses</TitleBlock>
     </div>
 
@@ -221,41 +278,48 @@ export default function Home() {
   </Container>
 </Section>
       {/* Amami */}
-      <Section className="bg-[#f4f4f2]">
-        <Container>
-
-          <div className="mb-10">
-            <TitleBlock>Amami Sea</TitleBlock>
-          </div>
-
-          <div className="grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12">
-
-            <div>
-              <img
-                src="/images/Amami sea.jpeg"
-                alt="Amami Sea"
-                className="w-full h-[360px] object-cover"
-              />
-            </div>
-
-            <div className="max-w-[420px]">
-  <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
-    奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。<br /><br />
-    湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。<br /><br />
-    さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。
-  </p>
-            </div>
-
-          </div>
-
-        </Container>
-      </Section>
-     
-{/* FAQ */}
-<Section className="bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]">
-  <Container size="narrow">
+<Section variant="default" className="bg-[#f4f4f2]">
+  <Container>
 
     <div className="mb-12">
+      <TitleBlock>Amami Sea</TitleBlock>
+    </div>
+
+    <div className="grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12">
+
+      <div>
+        <img
+          src="/images/Amami sea.jpeg"
+          alt="Amami Sea"
+          className="w-full h-[360px] object-cover"
+        />
+      </div>
+
+      <div className="max-w-[420px] space-y-6">
+        <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+          奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。
+        </p>
+
+        <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+          湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。
+        </p>
+
+        <p className="text-[15px] text-[#7a8a94] leading-[1.9]">
+          さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。
+        </p>
+      </div>
+
+    </div>
+
+  </Container>
+</Section>
+     
+{/* FAQ */}
+{/* FAQ */}
+<Section variant="compact" className="bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]">
+  <Container size="narrow">
+
+    <div className="mb-14">
       <TitleBlock>FAQ</TitleBlock>
     </div>
 
@@ -318,33 +382,32 @@ export default function Home() {
 </Section>
 
       {/* Contact */}
-      <Section className="relative py-24 overflow-hidden bg-[#f4f4f2]">
+<Section variant="large" className="relative overflow-hidden bg-[#f4f4f2]">
 
-        {/* 水のレイヤー */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(220,235,240,0.4)_0%,rgba(220,235,240,0)_60%)]" />
+  {/* 水のレイヤー */}
+  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(220,235,240,0.4)_0%,rgba(220,235,240,0)_60%)]" />
 
-        <div className="absolute top-1/3 left-[60%] -translate-x-1/2 w-[800px] h-[300px] bg-[#dbeff5] opacity-20 blur-[160px]" />
+  <div className="absolute top-1/3 left-[60%] -translate-x-1/2 w-[800px] h-[300px] bg-[#dbeff5] opacity-20 blur-[160px]" />
 
-        <Container size="narrow">
+  <Container size="narrow">
 
-          <div className="relative text-center space-y-8">
+    <div className="relative text-center space-y-8">
 
-            <TitleBlock align="center">Contact</TitleBlock>
+      <TitleBlock align="center">Contact</TitleBlock>
 
-            <p className="text-[#9fb0b8] text-[13px] leading-[1.8]">
-              ご相談からでも大丈夫です。<br />
-              はじめての方もお気軽にご連絡ください。
-            </p>
+      <p className="text-[#9fb0b8] text-[13px] leading-[1.8]">
+        ご相談からでも大丈夫です。<br />
+        はじめての方もお気軽にご連絡ください。
+      </p>
 
-            <button className="px-10 py-3 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 backdrop-blur-sm hover:bg-white/60 transition">
-              CONTACT
-            </button>
+      <button className="px-10 py-3 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 backdrop-blur-sm hover:bg-white/60 transition">
+        CONTACT
+      </button>
 
-          </div>
+    </div>
 
-        </Container>
-      </Section>
-
+  </Container>
+</Section>
       {/* Footer */}
      
 
