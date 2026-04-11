@@ -25,114 +25,94 @@ export default function Home() {
 
   return (
     <main className="bg-[#f4f4f2]">
+{/* HERO */}
+<section className="relative w-full h-screen pt-20 overflow-hidden">
 
-      {/* HERO */}
-      <section className="relative w-full h-screen pt-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/images/hero2.jpeg"
-            alt="Freediving"
-            className="w-full h-full object-cover"
-            style={{ filter: "saturate(0.9) brightness(1.05)" }}
-          />
-        </div>
+  {/* 背景 */}
+  <div className="absolute inset-0">
+    <img
+      src="/images/hero2.jpeg"
+      alt="Freediving"
+      className="w-full h-full object-cover md:object-[65%_center] lg:object-[70%_center]"
+      style={{
+        objectPosition: "15% center", // スマホ：被写体を右寄りに
+        filter: "saturate(0.9) brightness(1.05)"
+      }}
+    />
+  </div>
 
-        <div className="relative z-10 h-full flex items-center">
-          <div className="max-w-5xl mx-auto w-full px-8 flex justify-end">
-            <div className="max-w-xl text-white space-y-8 text-center">
+  {/* コンテンツ */}
+  <div className="relative z-10 h-full flex items-center">
+    <div
+      className="
+        max-w-5xl mx-auto w-full
+        px-6 md:px-8
+        flex
+        justify-start lg:justify-end
+      "
+    >
 
-              <h1
-                translate="no"
-                className="notranslate text-4xl md:text-6xl font-extralight tracking-[0.08em] leading-[1.5]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                hico freediving
-              </h1>
+      <div
+        className="
+          max-w-xl
+          ml-4 md:ml-6 lg:ml-0
+          text-white
+          space-y-6 md:space-y-8
+          text-left
+          -mt-[10vh] lg:mt-0
+        "
+      >
 
-              <p
-  className="
-    text-sm md:text-base
-    bg-gradient-to-b from-white to-white/70
-    bg-clip-text text-transparent
-    leading-[2.4]
-    tracking-[0.12em]
-    font-light
-    drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]
-  "
- style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
- >
-  心も体もゆるむひとときを<br />
-  一息で奄美ブルーに溶けましょう
-</p>
+        {/* タイトル */}
+        <h1
+          translate="no"
+          className="
+            notranslate
+            text-[28px] md:text-4xl lg:text-6xl
+            font-extralight tracking-[0.08em]
+            leading-[1.4] md:leading-[1.5]
+          "
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          hico freediving
+        </h1>
 
-              <Link
-                to="/course"
-                className="inline-block px-8 py-3 text-sm tracking-widest
-                bg-white/10 border border-white/30 text-white
-                backdrop-blur-md
-                hover:bg-white/20 transition-all duration-300"
-              >
-                コースを見る
-              </Link>
+        {/* コピー */}
+        <p
+          className="
+            text-[13px] md:text-base
+            bg-gradient-to-b from-white to-white/70
+            bg-clip-text text-transparent
+            leading-[2.2] md:leading-[2.4]
+            tracking-[0.12em]
+            font-light
+            drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]
+          "
+          style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+        >
+          心も体もゆるむひとときを<br />
+          一息で奄美ブルーに溶けましょう
+        </p>
 
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* CTA */}
+        <Link
+          to="/course"
+          className="
+            inline-block px-8 py-3
+            text-[12px] md:text-sm
+            tracking-[0.25em]
+            bg-white/10 border border-white/30 text-white
+            backdrop-blur-md
+            hover:bg-white/20 transition-all duration-300
+          "
+        >
+          コースを見る
+        </Link>
 
-      {/* Freediving */}
-      <Section className= "pt-24 md:pt-32 bg-[#f4f4f2]">
-        <Container>
-
-          <TwoColumn variant="compact">
-
-            <div className="space-y-5">
-
-              <TitleBlock>
-                <span translate="no" className="notranslate">
-                  WHAT IS FREEDIVING
-                </span>
-              </TitleBlock>
-
-              <BodyText>
-                <p>
-                  フリーダイビングは、酸素ボンベを使わずに
-                  自分の息だけで海や水中に潜るスポーツです。
-                </p>
-
-                <p>
-                  一呼吸で海の世界に飛び込む。
-                  その静けさと、心も体もゆるむ感覚を、
-                  ぜひ体験してみてください。
-                </p>
-              </BodyText>
-
-              <div className="pt-10 space-y-6 flex flex-col items-end">
-
-                <Link to="/about" className="group text-xs tracking-[0.2em] text-[#5a6b74]">
-                  <span className="inline-flex items-center gap-3">
-                    ABOUT ME
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      ••• →
-                    </span>
-                  </span>
-                </Link>
-
-              </div>
-            </div>
-
-            <div className="flex justify-end">
-              <img
-                src="/images/freediving.jpeg"
-                alt="Freediver"
-                className="w-[260px] md:w-[320px] aspect-[3/4] object-cover"
-              />
-            </div>
-
-          </TwoColumn>
-
-        </Container>
-      </Section>
+      </div>
+    </div>
+  </div>
+</section>
       
 {/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
