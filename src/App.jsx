@@ -9,17 +9,22 @@ import Contact from "./pages/Contact";
 import Thanks from "./pages/Thanks";
 import Footer from "./components/layout/Footer";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom"; // ←ここ追加
 
 function App() {
+  const location = useLocation();
+
+  const isHeroPage =
+    location.pathname === "/" ||
+    location.pathname === "/about";
+
   return (
     <div className="bg-[#f5f3ef] min-h-screen">
 
       <ScrollToTop />
       <Header />
 
-      {/* ★ここ追加（超重要） */}
-      <main className="pt-20 md:pt-24">
+      <main className={isHeroPage ? "" : "pt-20 md:pt-24"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
@@ -32,9 +37,8 @@ function App() {
       </main>
 
       <Footer />
-
     </div>
   );
 }
 
-export default App;
+export default App; // ←これも忘れず
