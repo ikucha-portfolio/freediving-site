@@ -6,22 +6,40 @@ export default function About() {
     <main className="bg-[#f4f4f2]">
 
       {/* ===== HERO ===== */}
-      <section className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden">
-        <img
-          src="/images/about-hero.jpeg"
-          className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
-        />
-        <div className="absolute inset-0 bg-[#1c2b2e]/25" />
+<section className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden">
 
-        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
-          <p className="text-white/70 text-[11px] tracking-[0.3em] mb-4">
-            INSTRUCTOR
-          </p>
-          <h1 className="text-white text-5xl md:text-6xl tracking-[0.3em] font-extralight">
-            hico
-          </h1>
-        </div>
-      </section>
+  <img
+    src="/images/about-hero.jpeg"
+    className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
+  />
+
+  <div className="absolute inset-0 bg-[#1c2b2e]/25" />
+
+  <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
+
+    {/* 名前 */}
+    <h1 className="
+      text-[#e8f0f2] 
+      text-4xl md:text-5xl 
+      tracking-[0.25em] 
+      font-extralight
+    ">
+      hico
+    </h1>
+
+    {/* サブ（下に配置） */}
+    <p className="
+      mt-3
+      text-[#b7c9cf]
+      text-[10px] md:text-[11px]
+      tracking-[0.35em]
+    ">
+      INSTRUCTOR
+    </p>
+
+  </div>
+
+</section>
 
       {/* ===== STORY ===== */}
       <Section className="pt-16 md:pt-24">
