@@ -1,19 +1,18 @@
 import CourseSection from "../components/CourseSection";
 import Container from "../components/layout/Container";
 import Section from "../components/layout/Section";
-
+import TitleBlock from "../components/ui/TitleBlock";
 const Courses = () => {
   return (
     <Section className="bg-[#f4f4f2]">
-
       <Container>
 
         {/* タイトル */}
-        <div className="text-center mb-28">
-          <h1 className="text-3xl md:text-4xl font-light text-[#5a6b74]">
-            Courses
-          </h1>
-        </div>
+        <div className="mb-14 md:mb-16 text-center">
+  <TitleBlock align="center">
+    Courses
+  </TitleBlock>
+</div>
 
         {/* Skin Diving */}
         <div id="skin-diving">
@@ -115,36 +114,35 @@ const Courses = () => {
             image="/images/aida-3.jpeg"
             reverse
           />
+        </div>
 
-          {/* Beach Training */}
-<div id="training">
-  <CourseSection
-    title="Freediving Training（ビーチトレーニング）"
-    description1={
-      <>
-        ライセンス取得後のスキルアップや、
-        個々のレベル・目標に沿ったトレーニングを行います
-      </>
-    }
-    description2={
-      <>
-      参加条件：18歳以上で健康に問題のない方<br />
-        （持病がある方は事前にご相談ください）<br />
-        AIDA1、または他団体のライセンスをお持ちの方がご参加いただけます。<br />
-        安全のため最大深度は、受講者様のスキルをお伺いし、相談のうえインストラクターが決定します。<br />
-        (最大深度：40mまで)<br /><br />
-        場所：瀬戸内町のビーチ<br />
-        人数：最大3名まで<br />
-        料金：1セッション（2〜2.5時間）¥12,000
-      </>
-    }
-    image="/images/Training.jpeg"
-  />
-</div>
+        {/* Training */}
+        <div id="training">
+          <CourseSection
+            title="Freediving Training（ビーチトレーニング）"
+            description1={
+              <>
+                ライセンス取得後のスキルアップや、
+                個々のレベル・目標に沿ったトレーニングを行います
+              </>
+            }
+            description2={
+              <>
+                参加条件：18歳以上で健康に問題のない方<br />
+                （持病がある方は事前にご相談ください）<br />
+                AIDA1、または他団体のライセンスをお持ちの方がご参加いただけます。<br />
+                安全のため最大深度は、受講者様のスキルをお伺いし、相談のうえインストラクターが決定します。<br />
+                (最大深度：40mまで)<br /><br />
+                場所：瀬戸内町のビーチ<br />
+                人数：最大3名まで<br />
+                料金：1セッション（2〜2.5時間）¥12,000
+              </>
+            }
+            image="/images/Training.jpeg"
+          />
         </div>
 
       </Container>
-
     </Section>
   );
 };

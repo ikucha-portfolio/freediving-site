@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
+import TitleBlock from "../components/ui/TitleBlock";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -37,12 +38,17 @@ export default function FAQ() {
       <Container size="narrow">
 
         {/* タイトル */}
-        <div className="text-center mb-20">
-          <h1 className="text-3xl text-[#5a6b74]">FAQ</h1>
-        </div>
+        <div className="mb-14 md:mb-16 text-center">
+  <TitleBlock align="center">
+    FAQ
+  </TitleBlock>
+</div>
 
-        {/* FAQ */}
-        <div className="space-y-3">
+       {/* 👇これ追加 */}
+<div className="mb-6 md:mb-8" />
+
+{/* FAQ */}
+<div className="space-y-3">
 
   {faqs.map((item, i) => (
     <div

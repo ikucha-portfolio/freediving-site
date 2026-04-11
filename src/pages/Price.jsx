@@ -1,6 +1,7 @@
 import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
 import { Link } from "react-router-dom";
+import TitleBlock from "../components/ui/TitleBlock";
 
 export default function Price() {
   return (
@@ -8,11 +9,11 @@ export default function Price() {
       <Container size="narrow">
 
         {/* タイトル */}
-        <div className="text-center mb-16">
-          <h1 className="text-2xl md:text-3xl text-[#5a6b74]">
-            Price
-          </h1>
-        </div>
+   <div className="mb-14 md:mb-16 text-center">
+  <TitleBlock align="center">
+    Price
+  </TitleBlock>
+</div>
 
         {/* --- COURSE --- */}
         <div className="space-y-5 mb-10">
