@@ -92,19 +92,19 @@ function Header() {
         }`}
       >
 
-        {/* 背景（完全に覆う） */}
+        {/* 背景 */}
         <div
           className="absolute inset-0 bg-[#f5f3ef]"
           onClick={() => setIsOpen(false)}
         />
 
-        {/* 右スライドメニュー */}
+        {/* メニュー本体 */}
         <div className="
           absolute top-0 right-0
           w-[75%] h-full
           bg-[#f5f3ef]
           px-8 py-24
-          flex flex-col justify-between
+          flex flex-col
         ">
 
           {/* ナビ */}
@@ -117,26 +117,35 @@ function Header() {
             <NavLink to="/contact" className={navItemClass} onClick={() => setIsOpen(false)}>Contact</NavLink>
           </nav>
 
-          {/* CTA & SNS */}
-          <div className="space-y-6">
-
-            <NavLink
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block text-center border border-[#cfd8dc] py-3 text-xs tracking-[0.2em]"
-            >
-              CONTACT
-            </NavLink>
+          {/* SNS（ナビ直下） */}
+          <div className="mt-8">
 
             <a
               href="https://www.instagram.com/hico0624/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center text-[#7a8a94]"
+              className="
+                flex items-center gap-3
+                text-[#7a8a94] hover:text-[#5a6b74]
+                transition
+              "
             >
-              <span className="text-sm tracking-[0.2em]">
-                INSTAGRAM →
+              <span className="text-[13px] tracking-[0.15em]">
+                hico
               </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 hover:scale-105 transition"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1.2" />
+              </svg>
             </a>
 
           </div>
