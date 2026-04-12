@@ -134,13 +134,28 @@ export default function Contact() {
               />
 
               <div className="pt-6 text-center">
-                <button
-                  type="submit"
-                  className="px-10 py-2.5 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 hover:bg-white/60 transition"
-                >
-                  SEND
-                </button>
-              </div>
+  <button
+    type="submit"
+    className="
+      px-10 py-3
+      text-[12px]
+      tracking-[0.3em]
+
+      text-white
+      bg-[#7a8a94]
+
+      rounded-none
+
+      transition-all duration-300
+
+      hover:bg-[#5a6b74]
+      hover:translate-y-1
+      active:scale-[0.97]
+    "
+  >
+    SEND
+  </button>
+</div>
 
             </form>
 

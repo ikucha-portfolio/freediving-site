@@ -476,7 +476,7 @@ export default function Home() {
             text-white
             bg-[#7a8a94]
 
-            rounded-md
+            rounded-none
 
             transition-all duration-300
 
