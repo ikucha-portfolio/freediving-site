@@ -110,7 +110,7 @@ export default function About() {
               </svg>
             </Link>
 
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94] hover:text-[#5a6b74] transition">
+            <a href="https://www.instagram.com/hico0624/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94] hover:text-[#5a6b74] transition">
               <svg className="w-6 h-6 hover:scale-105 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <rect x="3" y="3" width="18" height="18" rx="5" />
                 <circle cx="12" cy="12" r="4" />
