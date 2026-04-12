@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Section from "../components/layout/Section";
 import TwoColumn from "../components/layout/TwoColumn";
 import TitleBlock from "../components/ui/TitleBlock";
@@ -7,6 +7,7 @@ import Container from "../components/layout/Container";
 import { useState } from "react";
 
 export default function Home() {
+  const navigate = useNavigate();  // ←これ追加
   const faqs = [
   {
     q: "初めてでも参加できますか？",
@@ -26,8 +27,17 @@ export default function Home() {
   return (
     <main className="bg-[#f4f4f2]">
 {/* HERO */}
-<section className="relative z-0 w-full h-screen pt-20 overflow-hidden">
-
+<section
+  onClick={() => {
+    if (window.innerWidth < 768) {
+      navigate("/courses");
+    }
+  }}
+  className="
+    relative z-0 w-full h-screen pt-20 overflow-hidden
+    cursor-pointer md:cursor-default
+  "
+>
   {/* 背景 */}
   <div className="absolute inset-0">
     <img
@@ -95,7 +105,8 @@ export default function Home() {
 
       {/* CTA */}
       <Link
-        to="/course"
+        to="/courses"
+        onClick={(e) => e.stopPropagation()}  // ←これ追加
         className="
   inline-block
   mt-3 md:mt-5
