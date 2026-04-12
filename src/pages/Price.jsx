@@ -1,9 +1,10 @@
 import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
-import { Link } from "react-router-dom";
 import TitleBlock from "../components/ui/TitleBlock";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Price() {
+  const navigate = useNavigate(); // ←ここ！！
   return (
     <Section>
       <Container size="narrow">
@@ -64,16 +65,26 @@ export default function Price() {
             }
           ].map((course, i) => (
             <div
-              key={i}
-              className="
-                bg-[#f4f4f2]
-                border border-[#e5e0d8]
-                px-5 py-4
-                flex items-center justify-between
-                hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)]
-                transition
-              "
-            >
+  key={i}
+  onClick={() => {
+    navigate(`/courses#${course.id}`);
+  }}
+  className="
+    bg-[#f4f4f2]
+    border border-[#e5e0d8]
+    px-5 py-4
+    flex items-center justify-between
+
+    transition-all duration-300
+    cursor-pointer
+
+    hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
+    hover:-translate-y-[2px]
+
+    active:scale-[0.98]
+  "
+>
+            
 
               {/* 左 */}
               <div>
@@ -123,18 +134,19 @@ export default function Price() {
                 </span>
 
                 <Link
-                  to={`/courses#${course.id}`}
-                  className="
-                    text-[11px]
-                    text-[#aab6bd]
-                    tracking-[0.2em]
-                    hover:opacity-60
-                    hover:translate-x-[2px]
-                    transition
-                  "
-                >
-                  ••• →
-                </Link>
+  to={`/courses#${course.id}`}
+  onClick={(e) => e.stopPropagation()}
+  className="
+    text-[11px]
+    text-[#aab6bd]
+    tracking-[0.2em]
+    hover:opacity-60
+    hover:translate-x-[2px]
+    transition
+  "
+>
+  ••• →
+</Link>
 
               </div>
 

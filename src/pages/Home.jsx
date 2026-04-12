@@ -261,9 +261,7 @@ export default function Home() {
 <div
   key={i}
   onClick={() => {
-    if (window.innerWidth < 768) {
-      navigate(`/courses#${course.id}`);
-    }
+    navigate(`/courses#${course.id}`);
   }}
   className="
     relative
@@ -274,7 +272,7 @@ export default function Home() {
     flex flex-col
     transition-all duration-300
 
-    cursor-pointer md:cursor-default
+    cursor-pointer
 
     hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
     hover:-translate-y-[2px]
@@ -282,6 +280,7 @@ export default function Home() {
     active:scale-[0.98]
   "
 >
+
           <div className="space-y-3">
 
             <div
