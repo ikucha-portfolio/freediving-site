@@ -35,7 +35,7 @@ const Courses = () => {
                 集合時間：天候を見て前日までにご連絡
               </>
             }
-            image="/images/Skin-diving.jpeg"
+            image="/images/skin-diving.jpeg"
           />
         </div>
 
@@ -139,7 +139,7 @@ const Courses = () => {
                 料金：1セッション（2〜2.5時間）¥12,000
               </>
             }
-            image="/images/Training.jpeg"
+            image="/images/training.jpeg"
           />
         </div>
 

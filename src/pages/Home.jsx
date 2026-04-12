@@ -345,7 +345,7 @@ export default function Home() {
 
       <div>
         <img
-          src="/images/Amami sea.jpeg"
+          src="/images/amami-sea.jpeg"
           alt="Amami Sea"
           className="w-full h-[360px] object-cover"
         />
@@ -370,7 +370,6 @@ export default function Home() {
   </Container>
 </Section>
      
-{/* FAQ */}
 {/* FAQ */}
 <Section variant="compact" className="bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]">
   <Container size="narrow">
