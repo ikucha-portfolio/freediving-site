@@ -49,42 +49,49 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
 
       {/* ===== 左：ストーリー ===== */}
-      <div className="max-w-[560px]">
+      <div className="max-w-[560px] relative pt-6">
 
-        <p className="text-[11px] tracking-[0.3em] text-[#9fb2bb] mb-4">
+        {/* ラベル（浮かせる） */}
+        <p className="
+          absolute 
+          top-0 
+          left-0
+          text-[11px] tracking-[0.3em] text-[#9fb2bb]
+        ">
           経歴
         </p>
 
+        {/* 本文 */}
         <div className="space-y-5 text-[#6b7c85] text-[14px] leading-[2] font-light">
 
           <p className="leading-[2.1]">
-  愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
-  それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていたが
-  スキンダイビングを始め、少しずつ水中に慣れていく。
-  「水中でもっと自由に動きたい、もっと深く潜りたい」と思うようになり
-  2018年にフリーダイビングと出会い、その魅力に惹かれる。
-</p>
+            愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
+            それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていたが
+            スキンダイビングを始め、少しずつ水中に慣れていく。
+            「水中でもっと自由に動きたい、もっと深く潜りたい」と思うようになり
+            2018年にフリーダイビングと出会い、その魅力に惹かれる。
+          </p>
 
-<p className="leading-[2.1] mt-4">
-  フリーダイビングの練習のためより良い環境を求めて奄美大島へ移住。
-  現在は看護師として働きながら、大会出場に向けて日々練習している。
-</p>
+          <p className="leading-[2.1]">
+            フリーダイビングの練習のためより良い環境を求めて奄美大島へ移住。
+            現在は看護師として働きながら、大会出場に向けて日々練習している。
+          </p>
 
-{/* メッセージ */}
-<div className="pt-4 mt-4 border-t border-[#e5e0d8]">
+          {/* メッセージ */}
+          <div className="pt-4 mt-4 border-t border-[#e5e0d8]">
 
-  <p className="leading-[2.1]">
-    これから海遊びを始めたい方、フリーダイビングに興味がある方、
-    もっと深く潜れるようになりたい方、初心者から上級者まで、
-    男女問わず大歓迎です。
-  </p>
+            <p className="leading-[2.1]">
+              これから海遊びを始めたい方、フリーダイビングに興味がある方、
+              もっと深く潜れるようになりたい方、初心者から上級者まで、
+              男女問わず大歓迎です。
+            </p>
 
-  <p className="leading-[2.1] mt-3">
-    一呼吸で海の世界に飛び込む楽しさを、誰でも気軽に体験してほしいです。
-    海の中でしか味わえない静けさや、心も体もゆるむひとときをぜひ味わってください。
-  </p>
+            <p className="leading-[2.1] mt-3">
+              一呼吸で海の世界に飛び込む楽しさを、誰でも気軽に体験してほしいです。
+              海の中でしか味わえない静けさや、心も体もゆるむひとときをぜひ味わってください。
+            </p>
 
-</div>
+          </div>
 
         </div>
 
@@ -117,61 +124,57 @@ export default function About() {
       </div>
 
       {/* ===== 右：写真 ===== */}
-<div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
 
-  {/* 画像（中央） */}
-  <img
-    src="/images/instructor.jpeg"
-    className="
-      w-full
-      max-w-[320px] md:max-w-[420px]
-      h-[320px] md:h-[420px]
-      object-cover
-      object-[center_35%]
-    "
-  />
+        {/* 画像 */}
+        <img
+          src="/images/instructor.jpeg"
+          className="
+            w-full
+            max-w-[320px] md:max-w-[420px]
+            h-[320px] md:h-[420px]
+            object-cover
+            object-[center_35%]
+          "
+        />
 
-  {/* CTA（右寄せ） */}
-  <div className="
-    md:hidden
-    w-full max-w-[320px]
-    flex justify-end
-    mt-2
-  ">
+        {/* SP CTA */}
+        <div className="
+          md:hidden
+          w-full max-w-[320px]
+          flex justify-end
+          mt-2
+        ">
+          <div className="flex items-center gap-3">
 
-    <div className="flex items-center gap-3">
+            <span className="text-[12px] tracking-[0.1em] text-[#7a8a94]">
+              hico
+            </span>
 
-      <span className="text-[12px] tracking-[0.1em] text-[#7a8a94]">
-        hico
-      </span>
+            <Link to="/contact" className="text-[#7a8a94]">
+              <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <path d="M3 7l9 6 9-6" />
+              </svg>
+            </Link>
 
-      {/* メール */}
-      <Link to="/contact" className="text-[#7a8a94]">
-        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="3" y="5" width="18" height="14" rx="3" />
-          <path d="M3 7l9 6 9-6" />
-        </svg>
-      </Link>
+            <a href="https://www.instagram.com/hico0624/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94]">
+              <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1.2" />
+              </svg>
+            </a>
 
-      {/* Instagram */}
-      <a href="https://www.instagram.com/hico0624/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94]">
-        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="3" y="3" width="18" height="18" rx="5" />
-          <circle cx="12" cy="12" r="4" />
-          <circle cx="17" cy="7" r="1.2" />
-        </svg>
-      </a>
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
-  </div>
-
-</div>
-</div>
-
   </Container>
-</Section>    
-
+</Section>
       {/* ===== PROFILE ===== */}
       <Section variant="compact">
         <Container>
