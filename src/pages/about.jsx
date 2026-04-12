@@ -1,5 +1,6 @@
 import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -61,15 +62,15 @@ export default function About() {
 
   <p>
     愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
-    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていた。
+    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていたが
     スキンダイビングを始め、少しずつ水中に慣れていく。
-    水中でもっと自由に動きたい、もっと深く潜りたい。
+    「水中でもっと自由に動きたい、もっと深く潜りたい」と思うようになり
     2018年にフリーダイビングと出会い、その魅力に惹かれる。
   </p>
 
   <p>
-    より良い環境を求めて奄美大島へ移住。
-    現在は看護師として働きながら、競技にも挑戦している。
+    フリーダイビングの練習のためより良い環境を求めて奄美大島へ移住。
+    現在は看護師として働きながら、大会出場に向けて日々練習している。
   </p>
 
   {/* メッセージ（軽く区切る） */}
@@ -81,40 +82,68 @@ export default function About() {
     </p>
   </div>
 
+  </div>
+
 </div>
+<div className="flex justify-end mt-6">
 
-              </div>
+  <div className="flex items-center gap-3">
 
-              {/* Instagram */}
-             <div className="mt-10">
+
+  {/* テキスト */}
+  <span className="text-[13px] tracking-[0.1em] text-[#7a8a94]">
+    hico
+  </span>
+
+  {/* メール */}
+  <Link
+    to="/contact"
+    className="
+      text-[#7a8a94]
+      hover:text-[#5a6b74]
+      transition
+    "
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6 hover:scale-105 transition"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="3" />
+      <path d="M3 7l9 6 9-6" />
+    </svg>
+  </Link>
+
+  {/* Instagram */}
   <a
     href="https://instagram.com/"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#7a8a94] hover:text-[#5a6b74] transition"
+    className="
+      text-[#7a8a94]
+      hover:text-[#5a6b74]
+      transition
+    "
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      className="w-6 h-6 hover:scale-105 transition"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeWidth="1.5"
     >
-      <rect x="3" y="3" width="18" height="18" rx="6" />
+      <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17" cy="7" r="1.2" />
     </svg>
-
-    <span className="text-[12px] tracking-[0.15em]">
-      Instagram
-    </span>
   </a>
-</div>
 
+</div>
+</div>
             </div>
 
             {/* ===== 右：写真 ===== */}

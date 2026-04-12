@@ -64,35 +64,38 @@ export default function Home() {
       >
 
         {/* タイトル */}
-        <h1
-          translate="no"
-          className="
-            notranslate
-            text-[28px] md:text-4xl lg:text-6xl
-            font-extralight tracking-[0.08em]
-            leading-[1.4] md:leading-[1.5]
-          "
-          style={{ fontFamily: "'Cormorant Garamond', serif" }}
-        >
-          hico freediving
-        </h1>
+        <div className="flex flex-col items-center text-center">
 
-        {/* コピー */}
-        <p
-          className="
-            text-[13px] md:text-base
-            bg-gradient-to-b from-white to-white/70
-            bg-clip-text text-transparent
-            leading-[2.2] md:leading-[2.4]
-            tracking-[0.12em]
-            font-light
-            drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]
-          "
-          style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
-        >
-          心も体もゆるむひとときを<br />
-          一息で奄美ブルーに溶けましょう
-        </p>
+  {/* タイトル */}
+  <h1
+    translate="no"
+    className="
+      notranslate
+      text-[28px] md:text-4xl lg:text-6xl
+      font-extralight tracking-[0.08em]
+      leading-[1.3] md:leading-[1.4]
+    "
+    style={{ fontFamily: "'Cormorant Garamond', serif" }}
+  >
+    hico freediving
+  </h1>
+
+  {/* コピー */}
+  <p
+    className="
+      mt-3 md:mt-4
+      text-[13px] md:text-[15px]
+      text-white/80
+      leading-[1.9] md:leading-[2.1]
+      tracking-[0.1em]
+      font-light
+    "
+    style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+  >
+    奄美ブルーへ。深く、自由に。
+  </p>
+
+</div>
 
         {/* CTA */}
         <Link

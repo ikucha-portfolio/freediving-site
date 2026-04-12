@@ -30,39 +30,46 @@ export default function Contact() {
                   まだ具体的に決まっていなくても問題ありません。<br />
                   わかる範囲でご記入いただければ大丈夫です◎
                 </p>
+{/* Instagram */}
+<a
+  href="https://instagram.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    flex items-center gap-4
+    text-[#7a8a94] hover:text-[#5a6b74]
+    transition group
+  "
+>
+  {/* テキスト */}
+  <span className="text-[14px] tracking-[0.05em]">
+    DMからのお問い合わせはこちら
+  </span>
 
-                {/* Instagram */}
-                <a
-                  href="https://instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#7a8a94] hover:text-[#5a6b74] transition"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#7a8a94"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17" cy="7" r="1.2" />
-                  </svg>
-
-                  <span className="text-sm">Instagramでお問い合わせ</span>
-                </a>
+  {/* アイコン */}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-7 h-7 transition-all duration-300 group-hover:scale-105"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17" cy="7" r="1.2" />
+  </svg>
+</a>
+    
 
               </div>
             </div>
 
             {/* 右：フォーム */}
             <form
-              action="https://formspree.io/f/xnjoybbo"
+              action="https://formspree.io/f/xreonlzl"
               method="POST"
               className="space-y-3"
             >
@@ -75,7 +82,7 @@ export default function Contact() {
               <input
                 name="name"
                 type="text"
-                placeholder="お名前・年齢（例：山田 花子 30歳）"
+                placeholder="お名前・年齢"
                 className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
               />
 
@@ -89,7 +96,7 @@ export default function Contact() {
               <input
                 name="phone"
                 type="tel"
-                placeholder="電話番号（任意）"
+                placeholder="電話番号"
                 className="w-full p-2.5 border border-[#e5e0d8] bg-white/40 text-sm placeholder:text-[#aab6bd] focus:outline-none focus:border-[#5a6b74]"
               />
 
