@@ -35,86 +35,84 @@ export default function Home() {
       alt="Freediving"
       className="w-full h-full object-cover md:object-[65%_center] lg:object-[70%_center]"
       style={{
-        objectPosition: "15% center", // スマホ：被写体を右寄りに
+        objectPosition: "15% center",
         filter: "saturate(0.9) brightness(1.05)"
       }}
     />
   </div>
 
   {/* コンテンツ */}
-  <div className="relative h-full flex items-center">
+<div className="relative h-full flex items-center">
+  <div
+    className="
+      max-w-6xl mx-auto w-full
+      px-6 md:px-8
+      flex
+      justify-start lg:justify-end   /* ←ここ重要 */
+    "
+  >
+
+    {/* テキストブロック */}
     <div
       className="
-        max-w-5xl mx-auto w-full
-        px-6 md:px-8
-        flex
-        justify-start lg:justify-end
+        max-w-xl
+        ml-4 md:ml-6 lg:ml-0        /* スマホは左余白 */
+        lg:mr-[8%]                  /* PCだけ右余白 */
+        text-white
+        text-left lg:text-center    /* ←ここ重要 */
+        space-y-6 md:space-y-8
+        -mt-[8vh] lg:-mt-[2vh]
       "
     >
 
-      <div
+      {/* タイトル */}
+      <h1
+        translate="no"
         className="
-          max-w-xl
-          ml-4 md:ml-6 lg:ml-0
-          text-white
-          space-y-6 md:space-y-8
-          text-left
-          -mt-[10vh] lg:mt-0
+          notranslate
+          text-[28px] md:text-5xl lg:text-6xl
+          font-extralight tracking-[0.08em]
+          leading-[1.3]
+        "
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+      >
+        hico freediving
+      </h1>
+
+      {/* コピー */}
+      <p
+        className="
+          text-[13px] md:text-[15px]
+          text-white/80
+          leading-[2]
+          tracking-[0.12em]
+          font-light
+        "
+        style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+      >
+        奄美ブルーへ。深く、自由に。
+      </p>
+
+      {/* CTA */}
+      <Link
+        to="/course"
+        className="
+          inline-block
+          mt-2 md:mt-4
+          px-8 py-3
+          text-[12px] md:text-sm
+          tracking-[0.25em]
+          bg-white/10 border border-white/30 text-white
+          backdrop-blur-md
+          hover:bg-white/20 transition-all duration-300
         "
       >
+        コースを見る
+      </Link>
 
-        {/* タイトル */}
-        <div className="flex flex-col items-center text-center">
-
-  {/* タイトル */}
-  <h1
-    translate="no"
-    className="
-      notranslate
-      text-[28px] md:text-4xl lg:text-6xl
-      font-extralight tracking-[0.08em]
-      leading-[1.3] md:leading-[1.4]
-    "
-    style={{ fontFamily: "'Cormorant Garamond', serif" }}
-  >
-    hico freediving
-  </h1>
-
-  {/* コピー */}
-  <p
-    className="
-      mt-3 md:mt-4
-      text-[13px] md:text-[15px]
-      text-white/80
-      leading-[1.9] md:leading-[2.1]
-      tracking-[0.1em]
-      font-light
-    "
-    style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
-  >
-    奄美ブルーへ。深く、自由に。
-  </p>
-
-</div>
-
-        {/* CTA */}
-        <Link
-          to="/course"
-          className="
-            inline-block px-8 py-3
-            text-[12px] md:text-sm
-            tracking-[0.25em]
-            bg-white/10 border border-white/30 text-white
-            backdrop-blur-md
-            hover:bg-white/20 transition-all duration-300
-          "
-        >
-          コースを見る
-        </Link>
-
-      </div>
     </div>
   </div>
+</div>
 </section>
       
 {/* Freediving */}
