@@ -437,35 +437,93 @@ export default function Home() {
   </Container>
 </Section>
 
-      {/* Contact */}
+    {/* Contact */}
 <Section variant="large" className="relative overflow-hidden bg-[#f4f4f2]">
 
   {/* 水のレイヤー */}
   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(220,235,240,0.4)_0%,rgba(220,235,240,0)_60%)]" />
-
   <div className="absolute top-1/3 left-[60%] -translate-x-1/2 w-[800px] h-[300px] bg-[#dbeff5] opacity-20 blur-[160px]" />
 
   <Container size="narrow">
 
-    <div className="relative text-center space-y-8">
+    {/* 👇 中身だけ完成形に置き換え */}
+    <div className="relative text-center space-y-10">
 
       <TitleBlock align="center">Contact</TitleBlock>
 
-      <p className="text-[#9fb0b8] text-[13px] leading-[1.8]">
+      {/* 説明文（濃さ調整済み） */}
+      <p className="text-[#7a8a94] text-[13px] leading-[1.8]">
         ご相談からでも大丈夫です。<br />
         はじめての方もお気軽にご連絡ください。
       </p>
 
-      <button className="px-10 py-3 text-[12px] tracking-[0.3em] text-[#5a6b74] border border-[#cfe0e6] bg-white/40 backdrop-blur-sm hover:bg-white/60 transition">
-        CONTACT
-      </button>
+      {/* 補助テキスト */}
+      <p className="text-[12px] text-[#8fa0a8] tracking-[0.2em]">
+        お問い合わせはこちら
+      </p>
+
+      {/* CTAエリア */}
+      <div className="relative flex justify-center items-center">
+
+        {/* ボタン（完全中央） */}
+        <Link
+          to="/contact"
+          className="
+            px-10 py-3
+            text-[12px]
+            tracking-[0.3em]
+
+            text-white
+            bg-[#7a8a94]
+
+            rounded-md
+
+            transition-all duration-300
+
+            hover:bg-[#5a6b74]
+            hover:translate-y-1
+            active:scale-[0.97]
+          "
+        >
+          CONTACT
+        </Link>
+
+        {/* Instagram（補助・安定版） */}
+        <a
+          href="https://www.instagram.com/hico0624/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            absolute
+            left-[calc(50%+130px)]
+
+            text-[#7a8a94]
+
+            transition-all duration-300
+            hover:opacity-60
+            hover:scale-110
+          "
+        >
+          <svg
+            className="w-8 h-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17" cy="7" r="1.2" />
+          </svg>
+        </a>
+
+      </div>
 
     </div>
 
   </Container>
-</Section>
-      {/* Footer */}
-     
+</Section>  
+      
 
     </main>
   );
