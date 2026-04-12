@@ -129,7 +129,7 @@ function Header() {
             </NavLink>
 
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/hico0624/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center text-[#7a8a94]"

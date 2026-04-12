@@ -32,7 +32,7 @@ export default function Contact() {
                 </p>
 {/* Instagram */}
 <a
-  href="https://instagram.com/"
+  href="https://www.instagram.com/hico0624/"
   target="_blank"
   rel="noopener noreferrer"
   className="

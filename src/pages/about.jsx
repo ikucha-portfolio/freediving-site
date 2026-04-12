@@ -147,7 +147,7 @@ export default function About() {
       </Link>
 
       {/* Instagram */}
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94]">
+      <a href="https://www.instagram.com/hico0624/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94]">
         <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="3" y="3" width="18" height="18" rx="5" />
           <circle cx="12" cy="12" r="4" />
