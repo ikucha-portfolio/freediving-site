@@ -41,7 +41,7 @@ export default function Home() {
   {/* 背景 */}
   <div className="absolute inset-0">
     <img
-      src="/images/hero2.jpeg"
+      src={`${import.meta.env.BASE_URL}images/hero2.jpeg`}
       alt="Freediving"
       className="w-full h-full object-cover md:object-[65%_center] lg:object-[70%_center]"
       style={{
@@ -187,7 +187,7 @@ export default function Home() {
       <div className="flex flex-col items-end space-y-6">
 
         <img
-          src="/images/freediving.jpeg"
+          src={`${import.meta.env.BASE_URL}images/freediving.jpeg`} 
           alt="Freediver"
           className="w-full md:w-[320px] aspect-[3/4] object-cover"
         />
@@ -345,7 +345,7 @@ export default function Home() {
 
       <div>
         <img
-          src="/images/amami-sea.jpeg"
+          src={`${import.meta.env.BASE_URL}images/amami-sea.jpeg`}
           alt="Amami Sea"
           className="w-full h-[360px] object-cover"
         />
