@@ -35,27 +35,32 @@ function CourseSection({
           {description2}
         </p>
 
-        {/* CTA（統一版） */}
         <Link
-          to="/contact"
-          className="
-            inline-block
+  to="/contact"
+  className="
+    inline-block
+    mt-2
 
-            px-8 py-2.5
-            text-[12px]
-            tracking-[0.25em]
+    px-8 py-2.5
+    text-[12px]
+    tracking-[0.25em]
 
-            text-[#5a6b74]
-            border border-[#cfd8dc]
+    text-[#5a6b74]
+    border border-[#cfd8dc]
 
-            transition-all duration-300
+    rounded-none
 
-            hover:bg-[#f0f4f6]
-            hover:border-[#5a6b74]
-          "
-        >
-          CONTACT
-        </Link>
+    transition-all duration-300
+
+    hover:bg-[#f0f4f6]
+    hover:border-[#5a6b74]
+
+    hover:translate-y-1
+    active:scale-[0.97]
+  "
+>
+  CONTACT
+</Link>
 
       </div>
 
