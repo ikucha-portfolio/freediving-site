@@ -214,6 +214,7 @@ export default function Home() {
   </Container>
 </Section>
       
+      
 {/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
@@ -256,20 +257,31 @@ export default function Home() {
           id: "training"
         }
       ].map((course, i) => (
-        <div
-          key={i}
-          className="
-            relative
-            bg-[#f4f4f2]
-            border border-[#e5e0d8]
-            p-6
-            pb-12
-            flex flex-col
-            transition
-            hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)]
-          "
-        >
+        
+<div
+  key={i}
+  onClick={() => {
+    if (window.innerWidth < 768) {
+      navigate(`/courses#${course.id}`);
+    }
+  }}
+  className="
+    relative
+    bg-[#f4f4f2]
+    border border-[#e5e0d8]
+    p-6
+    pb-12
+    flex flex-col
+    transition-all duration-300
 
+    cursor-pointer md:cursor-default
+
+    hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
+    hover:-translate-y-[2px]
+
+    active:scale-[0.98]
+  "
+>
           <div className="space-y-3">
 
             <div
@@ -297,21 +309,22 @@ export default function Home() {
           </div>
 
           <Link
-            to={`/courses#${course.id}`}
-            className="
-              absolute
-              bottom-4
-              right-5
-              text-[12px]
-              text-[#aab6bd]
-              tracking-[0.2em]
-              hover:opacity-60
-              hover:translate-x-[2px]
-              transition
-            "
-          >
-            ••• →
-          </Link>
+  to={`/courses#${course.id}`}
+  onClick={(e) => e.stopPropagation()}
+  className="
+    absolute
+    bottom-4
+    right-5
+    text-[12px]
+    text-[#aab6bd]
+    tracking-[0.2em]
+    hover:opacity-60
+    hover:translate-x-[2px]
+    transition
+  "
+>
+  ••• →
+</Link>
 
         </div>
       ))}
@@ -320,6 +333,7 @@ export default function Home() {
 
   </Container>
 </Section>
+
       {/* Amami */}
 <Section variant="default" className="bg-[#f4f4f2]">
   <Container>
@@ -457,3 +471,4 @@ export default function Home() {
     </main>
   );
 }
+
