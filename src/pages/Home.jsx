@@ -97,15 +97,27 @@ export default function Home() {
       <Link
         to="/course"
         className="
-          inline-block
-          mt-2 md:mt-4
-          px-8 py-3
-          text-[12px] md:text-sm
-          tracking-[0.25em]
-          bg-white/10 border border-white/30 text-white
-          backdrop-blur-md
-          hover:bg-white/20 transition-all duration-300
-        "
+  inline-block
+  mt-3 md:mt-5
+
+  px-6 py-2.5
+  text-[11px] md:text-[12px]
+  tracking-[0.25em]
+
+  bg-white/5
+  border border-white/20
+  text-white
+
+  backdrop-blur-md
+
+  transition-all duration-500 ease-out
+
+  hover:bg-white/10
+  hover:translate-y-1
+  hover:scale-[0.98]
+
+  active:translate-y-[2px]
+"
       >
         コースを見る
       </Link>
