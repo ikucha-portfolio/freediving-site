@@ -42,128 +42,128 @@ export default function About() {
 
 </section>
 
-      {/* ===== STORY ===== */}
-      <Section className="pt-16 md:pt-24">
-        <Container>
+  {/* ===== STORY ===== */}
+<Section className="pt-16 md:pt-24">
+  <Container>
 
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+    <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
 
-            {/* ===== 左：ストーリー ===== */}
-            <div className="max-w-[560px]">
+      {/* ===== 左：ストーリー ===== */}
+      <div className="max-w-[560px]">
 
-              {/* タイトル */}
-              <p className="text-[11px] tracking-[0.3em] text-[#9fb2bb] mb-4">
-                経歴
-              </p>
+        <p className="text-[11px] tracking-[0.3em] text-[#9fb2bb] mb-4">
+          経歴
+        </p>
 
-              <div className="space-y-8 text-[#6b7c85] text-[14px] leading-[2.1] font-light">
-{/* STORY本文（コンパクト版） */}
-<div className="space-y-5 text-[#6b7c85] text-[14px] leading-[2] font-light">
+        <div className="space-y-5 text-[#6b7c85] text-[14px] leading-[2] font-light">
 
-  <p>
-    愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
-    それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていたが
-    スキンダイビングを始め、少しずつ水中に慣れていく。
-    「水中でもっと自由に動きたい、もっと深く潜りたい」と思うようになり
-    2018年にフリーダイビングと出会い、その魅力に惹かれる。
-  </p>
+          <p>
+            愛知県出身。地元愛知の総合病院で4年勤務後、沖縄へ移住。
+            それまで海で泳いだ経験はなく、足のつかない場所が怖くて浮き輪を使っていたが
+            スキンダイビングを始め、少しずつ水中に慣れていく。
+            「水中でもっと自由に動きたい、もっと深く潜りたい」と思うようになり
+            2018年にフリーダイビングと出会い、その魅力に惹かれる。
+          </p>
 
-  <p>
-    フリーダイビングの練習のためより良い環境を求めて奄美大島へ移住。
-    現在は看護師として働きながら、大会出場に向けて日々練習している。
-  </p>
+          <p>
+            フリーダイビングの練習のためより良い環境を求めて奄美大島へ移住。
+            現在は看護師として働きながら、大会出場に向けて日々練習している。
+          </p>
 
-  {/* メッセージ（軽く区切る） */}
-  <div className="pt-5 border-t border-[#e5e0d8]">
-    <p className="text-[15px] leading-[2.2] tracking-[0.04em] text-[#5a6b74]">
-      これから海遊びを始めたい方、フリーダイビングに興味がある方、
-      もっと深く潜れるようになりたい方、初心者から上級者まで、
-      男女問わず大歓迎です。
-    </p>
-  </div>
-
-  </div>
-
-</div>
-<div className="flex justify-end mt-6">
-
-  <div className="flex items-center gap-3">
-
-
-  {/* テキスト */}
-  <span className="text-[13px] tracking-[0.1em] text-[#7a8a94]">
-    hico
-  </span>
-
-  {/* メール */}
-  <Link
-    to="/contact"
-    className="
-      text-[#7a8a94]
-      hover:text-[#5a6b74]
-      transition
-    "
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 hover:scale-105 transition"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-    >
-      <rect x="3" y="5" width="18" height="14" rx="3" />
-      <path d="M3 7l9 6 9-6" />
-    </svg>
-  </Link>
-
-  {/* Instagram */}
-  <a
-    href="https://instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      text-[#7a8a94]
-      hover:text-[#5a6b74]
-      transition
-    "
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 hover:scale-105 transition"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-    >
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17" cy="7" r="1.2" />
-    </svg>
-  </a>
-
-</div>
-</div>
-            </div>
-
-            {/* ===== 右：写真 ===== */}
-            <div className="flex justify-center md:justify-end">
-              <img
-                src="/images/instructor.jpeg"
-                className="
-                  w-full
-                  max-w-[320px] md:max-w-[420px]
-                  h-[320px] md:h-[420px]
-                  object-cover
-                  object-[center_35%]
-                "
-              />
-            </div>
-
+          {/* メッセージ */}
+          <div className="pt-5 border-t border-[#e5e0d8]">
+            <p className="text-[15px] leading-[2.2] tracking-[0.04em] text-[#5a6b74]">
+              これから海遊びを始めたい方、フリーダイビングに興味がある方、
+              もっと深く潜れるようになりたい方、初心者から上級者まで、
+              男女問わず大歓迎です。
+            </p>
           </div>
 
-        </Container>
-      </Section>
+        </div>
+
+        {/* ===== PC用 CTA（文章右下） */}
+        <div className="hidden md:flex justify-end mt-6">
+          <div className="flex items-center gap-3">
+
+            <span className="text-[13px] tracking-[0.1em] text-[#7a8a94]">
+              hico
+            </span>
+
+            <Link to="/contact" className="text-[#7a8a94] hover:text-[#5a6b74] transition">
+              <svg className="w-6 h-6 hover:scale-105 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <path d="M3 7l9 6 9-6" />
+              </svg>
+            </Link>
+
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94] hover:text-[#5a6b74] transition">
+              <svg className="w-6 h-6 hover:scale-105 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1.2" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      {/* ===== 右：写真 ===== */}
+<div className="flex flex-col items-center">
+
+  {/* 画像（中央） */}
+  <img
+    src="/images/instructor.jpeg"
+    className="
+      w-full
+      max-w-[320px] md:max-w-[420px]
+      h-[320px] md:h-[420px]
+      object-cover
+      object-[center_35%]
+    "
+  />
+
+  {/* CTA（右寄せ） */}
+  <div className="
+    md:hidden
+    w-full max-w-[320px]
+    flex justify-end
+    mt-2
+  ">
+
+    <div className="flex items-center gap-3">
+
+      <span className="text-[12px] tracking-[0.1em] text-[#7a8a94]">
+        hico
+      </span>
+
+      {/* メール */}
+      <Link to="/contact" className="text-[#7a8a94]">
+        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <rect x="3" y="5" width="18" height="14" rx="3" />
+          <path d="M3 7l9 6 9-6" />
+        </svg>
+      </Link>
+
+      {/* Instagram */}
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a8a94]">
+        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17" cy="7" r="1.2" />
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+  </Container>
+</Section>    
 
       {/* ===== PROFILE ===== */}
       <Section variant="compact">
