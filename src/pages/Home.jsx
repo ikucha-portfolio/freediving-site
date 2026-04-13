@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#f4f4f2]">
+
 {/* HERO */}
 <section
   onClick={() => {
@@ -38,42 +39,64 @@ export default function Home() {
     cursor-pointer md:cursor-default
   "
 >
+
+  {/* ===================== */}
   {/* 背景 */}
+  {/* ===================== */}
   <div className="absolute inset-0">
-    <img
-      src="/images/hero2.jpeg"
-      alt="Freediving"
-      className="w-full h-full object-cover md:object-[65%_center] lg:object-[70%_center]"
-      style={{
-        objectPosition: "15% center",
-        filter: "saturate(0.9) brightness(1.05)"
-      }}
-    />
+    <picture>
+      {/* 📱 モバイル */}
+      <source
+        media="(max-width: 768px)"
+        srcSet="/images/hero-mobile.jpeg"
+      />
+
+      {/* 📲 iPad */}
+      <source
+        media="(max-width: 1024px)"
+        srcSet="/images/hero-tablet.jpeg"
+      />
+
+      {/* 💻 PC */}
+      <img
+        src="/images/hero2.jpeg"
+        alt="Freediving"
+        className="w-full h-full object-cover"
+        style={{
+          filter: "saturate(0.9) brightness(1.05)"
+        }}
+      />
+    </picture>
+
+    {/* iPad 可読性補助 */}
+    <div className="hidden md:block lg:hidden absolute inset-0 bg-black/20" />
   </div>
 
+  {/* ===================== */}
   {/* コンテンツ */}
-<div className="relative h-full flex items-center">
-  <div
-    className="
-      max-w-6xl mx-auto w-full
-      px-6 md:px-8
-      flex
-      justify-start lg:justify-end   /* ←ここ重要 */
-    "
-  >
+  {/* ===================== */}
+  <div className="relative h-full">
 
-    {/* テキストブロック */}
+    {/* 📱 モバイル（左下へスライド） */}
+    
     <div
-      className="
-        max-w-xl
-        ml-4 md:ml-6 lg:ml-0        /* スマホは左余白 */
-        lg:mr-[8%]                  /* PCだけ右余白 */
-        text-white
-        text-left lg:text-center    /* ←ここ重要 */
-        space-y-6 md:space-y-8
-        -mt-[8vh] lg:-mt-[2vh]
-      "
-    >
+  className="
+    absolute md:relative
+    md:hidden            /* ← ★これが全てを解決 */
+
+    left-[8%] md:left-auto
+    bottom-[17%] md:bottom-auto
+
+    w-[min(85%,340px)] md:max-w-xl
+
+    text-white
+    text-left md:text-center
+
+    space-y-6 md:space-y-8
+
+    md:-mt-[2vh]
+  "
+>
 
       {/* タイトル */}
       <h1
@@ -81,7 +104,8 @@ export default function Home() {
         className="
           notranslate
           text-[28px] md:text-5xl lg:text-6xl
-          font-extralight tracking-[0.08em]
+          font-extralight
+          tracking-[0.08em]
           leading-[1.3]
         "
         style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -106,36 +130,116 @@ export default function Home() {
       {/* CTA */}
       <Link
         to="/courses"
-        onClick={(e) => e.stopPropagation()}  // ←これ追加
+        onClick={(e) => e.stopPropagation()}
         className="
-  inline-block
-  mt-3 md:mt-5
+          inline-block
+          mt-3 md:mt-5
 
-  px-6 py-2.5
-  text-[11px] md:text-[12px]
-  tracking-[0.25em]
+          px-6 py-2.5
+          text-[11px] md:text-[12px]
+          tracking-[0.25em]
 
-  bg-white/5
-  border border-white/20
-  text-white
+          bg-white/5
+          border border-white/20
+          text-white
 
-  backdrop-blur-md
+          backdrop-blur-md
 
-  transition-all duration-500 ease-out
-
-  hover:bg-white/10
-  hover:translate-y-1
-  hover:scale-[0.98]
-
-  active:translate-y-[2px]
-"
+          transition-all duration-500 ease-out
+          hover:bg-white/10
+          hover:translate-y-1
+          hover:scale-[0.98]
+          active:translate-y-[2px]
+        "
       >
         コースを見る
       </Link>
 
     </div>
+
+    {/* 📲 iPad / 💻 PC（既存維持） */}
+    <div className="hidden md:flex h-full items-center">
+      <div
+        className="
+          max-w-6xl mx-auto w-full
+          px-6 md:px-8
+          flex
+
+          justify-center
+          lg:justify-end
+        "
+      >
+        <div
+          className="
+            max-w-xl
+            lg:mr-[10%]
+
+            text-white
+            text-center
+
+            space-y-6 md:space-y-8
+
+            -mt-[2vh]
+          "
+        >
+          <h1
+            translate="no"
+            className="
+              notranslate
+              text-5xl lg:text-6xl
+              font-extralight
+              tracking-[0.08em]
+              leading-[1.3]
+            "
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            hico freediving
+          </h1>
+
+          <p
+            className="
+              text-[15px]
+              text-white/80
+              leading-[2]
+              tracking-[0.12em]
+              font-light
+            "
+            style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
+          >
+            奄美ブルーへ。深く、自由に。
+          </p>
+
+          <Link
+            to="/courses"
+            onClick={(e) => e.stopPropagation()}
+            className="
+              inline-block
+              mt-5
+
+              px-6 py-2.5
+              text-[12px]
+              tracking-[0.25em]
+
+              bg-white/5
+              border border-white/20
+              text-white
+
+              backdrop-blur-md
+
+              transition-all duration-500 ease-out
+              hover:bg-white/10
+              hover:translate-y-1
+              hover:scale-[0.98]
+              active:translate-y-[2px]
+            "
+          >
+            コースを見る
+          </Link>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
 </section>
       
 {/* Freediving */}
@@ -527,4 +631,6 @@ export default function Home() {
     </main>
   );
 }
+
+
 
