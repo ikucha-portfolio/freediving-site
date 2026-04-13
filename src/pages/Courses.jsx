@@ -35,7 +35,7 @@ const Courses = () => {
                 料金：¥25,000（別途AIDA申請料あり）
               </>
             }
-            image={`${import.meta.env.BASE_URL}images/aida-1.jpeg`}
+            image="/images/aida-1.jpeg"
             reverse
           />
         </div>
@@ -63,7 +63,7 @@ const Courses = () => {
                 ※未達項目は1年間有効で再挑戦可能（他のインストラクターでも可）<br />
               </>
             }
-            image={`${import.meta.env.BASE_URL}images/aida-2.jpeg`}
+            image="/images/aida-2.jpeg"
           />
         </div>
 
@@ -88,7 +88,7 @@ const Courses = () => {
                 ※未達項目は1年間有効で再挑戦可能（他のインストラクターでも可）<br />
               </>
             }
-            image={`${import.meta.env.BASE_URL}images/aida-3.jpeg`}
+            image="/images/aida-3.jpeg"
             reverse
           />
         </div>
@@ -114,7 +114,7 @@ const Courses = () => {
                 集合時間：天候を見て前日までにご連絡
               </>
             }
-            image={`${import.meta.env.BASE_URL}images/skin-diving.jpeg`}
+            image="/images/skin-diving.jpeg"
           />
         </div>
 
@@ -138,7 +138,7 @@ const Courses = () => {
                 料金：1セッション（2〜2.5時間）¥12,000
               </>
             }
-            image={`${import.meta.env.BASE_URL}images/training.jpeg`}
+            image="/images/training.jpeg"
           />
         </div>
 

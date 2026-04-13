@@ -10,7 +10,7 @@ export default function About() {
 <section className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden">
 
   <img
-    src={`${import.meta.env.BASE_URL}images/about-hero.jpeg`}
+    src="/images/about-hero.jpeg"
     className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
   />
 
@@ -128,7 +128,7 @@ export default function About() {
 
         {/* 画像 */}
         <img
-          src={`${import.meta.env.BASE_URL}images/instructor.jpeg`}
+          src="/images/instructor.jpeg"
           className="
             w-full
             max-w-[320px] md:max-w-[420px]
