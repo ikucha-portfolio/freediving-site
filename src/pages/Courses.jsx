@@ -2,6 +2,7 @@ import CourseSection from "../components/CourseSection";
 import Container from "../components/layout/Container";
 import Section from "../components/layout/Section";
 import TitleBlock from "../components/ui/TitleBlock";
+
 const Courses = () => {
   return (
     <Section className="bg-[#f4f4f2]">
@@ -9,34 +10,9 @@ const Courses = () => {
 
         {/* タイトル */}
         <div className="mb-14 md:mb-16 text-center">
-  <TitleBlock align="center">
-    Courses
-  </TitleBlock>
-</div>
-
-        {/* Skin Diving */}
-        <div id="skin-diving">
-          <CourseSection
-            title="Skin Diving Course"
-            description1={
-              <>
-                はじめて海に潜ってみたい方から、<br />
-                もっと自由に泳げるようになりたい方に<br />
-                おすすめのコースです。
-              </>
-            }
-            description2={
-              <>
-                初心者〜上級者まで様々なレベルに合わせて、呼吸の整え方、水中でリラックスする方法、綺麗に泳ぐ方法、海に潜る方法を丁寧にアドバイスします。<br /><br />
-                人数：最大4名<br />
-                時間：2時間<br />
-                場所：瀬戸内町または名瀬周辺のビーチ<br />
-                料金：¥12,000<br />
-                集合時間：天候を見て前日までにご連絡
-              </>
-            }
-            image={`${import.meta.env.BASE_URL}images/skin-diving.jpeg`}
-          />
+          <TitleBlock align="center">
+            Courses
+          </TitleBlock>
         </div>
 
         {/* AIDA Level 1 */}
@@ -52,7 +28,8 @@ const Courses = () => {
               <>
                 座学と海洋講習を1日で行い、基礎知識を学んだあと実際にフリーダイビングを体験します。<br />
                 認定基準はなく、受講のみのコースです。<br /><br />
-                参加条件：18歳以上で健康な方（持病がある方は要相談）／スキンダイビング経験者<br />
+                参加条件：18歳以上で健康な方（持病がある方は要相談）<br />
+                ／スキンダイビング経験者<br />
                 日程：1日（5〜6時間）<br />
                 場所：瀬戸内町のビーチ<br />
                 料金：¥25,000（別途AIDA申請料あり）
@@ -77,7 +54,8 @@ const Courses = () => {
               <>
                 呼吸法、リラクゼーション、耳抜き、フィンワーク、潜り方、バディシステム、レスキューを学びます。<br />
                 条件を満たす方はAIDA1をスキップして受講可能です。<br /><br />
-                参加条件：18歳以上で健康な方（持病がある方は要相談）／スキンダイビング経験があり5〜8m潜るころができる方<br />
+                参加条件：18歳以上で健康な方（持病がある方は要相談）<br />
+                ／スキンダイビング経験があり5〜8m潜ることができる方<br />
                 日程：2.5〜3日（日程を分けての受講可能）<br />
                 場所：瀬戸内町のビーチ<br />
                 料金：¥55,000（別途AIDA認定料・プール使用料あり）<br /><br />
@@ -115,6 +93,31 @@ const Courses = () => {
           />
         </div>
 
+        {/* Skin Diving */}
+        <div id="skin-diving">
+          <CourseSection
+            title="Skin Diving Course"
+            description1={
+              <>
+                はじめて海に潜ってみたい方から、<br />
+                もっと自由に泳げるようになりたい方に<br />
+                おすすめのコースです。
+              </>
+            }
+            description2={
+              <>
+                初心者〜上級者まで様々なレベルに合わせて、呼吸の整え方、水中でリラックスする方法、綺麗に泳ぐ方法、海に潜る方法を丁寧にアドバイスします。<br /><br />
+                人数：最大4名<br />
+                時間：2時間<br />
+                場所：瀬戸内町または名瀬周辺のビーチ<br />
+                料金：¥12,000<br />
+                集合時間：天候を見て前日までにご連絡
+              </>
+            }
+            image={`${import.meta.env.BASE_URL}images/skin-diving.jpeg`}
+          />
+        </div>
+
         {/* Training */}
         <div id="training">
           <CourseSection
@@ -127,9 +130,7 @@ const Courses = () => {
             }
             description2={
               <>
-                参加条件：18歳以上で健康に問題のない方<br />
-                （持病がある方は事前にご相談ください）<br />
-                AIDA、または他団体のライセンスをお持ちの方がご参加いただけます。<br />
+                参加条件：18歳以上で健康に問題のない方（持病がある方は事前にご相談ください）／AIDA、または他団体のライセンスをお持ちの方<br />
                 安全のため最大深度は、受講者様のスキルをお伺いし、相談のうえインストラクターが決定します。<br />
                 (最大深度：40mまで)<br /><br />
                 場所：瀬戸内町のビーチ<br />
