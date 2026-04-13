@@ -36,7 +36,6 @@ const Courses = () => {
               </>
             }
             image="/images/aida-1.jpeg"
-            reverse
           />
         </div>
 
@@ -64,6 +63,7 @@ const Courses = () => {
               </>
             }
             image="/images/aida-2.jpeg"
+            reverse 
           />
         </div>
 
@@ -89,7 +89,6 @@ const Courses = () => {
               </>
             }
             image="/images/aida-3.jpeg"
-            reverse
           />
         </div>
 
@@ -115,6 +114,7 @@ const Courses = () => {
               </>
             }
             image="/images/skin-diving.jpeg"
+            reverse 
           />
         </div>
 
