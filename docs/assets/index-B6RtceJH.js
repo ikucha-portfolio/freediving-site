@@ -81,7 +81,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     cursor-pointer md:cursor-default
   `,children:[(0,M.jsxs)(`div`,{className:`absolute inset-0`,children:[(0,M.jsxs)(`picture`,{children:[(0,M.jsx)(`source`,{media:`(max-width: 768px)`,srcSet:`/images/hero-mobile.jpeg`}),(0,M.jsx)(`source`,{media:`(max-width: 1024px)`,srcSet:`/images/hero-tablet.jpeg`}),(0,M.jsx)(`img`,{src:`/images/hero2.jpeg`,alt:`Freediving`,className:`w-full h-full object-cover`,style:{filter:`saturate(0.9) brightness(1.05)`}})]}),(0,M.jsx)(`div`,{className:`hidden md:block lg:hidden absolute inset-0 bg-black/20`})]}),(0,M.jsxs)(`div`,{className:`relative h-full`,children:[(0,M.jsxs)(`div`,{className:`
     absolute md:relative
-    md:hidden            /* ← ★これが全てを解決 */
+    md:hidden
 
     left-[8%] md:left-auto
     bottom-[17%] md:bottom-auto
@@ -91,41 +91,44 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     text-white
     text-left md:text-center
 
-    space-y-6 md:space-y-8
+    space-y-4 md:space-y-8   /* ← 調整 */
 
     md:-mt-[2vh]
   `,children:[(0,M.jsx)(`h1`,{translate:`no`,className:`
-          notranslate
-          text-[28px] md:text-5xl lg:text-6xl
-          font-extralight
-          tracking-[0.08em]
-          leading-[1.3]
-        `,style:{fontFamily:`'Cormorant Garamond', serif`},children:`hico freediving`}),(0,M.jsx)(`p`,{className:`
-          text-[13px] md:text-[15px]
-          text-white/80
-          leading-[2]
-          tracking-[0.12em]
-          font-light
-        `,style:{fontFamily:`'Noto Sans JP', sans-serif`},children:`奄美ブルーへ。深く、自由に。`}),(0,M.jsx)(En,{to:`/courses`,onClick:e=>e.stopPropagation(),className:`
-          inline-block
-          mt-3 md:mt-5
+    notranslate
+    text-[30px] md:text-5xl lg:text-6xl   /* ← モバイルだけ少し強調 */
+    font-extralight
+    tracking-[0.07em]                     /* ← ほんの少しだけ広げる */
+    leading-[1.25]
 
-          px-6 py-2.5
-          text-[11px] md:text-[12px]
-          tracking-[0.25em]
+    text-white/95
+    drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]   /* ← 上品に浮かせる */
+  `,style:{fontFamily:`'Cormorant Garamond', serif`},children:`hico freediving`}),(0,M.jsx)(`p`,{className:`
+      text-[13px] md:text-[15px]
+      text-white/80
+      leading-[1.7]    /* ← ここが一番効く */
+      tracking-[0.12em]
+      font-light
+    `,style:{fontFamily:`'Noto Sans JP', sans-serif`},children:`奄美ブルーへ。深く、自由に。`}),(0,M.jsx)(En,{to:`/courses`,onClick:e=>e.stopPropagation(),className:`
+      inline-block
+      mt-1.5 md:mt-5   /* ← 詰める */
 
-          bg-white/5
-          border border-white/20
-          text-white
+      px-6 py-2.5
+      text-[11px] md:text-[12px]
+      tracking-[0.25em]
 
-          backdrop-blur-md
+      bg-white/5
+      border border-white/20
+      text-white
 
-          transition-all duration-500 ease-out
-          hover:bg-white/10
-          hover:translate-y-1
-          hover:scale-[0.98]
-          active:translate-y-[2px]
-        `,children:`コースを見る`})]}),(0,M.jsx)(`div`,{className:`hidden md:flex h-full items-center`,children:(0,M.jsx)(`div`,{className:`
+      backdrop-blur-md
+
+      transition-all duration-500 ease-out
+      hover:bg-white/10
+      hover:translate-y-1
+      hover:scale-[0.98]
+      active:translate-y-[2px]
+    `,children:`コースを見る`})]}),(0,M.jsx)(`div`,{className:`hidden md:flex h-full items-center`,children:(0,M.jsx)(`div`,{className:`
           max-w-6xl mx-auto w-full
           px-6 md:px-8
           flex
