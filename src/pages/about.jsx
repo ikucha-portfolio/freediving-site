@@ -187,10 +187,15 @@ export default function About() {
     免許・資格
   </p>
 
-  <div className="space-y-2 text-[#5a6b74] text-[13px] leading-[1.7] font-light">
-    <p>AIDA フリーダイビングインストラクター</p>
+  <div className="space-y-2 text-[#6b7c85] text-[13px] leading-[1.7] font-light">
+
+    <p className="whitespace-nowrap">
+      AIDA フリーダイビングインストラクター
+    </p>
+
     <p>YOGA インストラクター RYT200</p>
     <p>看護師免許</p>
+
   </div>
 </div>
             {/* OCEAN */}

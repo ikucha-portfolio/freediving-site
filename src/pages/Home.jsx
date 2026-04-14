@@ -322,6 +322,7 @@ export default function Home() {
       
       
 {/* Courses */}
+{/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
 
@@ -329,7 +330,7 @@ export default function Home() {
       <TitleBlock>Courses</TitleBlock>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
 
       {[
         {
@@ -363,75 +364,76 @@ export default function Home() {
           id: "training"
         }
       ].map((course, i) => (
-        
-<div
+
+        <div
   key={i}
   onClick={() => {
     navigate(`/courses#${course.id}`);
   }}
   className="
-    relative
     bg-[#f4f4f2]
     border border-[#e5e0d8]
-    p-6
-    pb-12
-    flex flex-col
-    transition-all duration-300
 
+    p-3 md:p-4
+
+    flex flex-col justify-between
+
+    transition-all duration-300
     cursor-pointer
 
     hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
     hover:-translate-y-[2px]
-
     active:scale-[0.98]
   "
 >
 
-          <div className="space-y-3">
+  <div className="space-y-1.5">
 
-            <div
-              className="
-                inline-block
-                text-[10px]
-                tracking-[0.25em]
-                text-[#7a8a94]
-                bg-[#eef3f5]
-                px-2.5 py-1
-                -ml-2
-              "
-            >
-              {course.label}
-            </div>
+    <div
+      className="
+        inline-block
+        text-[10px]
+        tracking-[0.25em]
+        text-[#7a8a94]
+        bg-[#eef3f5]
+        px-2 py-0.5
+        -ml-1
+      "
+    >
+      {course.label}
+    </div>
 
-            <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.4]">
-              {course.title}
-            </h3>
+    <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.25]">
+      {course.title}
+    </h3>
 
-            <p className="text-[14px] text-[#7a8a94] leading-[1.7]">
-              {course.text}
-            </p>
+    <p className="text-[14px] text-[#7a8a94] leading-[1.45]">
+      {course.text}
+    </p>
 
-          </div>
+  </div>
 
-          <Link
-  to={`/courses#${course.id}`}
-  onClick={(e) => e.stopPropagation()}
-  className="
-    absolute
-    bottom-4
-    right-5
-    text-[12px]
-    text-[#aab6bd]
-    tracking-[0.2em]
-    hover:opacity-60
-    hover:translate-x-[2px]
-    transition
-  "
->
-  ••• →
-</Link>
+  <Link
+    to={`/courses#${course.id}`}
+    onClick={(e) => e.stopPropagation()}
+    className="
+      mt-2.5
+      self-end
 
-        </div>
+      text-[12px]
+      text-[#aab6bd]
+      tracking-[0.2em]
+
+      hover:opacity-60
+      hover:translate-x-[2px]
+      transition
+    "
+  >
+    ••• →
+  </Link>
+
+</div>
+
       ))}
 
     </div>
