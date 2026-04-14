@@ -76,52 +76,47 @@ export default function Home() {
   {/* コンテンツ */}
   {/* ===================== */}
   <div className="relative h-full">
-
-    {/* 📱 モバイル（左下へスライド） */}
-    
-    <div
+<div
   className="
     absolute md:relative
     md:hidden
 
-    left-[8%] md:left-auto
-    bottom-[17%] md:bottom-auto
+    left-[8%]
 
-    w-[min(85%,340px)] md:max-w-xl
+    top-[45%]
+    -translate-y-1/2
+
+    w-[min(85%,340px)]
 
     text-white
-    text-left md:text-center
+    text-left
 
-    space-y-4 md:space-y-8   /* ← 調整 */
-
-    md:-mt-[2vh]
+    space-y-6   /* ← ★全体の余白アップ */
   "
 >
 
   {/* タイトル */}
-<h1
-  translate="no"
-  className="
-    notranslate
-    text-[30px] md:text-5xl lg:text-6xl   /* ← モバイルだけ少し強調 */
-    font-extralight
-    tracking-[0.07em]                     /* ← ほんの少しだけ広げる */
-    leading-[1.25]
-
-    text-white/95
-    drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]   /* ← 上品に浮かせる */
-  "
-  style={{ fontFamily: "'Cormorant Garamond', serif" }}
->
-  hico freediving
-</h1>
+  <h1
+    translate="no"
+    className="
+      notranslate
+      text-[30px]
+      font-extralight
+      tracking-[0.07em]
+      leading-[1.25]
+      text-white/95
+    "
+    style={{ fontFamily: "'Cormorant Garamond', serif" }}
+  >
+    hico freediving
+  </h1>
 
   {/* コピー */}
   <p
     className="
-      text-[13px] md:text-[15px]
+      text-[13px]
       text-white/80
-      leading-[1.7]    /* ← ここが一番効く */
+      leading-[1.9]   /* ← ★ここ効いてる */
       tracking-[0.12em]
       font-light
     "
@@ -136,10 +131,10 @@ export default function Home() {
     onClick={(e) => e.stopPropagation()}
     className="
       inline-block
-      mt-1.5 md:mt-5   /* ← 詰める */
+      mt-4   /* ← ★CTA距離 */
 
       px-6 py-2.5
-      text-[11px] md:text-[12px]
+      text-[11px]
       tracking-[0.25em]
 
       bg-white/5
@@ -320,16 +315,16 @@ export default function Home() {
   </Container>
 </Section>
       
-      
-{/* Courses */}
 {/* Courses */}
 <Section variant="compact" className="bg-[#f4f4f2]">
   <Container>
 
+    {/* タイトル */}
     <div className="mb-14 text-center">
       <TitleBlock>Courses</TitleBlock>
     </div>
 
+    {/* カード一覧 */}
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
 
       {[
@@ -366,73 +361,76 @@ export default function Home() {
       ].map((course, i) => (
 
         <div
-  key={i}
-  onClick={() => {
-    navigate(`/courses#${course.id}`);
-  }}
-  className="
-    bg-[#f4f4f2]
-    border border-[#e5e0d8]
+          key={i}
+          onClick={() => navigate(`/courses#${course.id}`)}
+          className="
+            bg-[#f4f4f2]
+            border border-[#e5e0d8]
 
-    p-3 md:p-4
+            p-3 md:p-4
 
-    flex flex-col justify-between
+            flex flex-col justify-between
 
-    transition-all duration-300
-    cursor-pointer
+            cursor-pointer
+            transition-all duration-300
 
-    hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
-    hover:-translate-y-[2px]
-    active:scale-[0.98]
-  "
->
+            hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
+            hover:-translate-y-[2px]
+            active:scale-[0.98]
+          "
+        >
 
-  <div className="space-y-1.5">
+          {/* 上部 */}
+          <div className="space-y-1.5">
 
-    <div
-      className="
-        inline-block
-        text-[10px]
-        tracking-[0.25em]
-        text-[#7a8a94]
-        bg-[#eef3f5]
-        px-2 py-0.5
-        -ml-1
-      "
-    >
-      {course.label}
-    </div>
+            {/* ラベル */}
+            <div
+              className="
+                inline-block
+                text-[10px]
+                tracking-[0.25em]
+                text-[#7a8a94]
+                bg-[#eef3f5]
+                px-2 py-0.5
+                -ml-1
+              "
+            >
+              {course.label}
+            </div>
 
-    <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.25]">
-      {course.title}
-    </h3>
+            {/* タイトル */}
+            <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.25]">
+              {course.title}
+            </h3>
 
-    <p className="text-[14px] text-[#7a8a94] leading-[1.45]">
-      {course.text}
-    </p>
+            {/* 説明 */}
+            <p className="text-[14px] text-[#7a8a94] leading-[1.45]">
+              {course.text}
+            </p>
 
-  </div>
+          </div>
 
-  <Link
-    to={`/courses#${course.id}`}
-    onClick={(e) => e.stopPropagation()}
-    className="
-      mt-2.5
-      self-end
+          {/* CTA */}
+          <Link
+            to={`/courses#${course.id}`}
+            onClick={(e) => e.stopPropagation()}
+            className="
+              mt-2.5
+              self-end
 
-      text-[12px]
-      text-[#aab6bd]
-      tracking-[0.2em]
+              text-[12px]
+              text-[#aab6bd]
+              tracking-[0.2em]
 
-      hover:opacity-60
-      hover:translate-x-[2px]
-      transition
-    "
-  >
-    ••• →
-  </Link>
+              transition-all duration-300
+              hover:opacity-60
+              hover:translate-x-[2px]
+            "
+          >
+            ••• →
+          </Link>
 
-</div>
+        </div>
 
       ))}
 
@@ -635,6 +633,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

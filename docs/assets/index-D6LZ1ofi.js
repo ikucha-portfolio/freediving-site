@@ -83,38 +83,36 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     absolute md:relative
     md:hidden
 
-    left-[8%] md:left-auto
-    bottom-[17%] md:bottom-auto
+    left-[8%]
 
-    w-[min(85%,340px)] md:max-w-xl
+    top-[45%]
+    -translate-y-1/2
+
+    w-[min(85%,340px)]
 
     text-white
-    text-left md:text-center
+    text-left
 
-    space-y-4 md:space-y-8   /* ← 調整 */
-
-    md:-mt-[2vh]
+    space-y-6   /* ← ★全体の余白アップ */
   `,children:[(0,M.jsx)(`h1`,{translate:`no`,className:`
-    notranslate
-    text-[30px] md:text-5xl lg:text-6xl   /* ← モバイルだけ少し強調 */
-    font-extralight
-    tracking-[0.07em]                     /* ← ほんの少しだけ広げる */
-    leading-[1.25]
-
-    text-white/95
-    drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]   /* ← 上品に浮かせる */
-  `,style:{fontFamily:`'Cormorant Garamond', serif`},children:`hico freediving`}),(0,M.jsx)(`p`,{className:`
-      text-[13px] md:text-[15px]
+      notranslate
+      text-[30px]
+      font-extralight
+      tracking-[0.07em]
+      leading-[1.25]
+      text-white/95
+    `,style:{fontFamily:`'Cormorant Garamond', serif`},children:`hico freediving`}),(0,M.jsx)(`p`,{className:`
+      text-[13px]
       text-white/80
-      leading-[1.7]    /* ← ここが一番効く */
+      leading-[1.9]   /* ← ★ここ効いてる */
       tracking-[0.12em]
       font-light
     `,style:{fontFamily:`'Noto Sans JP', sans-serif`},children:`奄美ブルーへ。深く、自由に。`}),(0,M.jsx)(En,{to:`/courses`,onClick:e=>e.stopPropagation(),className:`
       inline-block
-      mt-1.5 md:mt-5   /* ← 詰める */
+      mt-4   /* ← ★CTA距離 */
 
       px-6 py-2.5
-      text-[11px] md:text-[12px]
+      text-[11px]
       tracking-[0.25em]
 
       bg-white/5
@@ -176,40 +174,40 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
               hover:translate-y-1
               hover:scale-[0.98]
               active:translate-y-[2px]
-            `,children:`コースを見る`})]})})})]})]}),(0,M.jsx)(Xn,{variant:`large`,className:`pt-32 md:pt-40 bg-[#f4f4f2]`,children:(0,M.jsx)(Yn,{children:(0,M.jsxs)($n,{variant:`compact`,children:[(0,M.jsxs)(`div`,{className:`space-y-5`,children:[(0,M.jsx)(Zn,{children:(0,M.jsx)(`span`,{translate:`no`,className:`notranslate`,children:`WHAT IS FREEDIVING`})}),(0,M.jsxs)(er,{children:[(0,M.jsx)(`p`,{children:`フリーダイビングは、酸素ボンベを使わずに 自分の息だけで海や水中に潜るスポーツです。`}),(0,M.jsx)(`p`,{children:`一呼吸で海の世界に飛び込む。 その静けさと、心も体もゆるむ感覚を、 ぜひ体験してみてください。`})]}),(0,M.jsx)(`div`,{className:`hidden md:flex pt-6 justify-end`,children:(0,M.jsx)(En,{to:`/about`,className:`group text-xs tracking-[0.2em] text-[#5a6b74]`,children:(0,M.jsxs)(`span`,{className:`inline-flex items-center gap-3`,children:[`ABOUT ME`,(0,M.jsx)(`span`,{className:`transition-transform duration-300 group-hover:translate-x-1`,children:`••• →`})]})})})]}),(0,M.jsxs)(`div`,{className:`flex flex-col items-end space-y-6`,children:[(0,M.jsx)(`img`,{src:`/images/freediving.jpeg`,alt:`Freediver`,className:`w-full md:w-[320px] aspect-[3/4] object-cover`}),(0,M.jsx)(`div`,{className:`flex md:hidden w-full justify-end`,children:(0,M.jsx)(En,{to:`/about`,className:`group text-xs tracking-[0.2em] text-[#5a6b74]`,children:(0,M.jsxs)(`span`,{className:`inline-flex items-center gap-3`,children:[`ABOUT ME`,(0,M.jsx)(`span`,{className:`transition-transform duration-300 group-hover:translate-x-1`,children:`••• →`})]})})})]})]})})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-14 text-center`,children:(0,M.jsx)(Zn,{children:`Courses`})}),(0,M.jsx)(`div`,{className:`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto`,children:[{title:`AIDA 1`,label:`LICENSE`,text:`フリーダイビング体験コース`,id:`aida1`},{title:`AIDA 2`,label:`LICENSE`,text:`フリーダイビング初級コース`,id:`aida2`},{title:`AIDA 3`,label:`LICENSE`,text:`フリーダイビング中級コース`,id:`aida3`},{title:`Skin Diving`,label:`SKIN DIVING`,text:`シュノーケルから一歩先へ、海の中を楽しみたい方へ`,id:`skin-diving`},{title:`Training`,label:`TRAINING`,text:`スキルアップ・継続のためのトレーニング`,id:`training`}].map((t,n)=>(0,M.jsxs)(`div`,{onClick:()=>{e(`/courses#${t.id}`)},className:`
-    relative
-    bg-[#f4f4f2]
-    border border-[#e5e0d8]
-    p-6
-    pb-12
-    flex flex-col
-    transition-all duration-300
+            `,children:`コースを見る`})]})})})]})]}),(0,M.jsx)(Xn,{variant:`large`,className:`pt-32 md:pt-40 bg-[#f4f4f2]`,children:(0,M.jsx)(Yn,{children:(0,M.jsxs)($n,{variant:`compact`,children:[(0,M.jsxs)(`div`,{className:`space-y-5`,children:[(0,M.jsx)(Zn,{children:(0,M.jsx)(`span`,{translate:`no`,className:`notranslate`,children:`WHAT IS FREEDIVING`})}),(0,M.jsxs)(er,{children:[(0,M.jsx)(`p`,{children:`フリーダイビングは、酸素ボンベを使わずに 自分の息だけで海や水中に潜るスポーツです。`}),(0,M.jsx)(`p`,{children:`一呼吸で海の世界に飛び込む。 その静けさと、心も体もゆるむ感覚を、 ぜひ体験してみてください。`})]}),(0,M.jsx)(`div`,{className:`hidden md:flex pt-6 justify-end`,children:(0,M.jsx)(En,{to:`/about`,className:`group text-xs tracking-[0.2em] text-[#5a6b74]`,children:(0,M.jsxs)(`span`,{className:`inline-flex items-center gap-3`,children:[`ABOUT ME`,(0,M.jsx)(`span`,{className:`transition-transform duration-300 group-hover:translate-x-1`,children:`••• →`})]})})})]}),(0,M.jsxs)(`div`,{className:`flex flex-col items-end space-y-6`,children:[(0,M.jsx)(`img`,{src:`/images/freediving.jpeg`,alt:`Freediver`,className:`w-full md:w-[320px] aspect-[3/4] object-cover`}),(0,M.jsx)(`div`,{className:`flex md:hidden w-full justify-end`,children:(0,M.jsx)(En,{to:`/about`,className:`group text-xs tracking-[0.2em] text-[#5a6b74]`,children:(0,M.jsxs)(`span`,{className:`inline-flex items-center gap-3`,children:[`ABOUT ME`,(0,M.jsx)(`span`,{className:`transition-transform duration-300 group-hover:translate-x-1`,children:`••• →`})]})})})]})]})})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-14 text-center`,children:(0,M.jsx)(Zn,{children:`Courses`})}),(0,M.jsx)(`div`,{className:`grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto`,children:[{title:`AIDA 1`,label:`LICENSE`,text:`フリーダイビング体験コース`,id:`aida1`},{title:`AIDA 2`,label:`LICENSE`,text:`フリーダイビング初級コース`,id:`aida2`},{title:`AIDA 3`,label:`LICENSE`,text:`フリーダイビング中級コース`,id:`aida3`},{title:`Skin Diving`,label:`SKIN DIVING`,text:`シュノーケルから一歩先へ、海の中を楽しみたい方へ`,id:`skin-diving`},{title:`Training`,label:`TRAINING`,text:`スキルアップ・継続のためのトレーニング`,id:`training`}].map((t,n)=>(0,M.jsxs)(`div`,{onClick:()=>e(`/courses#${t.id}`),className:`
+            bg-[#f4f4f2]
+            border border-[#e5e0d8]
 
-    cursor-pointer
+            p-3 md:p-4
 
-    hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
-    hover:-translate-y-[2px]
+            flex flex-col justify-between
 
-    active:scale-[0.98]
-  `,children:[(0,M.jsxs)(`div`,{className:`space-y-3`,children:[(0,M.jsx)(`div`,{className:`
+            cursor-pointer
+            transition-all duration-300
+
+            hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)]
+            hover:-translate-y-[2px]
+            active:scale-[0.98]
+          `,children:[(0,M.jsxs)(`div`,{className:`space-y-1.5`,children:[(0,M.jsx)(`div`,{className:`
                 inline-block
                 text-[10px]
                 tracking-[0.25em]
                 text-[#7a8a94]
                 bg-[#eef3f5]
-                px-2.5 py-1
-                -ml-2
-              `,children:t.label}),(0,M.jsx)(`h3`,{className:`text-[18px] font-light text-[#5a6b74] leading-[1.4]`,children:t.title}),(0,M.jsx)(`p`,{className:`text-[14px] text-[#7a8a94] leading-[1.7]`,children:t.text})]}),(0,M.jsx)(En,{to:`/courses#${t.id}`,onClick:e=>e.stopPropagation(),className:`
-    absolute
-    bottom-4
-    right-5
-    text-[12px]
-    text-[#aab6bd]
-    tracking-[0.2em]
-    hover:opacity-60
-    hover:translate-x-[2px]
-    transition
-  `,children:`••• →`})]},n))})]})}),(0,M.jsx)(Xn,{variant:`default`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-12`,children:(0,M.jsx)(Zn,{children:`Amami Sea`})}),(0,M.jsxs)(`div`,{className:`grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12`,children:[(0,M.jsx)(`div`,{children:(0,M.jsx)(`img`,{src:`/images/amami-sea.jpeg`,alt:`Amami Sea`,className:`w-full h-[360px] object-cover`})}),(0,M.jsxs)(`div`,{className:`max-w-[420px] space-y-6`,children:[(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。`})]})]})]})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]`,children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14`,children:(0,M.jsx)(Zn,{children:`FAQ`})}),(0,M.jsx)(`div`,{className:`space-y-3`,children:t.map((e,t)=>(0,M.jsxs)(`div`,{className:`
+                px-2 py-0.5
+                -ml-1
+              `,children:t.label}),(0,M.jsx)(`h3`,{className:`text-[18px] font-light text-[#5a6b74] leading-[1.25]`,children:t.title}),(0,M.jsx)(`p`,{className:`text-[14px] text-[#7a8a94] leading-[1.45]`,children:t.text})]}),(0,M.jsx)(En,{to:`/courses#${t.id}`,onClick:e=>e.stopPropagation(),className:`
+              mt-2.5
+              self-end
+
+              text-[12px]
+              text-[#aab6bd]
+              tracking-[0.2em]
+
+              transition-all duration-300
+              hover:opacity-60
+              hover:translate-x-[2px]
+            `,children:`••• →`})]},n))})]})}),(0,M.jsx)(Xn,{variant:`default`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-12`,children:(0,M.jsx)(Zn,{children:`Amami Sea`})}),(0,M.jsxs)(`div`,{className:`grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12`,children:[(0,M.jsx)(`div`,{children:(0,M.jsx)(`img`,{src:`/images/amami-sea.jpeg`,alt:`Amami Sea`,className:`w-full h-[360px] object-cover`})}),(0,M.jsxs)(`div`,{className:`max-w-[420px] space-y-6`,children:[(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。`})]})]})]})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]`,children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14`,children:(0,M.jsx)(Zn,{children:`FAQ`})}),(0,M.jsx)(`div`,{className:`space-y-3`,children:t.map((e,t)=>(0,M.jsxs)(`div`,{className:`
             bg-white/40
             backdrop-blur-sm
             border border-[#e8eff2]
@@ -267,7 +265,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           w-full max-w-[320px]
           flex justify-end
           mt-2
-        `,children:(0,M.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,M.jsx)(`span`,{className:`text-[12px] tracking-[0.1em] text-[#7a8a94]`,children:`hico`}),(0,M.jsx)(En,{to:`/contact`,className:`text-[#7a8a94]`,children:(0,M.jsxs)(`svg`,{className:`w-7 h-7`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,M.jsx)(`rect`,{x:`3`,y:`5`,width:`18`,height:`14`,rx:`3`}),(0,M.jsx)(`path`,{d:`M3 7l9 6 9-6`})]})}),(0,M.jsx)(`a`,{href:`https://www.instagram.com/hico0624/`,target:`_blank`,rel:`noopener noreferrer`,className:`text-[#7a8a94]`,children:(0,M.jsxs)(`svg`,{className:`w-7 h-7`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,M.jsx)(`rect`,{x:`3`,y:`3`,width:`18`,height:`18`,rx:`5`}),(0,M.jsx)(`circle`,{cx:`12`,cy:`12`,r:`4`}),(0,M.jsx)(`circle`,{cx:`17`,cy:`7`,r:`1.2`})]})})]})})]})]})})}),(0,M.jsx)(Xn,{variant:`compact`,children:(0,M.jsx)(Yn,{children:(0,M.jsxs)(`div`,{className:`max-w-[900px] mx-auto grid md:grid-cols-3 gap-12 md:gap-16 text-left mt-4 md:mt-8`,children:[(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-3`,children:`免許・資格`}),(0,M.jsxs)(`div`,{className:`space-y-2 text-[#5a6b74] text-[13px] leading-[1.7] font-light`,children:[(0,M.jsx)(`p`,{children:`AIDA フリーダイビングインストラクター`}),(0,M.jsx)(`p`,{children:`YOGA インストラクター RYT200`}),(0,M.jsx)(`p`,{children:`看護師免許`})]})]}),(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4`,children:`大会出場歴 -海洋`}),(0,M.jsxs)(`div`,{className:`space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light`,children:[(0,M.jsx)(`p`,{children:`AIDA Panglao Depth games TAIWAN CUP 2023`}),(0,M.jsx)(`p`,{children:`15TH AIDA PANGLAO DEPTH GAMES 2023 FINAL`}),(0,M.jsx)(`p`,{children:`AIDA Volcano Cup 2024`}),(0,M.jsx)(`p`,{children:`21st AIDA Panglao Depth Games Final 2024`}),(0,M.jsx)(`p`,{children:`AIDA Panglao Depth Championship 2024 -2`})]})]}),(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4`,children:`大会出場歴 -プール`}),(0,M.jsxs)(`div`,{className:`space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light`,children:[(0,M.jsx)(`p`,{children:`AIDA Yuinoshima Freediving Cup 2nd🥈`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Suzuka 1st🥇`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Kusatsu 2nd🥈`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Wakayama 3rd🥉`}),(0,M.jsx)(`p`,{children:`AIDA JAPAN FREEDIVING POOL CHAMPIONSHIPS 2026 女子1st🥇`})]})]})]})})})]})}function rr(){let e=lt();return(0,M.jsx)(Xn,{children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14 md:mb-16 text-center`,children:(0,M.jsx)(Zn,{align:`center`,children:`Price`})}),(0,M.jsx)(`div`,{className:`space-y-5 mb-10`,children:[{title:`AIDA1`,label:`LICENSE`,price:`¥25,000`,desc:`座学＋海洋講習`,duration:`1日（5〜6時間）`,note:`※別途AIDA申請料あり`,id:`aida1`},{title:`AIDA2`,label:`LICENSE`,price:`¥55,000`,desc:`座学＋海洋・プール講習`,duration:`2.5〜3日（日程を分けての受講可能）`,note:`※別途認定料・プール使用料あり`,id:`aida2`},{title:`AIDA3`,label:`LICENSE`,price:`¥65,000`,desc:`座学＋海洋・プール講習`,duration:`3〜3.5日（日程を分けての受講可能）`,note:`※別途認定料・プール使用料あり`,id:`aida3`},{title:`Skin Diving`,label:`SKIN DIVING`,price:`¥12,000`,desc:`海洋講習`,duration:`2時間`,id:`skin-diving`},{title:`Training`,label:`TRAINING`,price:`¥12,000`,desc:`ビーチトレーニング`,duration:`1セッション（2〜2.5時間）`,id:`training`}].map((t,n)=>(0,M.jsxs)(`div`,{onClick:()=>{e(`/courses#${t.id}`)},className:`
+        `,children:(0,M.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,M.jsx)(`span`,{className:`text-[12px] tracking-[0.1em] text-[#7a8a94]`,children:`hico`}),(0,M.jsx)(En,{to:`/contact`,className:`text-[#7a8a94]`,children:(0,M.jsxs)(`svg`,{className:`w-7 h-7`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,M.jsx)(`rect`,{x:`3`,y:`5`,width:`18`,height:`14`,rx:`3`}),(0,M.jsx)(`path`,{d:`M3 7l9 6 9-6`})]})}),(0,M.jsx)(`a`,{href:`https://www.instagram.com/hico0624/`,target:`_blank`,rel:`noopener noreferrer`,className:`text-[#7a8a94]`,children:(0,M.jsxs)(`svg`,{className:`w-7 h-7`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,M.jsx)(`rect`,{x:`3`,y:`3`,width:`18`,height:`18`,rx:`5`}),(0,M.jsx)(`circle`,{cx:`12`,cy:`12`,r:`4`}),(0,M.jsx)(`circle`,{cx:`17`,cy:`7`,r:`1.2`})]})})]})})]})]})})}),(0,M.jsx)(Xn,{variant:`compact`,children:(0,M.jsx)(Yn,{children:(0,M.jsxs)(`div`,{className:`max-w-[900px] mx-auto grid md:grid-cols-3 gap-12 md:gap-16 text-left mt-4 md:mt-8`,children:[(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-3`,children:`免許・資格`}),(0,M.jsxs)(`div`,{className:`space-y-2 text-[#6b7c85] text-[13px] leading-[1.7] font-light`,children:[(0,M.jsx)(`p`,{className:`whitespace-nowrap`,children:`AIDA フリーダイビングインストラクター`}),(0,M.jsx)(`p`,{children:`YOGA インストラクター RYT200`}),(0,M.jsx)(`p`,{children:`看護師免許`})]})]}),(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4`,children:`大会出場歴 -海洋`}),(0,M.jsxs)(`div`,{className:`space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light`,children:[(0,M.jsx)(`p`,{children:`AIDA Panglao Depth games TAIWAN CUP 2023`}),(0,M.jsx)(`p`,{children:`15TH AIDA PANGLAO DEPTH GAMES 2023 FINAL`}),(0,M.jsx)(`p`,{children:`AIDA Volcano Cup 2024`}),(0,M.jsx)(`p`,{children:`21st AIDA Panglao Depth Games Final 2024`}),(0,M.jsx)(`p`,{children:`AIDA Panglao Depth Championship 2024 -2`})]})]}),(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-[#9fb2bb] mb-4`,children:`大会出場歴 -プール`}),(0,M.jsxs)(`div`,{className:`space-y-4 text-[#6b7c85] text-[13px] leading-[1.9] font-light`,children:[(0,M.jsx)(`p`,{children:`AIDA Yuinoshima Freediving Cup 2nd🥈`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Suzuka 1st🥇`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Kusatsu 2nd🥈`}),(0,M.jsx)(`p`,{children:`AIDA Freediving Pool Games Japan Wakayama 3rd🥉`}),(0,M.jsx)(`p`,{children:`AIDA JAPAN FREEDIVING POOL CHAMPIONSHIPS 2026 女子1st🥇`})]})]})]})})})]})}function rr(){let e=lt();return(0,M.jsx)(Xn,{children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14 md:mb-16 text-center`,children:(0,M.jsx)(Zn,{align:`center`,children:`Price`})}),(0,M.jsx)(`div`,{className:`space-y-5 mb-10`,children:[{title:`AIDA1`,label:`LICENSE`,price:`¥25,000`,desc:`座学＋海洋講習`,duration:`1日（5〜6時間）`,note:`※別途AIDA申請料あり`,id:`aida1`},{title:`AIDA2`,label:`LICENSE`,price:`¥55,000`,desc:`座学＋海洋・プール講習`,duration:`2.5〜3日（日程を分けての受講可能）`,note:`※別途認定料・プール使用料あり`,id:`aida2`},{title:`AIDA3`,label:`LICENSE`,price:`¥65,000`,desc:`座学＋海洋・プール講習`,duration:`3〜3.5日（日程を分けての受講可能）`,note:`※別途認定料・プール使用料あり`,id:`aida3`},{title:`Skin Diving`,label:`SKIN DIVING`,price:`¥12,000`,desc:`海洋講習`,duration:`2時間`,id:`skin-diving`},{title:`Training`,label:`TRAINING`,price:`¥12,000`,desc:`ビーチトレーニング`,duration:`1セッション（2〜2.5時間）`,id:`training`}].map((t,n)=>(0,M.jsxs)(`div`,{onClick:()=>{e(`/courses#${t.id}`)},className:`
     bg-[#f4f4f2]
     border border-[#e5e0d8]
     px-5 py-4
