@@ -8,7 +8,10 @@ const TitleBlock = ({ children, align = "left" }) => {
         ${align === "center" ? "text-center" : "text-left"}
       `}
     >
+      {/* 翻訳防止：タイトルは英語UIとして統一 */}
+      <span translate="no" className="notranslate">
       {children}
+      </span>
     </h2>
   );
 };

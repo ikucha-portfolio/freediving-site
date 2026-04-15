@@ -11,14 +11,19 @@ const Courses = () => {
         {/* タイトル */}
         <div className="mb-14 md:mb-16 text-center">
           <TitleBlock align="center">
-            Courses
+            {/* 翻訳防止：ページタイトル */}
+            <span translate="no">Courses</span>
           </TitleBlock>
         </div>
 
         {/* AIDA Level 1 */}
         <div id="aida1">
           <CourseSection
-            title="AIDA1"
+            title={
+              <span translate="no">
+                AIDA1
+              </span>
+            }
             description1={
               <>
                 体験フリーダイビングコース。<br />
@@ -42,7 +47,11 @@ const Courses = () => {
         {/* AIDA Level 2 */}
         <div id="aida2">
           <CourseSection
-            title="AIDA2"
+            title={
+              <span translate="no">
+                AIDA2
+              </span>
+            }
             description1={
               <>
                 フリーダイビング初級コース。<br />
@@ -70,7 +79,11 @@ const Courses = () => {
         {/* AIDA Level 3 */}
         <div id="aida3">
           <CourseSection
-            title="AIDA3"
+            title={
+              <span translate="no">
+                AIDA3
+              </span>
+            }
             description1={
               <>
                 フリーダイビング中級コース。<br />
@@ -95,7 +108,11 @@ const Courses = () => {
         {/* Skin Diving */}
         <div id="skin-diving">
           <CourseSection
-            title="Skin Diving Course"
+            title={
+              <span translate="no">
+                Skin Diving Course
+              </span>
+            }
             description1={
               <>
                 はじめて海に潜ってみたい方から、<br />
@@ -121,7 +138,11 @@ const Courses = () => {
         {/* Training */}
         <div id="training">
           <CourseSection
-            title="Freediving Training（ビーチトレーニング）"
+            title={
+              <span translate="no">
+                Freediving Training（ビーチトレーニング）
+              </span>
+            }
             description1={
               <>
                 ライセンス取得後のスキルアップや、

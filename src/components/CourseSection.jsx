@@ -59,7 +59,8 @@ function CourseSection({
     active:scale-[0.97]
   "
 >
-  CONTACT
+  {/* 翻訳防止：CTAは英語UIとして固定 */}
+  <span translate="no">CONTACT</span>
 </Link>
 
       </div>

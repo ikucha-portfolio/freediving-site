@@ -106,8 +106,9 @@ export default function Price() {
                 </div>
 
                 {/* タイトル */}
-                <h2 className="text-[18px] font-light text-[#5a6b74]">
-                  {course.title}
+                 <h2 className="text-[18px] font-light text-[#5a6b74]">
+                {/* 翻訳防止：コース名のみ守る */}
+                 <span translate="no">{course.title}</span>
                 </h2>
 
                 <p className="text-[14px] text-[#7a8a94] mt-1">

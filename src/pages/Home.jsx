@@ -249,9 +249,7 @@ export default function Home() {
       <div className="space-y-5">
 
         <TitleBlock>
-          <span translate="no" className="notranslate">
-            WHAT IS FREEDIVING
-          </span>
+         WHAT IS FREEDIVING
         </TitleBlock>
 
         <BodyText>
@@ -273,7 +271,7 @@ export default function Home() {
             to="/about"
             className="group text-xs tracking-[0.2em] text-[#5a6b74]"
           >
-            <span className="inline-flex items-center gap-3">
+            <span translate="no" className="inline-flex items-center gap-3">
               ABOUT ME
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 ••• →
@@ -299,7 +297,7 @@ export default function Home() {
             to="/about"
             className="group text-xs tracking-[0.2em] text-[#5a6b74]"
           >
-            <span className="inline-flex items-center gap-3">
+            <span translate="no" className="inline-flex items-center gap-3">
               ABOUT ME
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 ••• →
@@ -321,7 +319,9 @@ export default function Home() {
 
     {/* タイトル */}
     <div className="mb-14 text-center">
-      <TitleBlock>Courses</TitleBlock>
+      <TitleBlock>
+      Course
+      </TitleBlock>
     </div>
 
     {/* カード一覧 */}
@@ -399,7 +399,7 @@ export default function Home() {
             </div>
 
             {/* タイトル */}
-            <h3 className="text-[18px] font-light text-[#5a6b74] leading-[1.25]">
+            <h3 translate="no" className="text-[18px] font-light text-[#5a6b74] leading-[1.25]">
               {course.title}
             </h3>
 
@@ -529,7 +529,7 @@ export default function Home() {
     to="/faq"
     className="group inline-flex items-center gap-2 text-[12px] text-[#aab6bd] tracking-[0.15em]"
   >
-    <span>VIEW MORE</span>
+    <span translate="no">VIEW MORE</span>
 
     <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:opacity-60">
       ••• →
@@ -554,7 +554,10 @@ export default function Home() {
     {/* 👇 中身だけ完成形に置き換え */}
     <div className="relative text-center space-y-10">
 
-      <TitleBlock align="center">Contact</TitleBlock>
+      <TitleBlock align="center">
+        Contact
+        
+      </TitleBlock>
 
       {/* 説明文（濃さ調整済み） */}
       <p className="text-[#7a8a94] text-[13px] leading-[1.8]">
