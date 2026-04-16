@@ -252,7 +252,7 @@ export default function Home() {
          WHAT IS FREEDIVING
         </TitleBlock>
 
-        <BodyText>
+        <BodyText className="text-[#5a6b74]">
           <p>
             フリーダイビングは、酸素ボンベを使わずに
             自分の息だけで海や水中に潜るスポーツです。
@@ -450,11 +450,19 @@ export default function Home() {
     <div className="grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12">
 
       <div>
-        <img
-          src="/images/amami-sea.jpeg"
-          alt="Amami Sea"
-          className="w-full h-[360px] object-cover"
-        />
+       <img
+  src="/images/amami-sea.jpeg"
+  alt="Amami Sea"
+  className="
+    w-full
+    h-[300px] md:h-[360px]
+
+    object-cover
+
+    object-[75%_40%]   /* スマホ */
+    md:object-[65%_center] /* PC */
+  "
+/>
       </div>
 
       <div className="max-w-[420px] space-y-6">
@@ -527,7 +535,7 @@ export default function Home() {
     <div className="mt-10 text-right">
   <Link
     to="/faq"
-    className="group inline-flex items-center gap-2 text-[12px] text-[#aab6bd] tracking-[0.15em]"
+    className="group inline-flex items-center gap-2 text-[12px] text-[#5a6b74] tracking-[0.15em]"
   >
     <span translate="no">VIEW MORE</span>
 
