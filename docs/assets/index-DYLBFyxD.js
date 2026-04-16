@@ -185,7 +185,15 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
               transition-all duration-300
               hover:opacity-60
               hover:translate-x-[2px]
-            `,children:`••• →`})]},n))})]})}),(0,M.jsx)(Xn,{variant:`default`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-12`,children:(0,M.jsx)(Zn,{children:`Amami Sea`})}),(0,M.jsxs)(`div`,{className:`grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12`,children:[(0,M.jsx)(`div`,{children:(0,M.jsx)(`img`,{src:`/images/amami-sea.jpeg`,alt:`Amami Sea`,className:`w-full h-[360px] object-cover`})}),(0,M.jsxs)(`div`,{className:`max-w-[420px] space-y-6`,children:[(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。`})]})]})]})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]`,children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14`,children:(0,M.jsx)(Zn,{children:`FAQ`})}),(0,M.jsx)(`div`,{className:`space-y-3`,children:t.map((e,t)=>(0,M.jsxs)(`div`,{className:`
+            `,children:`••• →`})]},n))})]})}),(0,M.jsx)(Xn,{variant:`default`,className:`bg-[#f4f4f2]`,children:(0,M.jsxs)(Yn,{children:[(0,M.jsx)(`div`,{className:`mb-12`,children:(0,M.jsx)(Zn,{children:`Amami Sea`})}),(0,M.jsxs)(`div`,{className:`grid md:grid-cols-[1.3fr_1fr] items-start gap-8 md:gap-12`,children:[(0,M.jsx)(`div`,{children:(0,M.jsx)(`img`,{src:`/images/amami-sea.jpeg`,alt:`Amami Sea`,className:`
+    w-full
+    h-[300px] md:h-[360px]
+
+    object-cover
+
+    object-[75%_40%]   /* スマホ */
+    md:object-[65%_center] /* PC */
+  `})}),(0,M.jsxs)(`div`,{className:`max-w-[420px] space-y-6`,children:[(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`奄美の海は、透明度の高い「奄美ブルー」と温暖な水温、そして穏やかな海況が揃った環境です。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`湾や入り江が多く、コンディションに合わせたポイント選びができるため、初心者から上級者まで安全に練習できます。`}),(0,M.jsx)(`p`,{className:`text-[15px] text-[#7a8a94] leading-[1.9]`,children:`さらに、珊瑚礁やウミガメなど豊かな自然環境も魅力です。`})]})]})]})}),(0,M.jsx)(Xn,{variant:`compact`,className:`bg-[linear-gradient(180deg,#f4f4f2_0%,#eef6f8_100%)]`,children:(0,M.jsxs)(Yn,{size:`narrow`,children:[(0,M.jsx)(`div`,{className:`mb-14`,children:(0,M.jsx)(Zn,{children:`FAQ`})}),(0,M.jsx)(`div`,{className:`space-y-3`,children:t.map((e,t)=>(0,M.jsxs)(`div`,{className:`
             bg-white/40
             backdrop-blur-sm
             border border-[#e8eff2]
