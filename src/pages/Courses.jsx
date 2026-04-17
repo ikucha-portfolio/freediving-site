@@ -110,34 +110,42 @@ const Courses = () => {
 </div>
 
         {/* Skin Diving */}
-        <div id="skin-diving">
-          <CourseSection
-            title={
-              <span translate="no">
-                Skin Diving Course
-              </span>
-            }
-            description1={
-              <>
-                はじめて海に潜ってみたい方から、<br />
-                もっと自由に泳げるようになりたい方に<br />
-                おすすめのコースです。
-              </>
-            }
-            description2={
-              <>
-                初心者〜上級者まで様々なレベルに合わせて、呼吸の整え方、水中でリラックスする方法、綺麗に泳ぐ方法、海に潜る方法を丁寧にアドバイスします。<br /><br />
-                人数：最大4名<br />
-                時間：2時間<br />
-                場所：瀬戸内町または名瀬周辺のビーチ<br />
-                集合時間：天候を見て前日までにご連絡<br />
-                料金：¥12,000
-              </>
-            }
-            image="/images/skin-diving.jpeg"
-            reverse 
-          />
-        </div>
+<div id="skin-diving">
+  <CourseSection
+    title={
+      <span translate="no">
+        Skin Diving Course
+      </span>
+    }
+    description1={
+      <>
+        スキンダイビングとは、酸素ボンベを使わずに息を止めて水中に潜り、
+        海の中を気軽に楽しむアクティビティです。<br />
+        いわゆる素潜りで、ウミガメやカラフルな魚、サンゴをより近くで見ることができます。
+      </>
+    }
+    description2={
+      <>
+        フリーダイビングとは違い、深さや記録に挑戦するものではなく、
+        水中の景色や生き物との時間をリラックスして楽しむことが目的です。<br />
+
+        まずは陸上でリラックスした呼吸法を練習し、
+        実際に海に入りながら、潜り方や綺麗な泳ぎ方をレクチャーします。<br />
+
+        はじめて海に潜ってみたい方から、
+        もっと自由に水中で泳げるようになりたい方におすすめです。<br /><br />
+
+        人数：最大4名<br />
+        時間：2時間<br />
+        場所：瀬戸内町または名瀬周辺のビーチ<br />
+        集合時間：天候を見て前日までにご連絡<br />
+        料金：¥12,000
+      </>
+    }
+    image="/images/skin-diving2.jpeg"
+    reverse 
+  />
+</div>
 
         {/* Training */}
         <div id="training">
