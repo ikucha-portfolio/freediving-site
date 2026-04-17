@@ -16,52 +16,52 @@ function CourseSection({
         flex flex-col 
         ${reverse ? "md:flex-row-reverse" : "md:flex-row"} 
         items-start 
-        gap-16 
-        mt-32
+        gap-12 
+        mt-28
       `}
     >
       {/* テキスト */}
-      <div className="w-full md:w-1/2 max-w-[420px] mx-auto md:mx-0 space-y-8">
+      <div className="w-full md:w-1/2 max-w-[420px] mx-auto md:mx-0 space-y-6">
 
         <h3 className="text-xl font-light text-[#5a6b74]">
           {title}
         </h3>
 
-        <p className="text-sm text-[#7a8a94] leading-[2]">
+        <p className="text-sm text-[#7a8a94] leading-[1.7]">
           {description1}
         </p>
 
-        <p className="text-sm text-[#7a8a94] leading-[2]">
+        <p className="text-sm text-[#7a8a94] leading-[1.7]">
           {description2}
         </p>
 
         <Link
-  to="/contact"
-  className="
-    inline-block
-    mt-2
+          to="/contact"
+          className="
+            inline-block
+            mt-4
 
-    px-8 py-2.5
-    text-[12px]
-    tracking-[0.25em]
+            px-8 py-2.5
+            text-[12px]
+            tracking-[0.25em]
 
-    text-[#5a6b74]
-    border border-[#cfd8dc]
+            text-[#5a6b74]
+            border border-[#cfd8dc]
 
-    rounded-none
+            rounded-none
 
-    transition-all duration-300
+            transition-all duration-300
 
-    hover:bg-[#f0f4f6]
-    hover:border-[#5a6b74]
+            hover:bg-[#f0f4f6]
+            hover:border-[#5a6b74]
 
-    hover:translate-y-1
-    active:scale-[0.97]
-  "
->
-  {/* 翻訳防止：CTAは英語UIとして固定 */}
-  <span translate="no">CONTACT</span>
-</Link>
+            hover:translate-y-1
+            active:scale-[0.97]
+          "
+        >
+          {/* 翻訳防止：CTAは英語UIとして固定 */}
+          <span translate="no">CONTACT</span>
+        </Link>
 
       </div>
 
