@@ -74,10 +74,10 @@ export default function Contact() {
               className="space-y-3"
             >
               <input
-                type="hidden"
-                name="_next"
-                value="http://localhost:5173/thanks"
-              />
+  type="hidden"
+  name="_next"
+  value="https://hicofreediving.com/thanks"
+/>
 
               <input
                 name="name"
