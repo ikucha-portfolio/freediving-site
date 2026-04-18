@@ -2,8 +2,10 @@ import Section from "../components/layout/Section";
 import Container from "../components/layout/Container";
 import TitleBlock from "../components/ui/TitleBlock";
 import TwoColumn from "../components/layout/TwoColumn";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
+   const navigate = useNavigate(); // ←ここ追加
   return (
     <main className="bg-[#f4f4f2] min-h-screen flex items-center">
 
@@ -69,16 +71,21 @@ export default function Contact() {
 
             {/* 右：フォーム */}
             <form
-              action="https://formspree.io/f/xreonlzl"
-              method="POST"
-              className="space-y-3"
-            >
-              <input
-  type="hidden"
-  name="_next"
-  value="https://hicofreediving.com/thanks"
-/>
+  onSubmit={async (e) => {
+    e.preventDefault();
 
+    const formData = new FormData(e.target);
+
+    await fetch("https://formspree.io/f/xreonlzl", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    navigate("/thanks");
+  }}
+  className="space-y-3"
+>
               <input
                 name="name"
                 type="text"
