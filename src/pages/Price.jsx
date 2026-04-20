@@ -160,7 +160,32 @@ export default function Price() {
         <div className="text-xs text-[#5a6b74] mb-16 space-y-2">
           <p>※レンタル料金は含まれておりません</p>
         </div>
+ {/* 注意書き */}
+{/* --- BOOKING POLICY --- */}
+<div className="pt-12 border-t border-[#eef4f7] mb-16 text-[#7a8a94] text-sm leading-relaxed">
 
+  <h2 className="text-sm text-[#5a6b74] mb-6">
+    キャンセルポリシー
+  </h2>
+
+  <div className="space-y-1">
+    <p>当日のキャンセル：100％</p>
+    <p>前日のキャンセル：50％</p>
+    <p>2日前のキャンセル：20％</p>
+    <p>3日前まで：無料</p>
+  </div>
+
+  <p className="mt-4">
+    なお、当日の天候や海のコンディションにより、<br />
+    安全を最優先に講習を中止させていただく場合がございます。<br />
+    ご了承ください。
+  </p>
+
+  <p className="mt-2">
+    その際の対応については、状況に応じて個別にご案内させていただきます。
+  </p>
+
+</div>
         {/* --- RENTAL --- */}
         <div className="pt-12 border-t border-[#eef4f7]">
 
